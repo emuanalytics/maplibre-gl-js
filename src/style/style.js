@@ -77,7 +77,9 @@ const supportedDiffOperations = pick(diffOperations, [
     'setLayerZoomRange',
     'setLight',
     'setTransition',
-    'setGeoJSONSourceData'
+    'setGeoJSONSourceData',
+    'setVectorSourceUrl',
+    'setVectorSourceTiles',
     // 'setGlyphs',
     // 'setSprite',
 ]);
@@ -631,6 +633,39 @@ class Style extends Evented {
         geojsonSource.setData(data);
         this._changed = true;
     }
+
+    /**
+    * Set the url of a Vector source, given its id.
+    * @param {string} id id of the source
+    * @param {string} url TileJSON url
+    */
+     setVectorSourceUrl(id: string, url: string) {
+      this._checkLoaded();
+
+      assert(this.sourceCaches[id] !== undefined, 'There is no source with this ID');
+      const vectorSource: VectorSource = (this.sourceCaches[id].getSource(): any);
+      assert(vectorSource.type === 'vector');
+
+      vectorSource.setUrl(url);
+      this._changed = true;
+    }
+
+    /**
+    * Set the tile urls of a Vector source, given its id.
+    * @param {string} id id of the source
+    * @param {string} url TileJSON url
+    */
+    setVectorSourceTiles(id: string, tiles: Array<string>) {
+        this._checkLoaded();
+
+        assert(this.sourceCaches[id] !== undefined, 'There is no source with this ID');
+        const vectorSource: VectorSource = (this.sourceCaches[id].getSource(): any);
+        assert(vectorSource.type === 'vector');
+
+        vectorSource.setTiles(tiles);
+        this._changed = true;
+    }
+
 
     /**
      * Get a source by id.

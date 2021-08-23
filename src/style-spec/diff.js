@@ -49,6 +49,16 @@ const operations = {
     setGeoJSONSourceData: 'setGeoJSONSourceData',
 
     /*
+     * { command: 'setVectorSourceUrl', args: ['sourceId', url] }
+     */
+    setVectorSourceUrl: 'setVectorSourceUrl',
+
+    /*
+     * { command: 'setVectorSourceUrl', args: ['sourceId', tiles] }
+     */
+    setVectorSourceTiles: 'setVectorSourceTiles',
+
+    /*
      * { command: 'setLayerZoomRange', args: ['layerId', 0, 22] }
      */
     setLayerZoomRange: 'setLayerZoomRange',
@@ -131,6 +141,23 @@ function canUpdateGeoJSON(before, after, sourceId) {
     return true;
 }
 
+function canUpdateVectorSource(before, after, sourceId) {
+  let prop;
+  for (prop in before[sourceId]) {
+      if (!before[sourceId].hasOwnProperty(prop)) continue;
+      if (prop !== 'url' && prop !== 'tiles' && !isEqual(before[sourceId][prop], after[sourceId][prop])) {
+          return false;
+      }
+  }
+  for (prop in after[sourceId]) {
+      if (!after[sourceId].hasOwnProperty(prop)) continue;
+      if (prop !== 'url' && prop !== 'tiles' && !isEqual(before[sourceId][prop], after[sourceId][prop])) {
+          return false;
+      }
+  }
+  return true;
+}
+
 function diffSources(before, after, commands, sourcesRemoved) {
     before = before || {};
     after = after || {};
@@ -153,6 +180,12 @@ function diffSources(before, after, commands, sourcesRemoved) {
         } else if (!isEqual(before[sourceId], after[sourceId])) {
             if (before[sourceId].type === 'geojson' && after[sourceId].type === 'geojson' && canUpdateGeoJSON(before, after, sourceId)) {
                 commands.push({command: operations.setGeoJSONSourceData, args: [sourceId, after[sourceId].data]});
+              } else if (before[sourceId].type === 'vector' && after[sourceId].type === 'vector' && canUpdateVectorSource(before, after, sourceId)) {
+                if (after[sourceId].tiles) {
+                    commands.push({command: operations.setVectorSourceTiles, args: [sourceId, after[sourceId].tiles]});
+                } else if (after[sourceId].url) {
+                    commands.push({command: operations.setVectorSourceUrl, args: [sourceId, after[sourceId].url]});
+                }
             } else {
                 // no update command, must remove then add
                 updateSource(sourceId, after, commands, sourcesRemoved);

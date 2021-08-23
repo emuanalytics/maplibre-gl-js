@@ -27252,8 +27252,6 @@ var VectorTileSource = function (Evented) {
             this._tileJSONRequest.cancel();
         }
         callback();
-        var sourceCache = this.map.style.sourceCaches[this.id];
-        sourceCache.clearTiles();
         this.load();
     };
     VectorTileSource.prototype.setTiles = function setTiles(tiles) {
@@ -29703,7 +29701,7 @@ var SourceCache = function (Evented) {
                 this$1._sourceLoaded = true;
             }
             if (this$1._sourceLoaded && !this$1._paused && e.dataType === 'source' && e.sourceDataType === 'content') {
-                this$1.reload();
+                this$1.reload(true);
                 if (this$1.transform) {
                     this$1.update(this$1.transform);
                 }
@@ -29847,7 +29845,9 @@ var SourceCache = function (Evented) {
     SourceCache.prototype._isIdRenderable = function _isIdRenderable(id, symbolLayer) {
         return this._tiles[id] && this._tiles[id].hasData() && !this._coveredTiles[id] && (symbolLayer || !this._tiles[id].holdingForFade());
     };
-    SourceCache.prototype.reload = function reload() {
+    SourceCache.prototype.reload = function reload(forceVectorReload) {
+        if (forceVectorReload === void 0)
+            forceVectorReload = false;
         if (this._paused) {
             this._shouldReloadOnResume = true;
             return;
@@ -29855,7 +29855,8 @@ var SourceCache = function (Evented) {
         this._cache.reset();
         for (var i in this._tiles) {
             if (this._tiles[i].state !== 'errored') {
-                this._reloadTile(i, 'reloading');
+                var reloadState = forceVectorReload && this._source.type === 'vector' ? 'expired' : 'reloading';
+                this._reloadTile(i, reloadState);
             }
         }
     };
@@ -30511,6 +30512,8 @@ var operations = {
     addSource: 'addSource',
     removeSource: 'removeSource',
     setGeoJSONSourceData: 'setGeoJSONSourceData',
+    setVectorSourceUrl: 'setVectorSourceUrl',
+    setVectorSourceTiles: 'setVectorSourceTiles',
     setLayerZoomRange: 'setLayerZoomRange',
     setLayerProperty: 'setLayerProperty',
     setCenter: 'setCenter',
@@ -30562,6 +30565,26 @@ function canUpdateGeoJSON(before, after, sourceId) {
     }
     return true;
 }
+function canUpdateVectorSource(before, after, sourceId) {
+    var prop;
+    for (prop in before[sourceId]) {
+        if (!before[sourceId].hasOwnProperty(prop)) {
+            continue;
+        }
+        if (prop !== 'url' && prop !== 'tiles' && !performance.deepEqual(before[sourceId][prop], after[sourceId][prop])) {
+            return false;
+        }
+    }
+    for (prop in after[sourceId]) {
+        if (!after[sourceId].hasOwnProperty(prop)) {
+            continue;
+        }
+        if (prop !== 'url' && prop !== 'tiles' && !performance.deepEqual(before[sourceId][prop], after[sourceId][prop])) {
+            return false;
+        }
+    }
+    return true;
+}
 function diffSources(before, after, commands, sourcesRemoved) {
     before = before || {};
     after = after || {};
@@ -30589,6 +30612,24 @@ function diffSources(before, after, commands, sourcesRemoved) {
                         after[sourceId].data
                     ]
                 });
+            } else if (before[sourceId].type === 'vector' && after[sourceId].type === 'vector' && canUpdateVectorSource(before, after, sourceId)) {
+                if (after[sourceId].tiles) {
+                    commands.push({
+                        command: operations.setVectorSourceTiles,
+                        args: [
+                            sourceId,
+                            after[sourceId].tiles
+                        ]
+                    });
+                } else if (after[sourceId].url) {
+                    commands.push({
+                        command: operations.setVectorSourceUrl,
+                        args: [
+                            sourceId,
+                            after[sourceId].url
+                        ]
+                    });
+                }
             } else {
                 updateSource(sourceId, after, commands, sourcesRemoved);
             }
@@ -32703,7 +32744,9 @@ var supportedDiffOperations = performance.pick(operations, [
     'setLayerZoomRange',
     'setLight',
     'setTransition',
-    'setGeoJSONSourceData'
+    'setGeoJSONSourceData',
+    'setVectorSourceUrl',
+    'setVectorSourceTiles'
 ]);
 var ignoredDiffOperations = performance.pick(operations, [
     'setCenter',
@@ -33132,6 +33175,18 @@ var Style = function (Evented) {
         this._checkLoaded();
         var geojsonSource = this.sourceCaches[id].getSource();
         geojsonSource.setData(data);
+        this._changed = true;
+    };
+    Style.prototype.setVectorSourceUrl = function setVectorSourceUrl(id, url) {
+        this._checkLoaded();
+        var vectorSource = this.sourceCaches[id].getSource();
+        vectorSource.setUrl(url);
+        this._changed = true;
+    };
+    Style.prototype.setVectorSourceTiles = function setVectorSourceTiles(id, tiles) {
+        this._checkLoaded();
+        var vectorSource = this.sourceCaches[id].getSource();
+        vectorSource.setTiles(tiles);
         this._changed = true;
     };
     Style.prototype.getSource = function getSource(id) {

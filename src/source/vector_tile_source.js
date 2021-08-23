@@ -136,8 +136,6 @@ class VectorTileSource extends Evented implements Source {
 
         callback();
 
-        const sourceCache = this.map.style.sourceCaches[this.id];
-        sourceCache.clearTiles();
         this.load();
     }
 
