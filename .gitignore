@@ -1,6 +1,5 @@
 /rollup/build/
 *.es.js
-*.js.map
 node_modules
 package-lock.json
 *.sublime-*
