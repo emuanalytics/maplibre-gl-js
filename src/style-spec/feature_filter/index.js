@@ -11,10 +11,6 @@ export default createFilter;
 export {isExpressionFilter};
 
 function isExpressionFilter(filter: any) {
-
-    // RJS - modified to always assume a filter is an expression
-    return true;
-
     if (filter === true || filter === false) {
         return true;
     }
