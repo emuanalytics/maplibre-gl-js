@@ -364,7 +364,8 @@ export const getImage = function(requestParameters: RequestParameters, callback:
         if (err) {
             callback(err);
         } else if (data) {
-            if (offscreenCanvasSupported()) {
+            // RJS - handle empty image tiles
+            if (offscreenCanvasSupported() && data.byteLength) {
                 arrayBufferToImageBitmap(data, callback);
             } else {
                 arrayBufferToImage(data, callback, cacheControl, expires);

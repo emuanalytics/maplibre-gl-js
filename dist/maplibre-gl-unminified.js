@@ -1429,7 +1429,7 @@ var getImage = function (requestParameters, callback) {
         if (err) {
             callback(err);
         } else if (data) {
-            if (offscreenCanvasSupported()) {
+            if (offscreenCanvasSupported() && data.byteLength) {
                 arrayBufferToImageBitmap(data, callback);
             } else {
                 arrayBufferToImage(data, callback, cacheControl, expires);
