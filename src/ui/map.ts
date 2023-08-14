@@ -55,7 +55,7 @@ import type {
     LightSpecification,
     SourceSpecification,
     TerrainSpecification
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@emuanalytics/maplibre-gl-style-spec';
 
 import {Callback} from '../types/callback';
 import type {ControlPosition, IControl} from './control/control';
