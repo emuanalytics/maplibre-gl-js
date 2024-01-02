@@ -524,21 +524,21 @@ export class Style extends Evented {
      * @returns this._serializedLayers dictionary
      */
     private _serializedAllLayers(): {[_: string]: LayerSpecification} {
-        let serializedLayers = this._serializedLayers;
-        if (serializedLayers) {
-            return serializedLayers;
-        }
 
-        serializedLayers = this._serializedLayers = {};
+        // RJS - refactored to support clearing of individual layers
+        // from serializedLayers dictionary
+
+        this._serializedLayers = this._serializedLayers || {};
+
         const allLayerIds: string [] = Object.keys(this._layers);
         for (const layerId of allLayerIds) {
             const layer = this._layers[layerId];
             if (layer.type !== 'custom') {
-                serializedLayers[layerId] = layer.serialize();
+                this._serializedLayers[layerId] = this._serializedLayers[layerId] || layer.serialize();
             }
         }
 
-        return serializedLayers;
+        return this._serializedLayers;
     }
 
     hasTransitions() {
@@ -1115,6 +1115,12 @@ export class Style extends Evented {
         const requiresRelayout = layer.setPaintProperty(name, value, options);
         if (requiresRelayout) {
             this._updateLayer(layer);
+        } else {
+            // RJS - remove serialized layer so that it will
+            // be re-serialized next time it is needed
+            if (this._serializedLayers) {
+                delete this._serializedLayers[layerId];
+            }
         }
 
         this._changed = true;
