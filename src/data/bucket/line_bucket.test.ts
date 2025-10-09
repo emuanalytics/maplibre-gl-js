@@ -1,15 +1,15 @@
-import {beforeAll, describe, test, expect, vi} from 'vitest';
+import { type LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import {SegmentVector} from '../segment';
-import {LineBucket} from './line_bucket';
-import {LineStyleLayer} from '../../style/style_layer/line_style_layer';
-import {type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {type EvaluationParameters} from '../../style/evaluation_parameters';
-import {type ZoomHistory} from '../../../src/style/zoom_history';
-import {type BucketFeature, type BucketParameters} from '../bucket';
-import {SubdivisionGranularitySetting} from '../../render/subdivision_granularity_settings';
-import {type CreateBucketParameters, createPopulateOptions, getFeaturesFromLayer, loadVectorTile} from '../../../test/unit/lib/tile';
-import {type VectorTileLayer} from '@mapbox/vector-tile';
+import { type VectorTileLayer } from '@mapbox/vector-tile';
+import { beforeAll, describe, expect, test, vi } from 'vitest';
+import { type ZoomHistory } from '../../../src/style/zoom_history';
+import { type CreateBucketParameters, createPopulateOptions, getFeaturesFromLayer, loadVectorTile } from '../../../test/unit/lib/tile';
+import { SubdivisionGranularitySetting } from '../../render/subdivision_granularity_settings';
+import { type EvaluationParameters } from '../../style/evaluation_parameters';
+import { LineStyleLayer } from '../../style/style_layer/line_style_layer';
+import { type BucketFeature, type BucketParameters } from '../bucket';
+import { SegmentVector } from '../segment';
+import { LineBucket } from './line_bucket';
 
 const {noSubdivision} = SubdivisionGranularitySetting;
 

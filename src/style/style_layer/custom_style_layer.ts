@@ -1,8 +1,8 @@
-import {StyleLayer} from '../style_layer';
-import type {Map} from '../../ui/map';
-import {type mat4} from 'gl-matrix';
-import {type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {ProjectionData} from '../../geo/projection/projection_data';
+import { type LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { type mat4 } from 'gl-matrix';
+import type { ProjectionData } from '../../geo/projection/projection_data';
+import type { Map } from '../../ui/map';
+import { StyleLayer } from '../style_layer';
 
 /**
 * Input arguments exposed by custom render function.

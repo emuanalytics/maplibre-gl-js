@@ -1,19 +1,19 @@
-import {bgPatternUniformValues} from './pattern';
+import { extend } from '../../util/util';
 import {
-    Uniform1i,
     Uniform1f,
+    Uniform1i,
     Uniform2f,
     UniformColor
 } from '../uniform_binding';
-import {extend} from '../../util/util';
+import { bgPatternUniformValues } from './pattern';
 
-import type {Painter} from '../painter';
-import type {UniformValues, UniformLocations} from '../uniform_binding';
-import type {Context} from '../../gl/context';
-import type {Color, ResolvedImage} from '@maplibre/maplibre-gl-style-spec';
-import type {CrossFaded} from '../../style/properties';
-import type {CrossfadeParameters} from '../../style/evaluation_parameters';
-import type {OverscaledTileID} from '../../source/tile_id';
+import type { Color, ResolvedImage } from '@emuanalytics/maplibre-gl-style-spec';
+import type { Context } from '../../gl/context';
+import type { OverscaledTileID } from '../../source/tile_id';
+import type { CrossfadeParameters } from '../../style/evaluation_parameters';
+import type { CrossFaded } from '../../style/properties';
+import type { Painter } from '../painter';
+import type { UniformLocations, UniformValues } from '../uniform_binding';
 
 export type BackgroundUniformsType = {
     'u_opacity': Uniform1f;
@@ -84,8 +84,6 @@ const backgroundPatternUniformValues = (
 );
 
 export {
-    backgroundUniforms,
-    backgroundPatternUniforms,
-    backgroundUniformValues,
-    backgroundPatternUniformValues
+    backgroundPatternUniforms, backgroundPatternUniformValues, backgroundUniforms, backgroundUniformValues
 };
+

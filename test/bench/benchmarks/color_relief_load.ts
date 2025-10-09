@@ -1,6 +1,6 @@
+import type { StyleSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 import Benchmark from '../lib/benchmark';
 import createMap from '../lib/create_map';
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
 
 /**
  * Measures how long it takes the map to reach the idle state when only using color-relief tiles.

@@ -1,20 +1,20 @@
-import {Color} from '@maplibre/maplibre-gl-style-spec';
-import {isWebGL2} from './webgl2';
+import { Color } from '@emuanalytics/maplibre-gl-style-spec';
+import { isWebGL2 } from './webgl2';
 
-import type {Context} from './context';
+import type { Context } from './context';
 import type {
-    BlendFuncType,
     BlendEquationType,
+    BlendFuncType,
     ColorMaskType,
-    DepthRangeType,
+    CullFaceModeType,
+    DepthFuncType,
     DepthMaskType,
+    DepthRangeType,
+    FrontFaceType,
     StencilFuncType,
     StencilOpType,
-    DepthFuncType,
     TextureUnitType,
     ViewportType,
-    CullFaceModeType,
-    FrontFaceType,
 } from './types';
 
 export interface IValue<T> {

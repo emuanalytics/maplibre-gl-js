@@ -1,8 +1,8 @@
-import {describe, test, expect} from 'vitest';
-import {HillshadeStyleLayer} from './hillshade_style_layer';
-import {Color, type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {createStyleLayer} from '../create_style_layer';
-import {degreesToRadians, extend} from '../../util/util';
+import { Color, type LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { describe, expect, test } from 'vitest';
+import { degreesToRadians, extend } from '../../util/util';
+import { createStyleLayer } from '../create_style_layer';
+import { HillshadeStyleLayer } from './hillshade_style_layer';
 
 function createLayerSpec(properties?): LayerSpecification {
     return extend({

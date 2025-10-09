@@ -1,12 +1,12 @@
-import {getTileBBox} from '@mapbox/whoots-js';
-import {EXTENT} from '../data/extent';
+import { type ICanonicalTileID, type IMercatorCoordinate } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import {MercatorCoordinate} from '../geo/mercator_coordinate';
-import {register} from '../util/web_worker_transfer';
-import {type mat4} from 'gl-matrix';
-import {type ICanonicalTileID, type IMercatorCoordinate} from '@maplibre/maplibre-gl-style-spec';
-import {MAX_TILE_ZOOM, MIN_TILE_ZOOM} from '../util/util';
-import {isInBoundsForTileZoomXY} from '../util/world_bounds';
+import { getTileBBox } from '@mapbox/whoots-js';
+import { type mat4 } from 'gl-matrix';
+import { EXTENT } from '../data/extent';
+import { MercatorCoordinate } from '../geo/mercator_coordinate';
+import { MAX_TILE_ZOOM, MIN_TILE_ZOOM } from '../util/util';
+import { register } from '../util/web_worker_transfer';
+import { isInBoundsForTileZoomXY } from '../util/world_bounds';
 
 /**
  * A canonical way to define a tile ID

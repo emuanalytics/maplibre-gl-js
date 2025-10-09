@@ -1,16 +1,16 @@
+import { interpolates } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import {cameraBoundsWarning, type CameraForBoxAndBearingHandlerResult, type EaseToHandlerResult, type EaseToHandlerOptions, type FlyToHandlerResult, type FlyToHandlerOptions, type ICameraHelper, type MapControlsDeltas, updateRotation, type UpdateRotationArgs, cameraForBoxAndBearing} from './camera_helper';
-import {LngLat, type LngLatLike} from '../lng_lat';
-import {angularCoordinatesToSurfaceVector, computeGlobePanCenter, getGlobeRadiusPixels, getZoomAdjustment, globeDistanceOfLocationsPixels, interpolateLngLatForGlobe} from './globe_utils';
-import {clamp, createVec3f64, differenceOfAnglesDegrees, MAX_VALID_LATITUDE, remapSaturate, rollPitchBearingEqual, scaleZoom, warnOnce, zoomScale} from '../../util/util';
-import {type mat4, vec3} from 'gl-matrix';
-import {normalizeCenter} from '../transform_helper';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import { type mat4, vec3 } from 'gl-matrix';
+import { clamp, createVec3f64, differenceOfAnglesDegrees, MAX_VALID_LATITUDE, remapSaturate, rollPitchBearingEqual, scaleZoom, warnOnce, zoomScale } from '../../util/util';
+import { LngLat, type LngLatLike } from '../lng_lat';
+import { normalizeCenter } from '../transform_helper';
+import { cameraBoundsWarning, cameraForBoxAndBearing, type CameraForBoxAndBearingHandlerResult, type EaseToHandlerOptions, type EaseToHandlerResult, type FlyToHandlerOptions, type FlyToHandlerResult, type ICameraHelper, type MapControlsDeltas, updateRotation, type UpdateRotationArgs } from './camera_helper';
+import { angularCoordinatesToSurfaceVector, computeGlobePanCenter, getGlobeRadiusPixels, getZoomAdjustment, globeDistanceOfLocationsPixels, interpolateLngLatForGlobe } from './globe_utils';
 
-import type {IReadonlyTransform, ITransform} from '../transform_interface';
-import type {CameraForBoundsOptions} from '../../ui/camera';
-import type {LngLatBounds} from '../lng_lat_bounds';
-import type {PaddingOptions} from '../edge_insets';
+import type { CameraForBoundsOptions } from '../../ui/camera';
+import type { PaddingOptions } from '../edge_insets';
+import type { LngLatBounds } from '../lng_lat_bounds';
+import type { IReadonlyTransform, ITransform } from '../transform_interface';
 
 /**
  * @internal

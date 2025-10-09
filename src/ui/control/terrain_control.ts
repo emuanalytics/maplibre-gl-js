@@ -1,8 +1,8 @@
-import {DOM} from '../../util/dom';
+import { DOM } from '../../util/dom';
 
-import type {Map} from '../map';
-import type {IControl} from './control';
-import type {TerrainSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type { TerrainSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { Map } from '../map';
+import type { IControl } from './control';
 
 /**
  * A `TerrainControl` control contains a button for turning the terrain on and off.

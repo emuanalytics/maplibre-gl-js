@@ -1,17 +1,17 @@
-import {describe, test, expect, vi} from 'vitest';
-import {WorkerTile} from '../source/worker_tile';
-import {type Feature, GeoJSONWrapper} from '@maplibre/vt-pbf';
-import {OverscaledTileID} from '../source/tile_id';
-import {StyleLayerIndex} from '../style/style_layer_index';
-import {type WorkerTileParameters} from './worker_source';
-import {type VectorTile} from '@mapbox/vector-tile';
-import {SubdivisionGranularitySetting} from '../render/subdivision_granularity_settings';
-import {type EvaluationParameters} from '../style/evaluation_parameters';
-import {type PossiblyEvaluated} from '../style/properties';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
-import {type CirclePaintProps, type CirclePaintPropsPossiblyEvaluated} from '../style/style_layer/circle_style_layer_properties.g';
-import {type SymbolLayoutProps, type SymbolLayoutPropsPossiblyEvaluated} from '../style/style_layer/symbol_style_layer_properties.g';
-import {MessageType} from '../util/actor_messages';
+import { Color } from '@emuanalytics/maplibre-gl-style-spec';
+import { type VectorTile } from '@mapbox/vector-tile';
+import { type Feature, GeoJSONWrapper } from '@maplibre/vt-pbf';
+import { describe, expect, test, vi } from 'vitest';
+import { SubdivisionGranularitySetting } from '../render/subdivision_granularity_settings';
+import { OverscaledTileID } from '../source/tile_id';
+import { WorkerTile } from '../source/worker_tile';
+import { type EvaluationParameters } from '../style/evaluation_parameters';
+import { type PossiblyEvaluated } from '../style/properties';
+import { type CirclePaintProps, type CirclePaintPropsPossiblyEvaluated } from '../style/style_layer/circle_style_layer_properties.g';
+import { type SymbolLayoutProps, type SymbolLayoutPropsPossiblyEvaluated } from '../style/style_layer/symbol_style_layer_properties.g';
+import { StyleLayerIndex } from '../style/style_layer_index';
+import { MessageType } from '../util/actor_messages';
+import { type WorkerTileParameters } from './worker_source';
 
 function createWorkerTile(params?: {globalState?: Record<string, any>}): WorkerTile {
     return new WorkerTile({

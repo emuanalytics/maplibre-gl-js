@@ -1,20 +1,20 @@
+import { rtlWorkerPlugin } from '../source/rtl_text_plugin_worker';
 import {
-    charHasUprightVerticalOrientation,
     charAllowsIdeographicBreaking,
+    charHasUprightVerticalOrientation,
     charInComplexShapingScript
 } from '../util/script_detection';
-import {verticalizePunctuation} from '../util/verticalize_punctuation';
-import {rtlWorkerPlugin} from '../source/rtl_text_plugin_worker';
+import { warnOnce } from '../util/util';
+import { verticalizePunctuation } from '../util/verticalize_punctuation';
 import ONE_EM from './one_em';
-import {warnOnce} from '../util/util';
 
-import type {StyleGlyph, GlyphMetrics} from '../style/style_glyph';
-import {GLYPH_PBF_BORDER} from '../style/parse_glyph_pbf';
-import {TextFit} from '../style/style_image';
-import type {ImagePosition} from '../render/image_atlas';
-import {IMAGE_PADDING} from '../render/image_atlas';
-import type {Rect, GlyphPosition} from '../render/glyph_atlas';
-import {type Formatted, type FormattedSection, type VerticalAlign} from '@maplibre/maplibre-gl-style-spec';
+import { type Formatted, type FormattedSection, type VerticalAlign } from '@emuanalytics/maplibre-gl-style-spec';
+import type { GlyphPosition, Rect } from '../render/glyph_atlas';
+import type { ImagePosition } from '../render/image_atlas';
+import { IMAGE_PADDING } from '../render/image_atlas';
+import { GLYPH_PBF_BORDER } from '../style/parse_glyph_pbf';
+import type { GlyphMetrics, StyleGlyph } from '../style/style_glyph';
+import { TextFit } from '../style/style_image';
 
 enum WritingMode {
     none = 0,
@@ -24,7 +24,7 @@ enum WritingMode {
 }
 
 const SHAPING_DEFAULT_OFFSET = -17;
-export {shapeText, shapeIcon, applyTextFit, fitIconToText, getAnchorAlignment, WritingMode, SHAPING_DEFAULT_OFFSET};
+export { applyTextFit, fitIconToText, getAnchorAlignment, shapeIcon, shapeText, SHAPING_DEFAULT_OFFSET, WritingMode };
 
 // The position of a glyph relative to the text's anchor point.
 export type PositionedGlyph = {
@@ -874,7 +874,7 @@ function shapeImageSection(
     // Difference between height of an image and one EM at max line scale.
     // Pushes current line down if an image size is over 1 EM at max line scale.
     const imageOffset = (vertical ? size[0] : size[1]) * section.scale - ONE_EM * lineMaxScale;
-    
+
     return {rect, metrics, baselineOffset, imageOffset};
 }
 

@@ -1,15 +1,15 @@
-import {StyleLayer} from '../style_layer';
+import { StyleLayer } from '../style_layer';
 
-import properties, {type ColorReliefPaintPropsPossiblyEvaluated} from './color_relief_style_layer_properties.g';
-import {type Transitionable, type Transitioning, type PossiblyEvaluated} from '../properties';
+import { type PossiblyEvaluated, type Transitionable, type Transitioning } from '../properties';
+import properties, { type ColorReliefPaintPropsPossiblyEvaluated } from './color_relief_style_layer_properties.g';
 
-import type {ColorReliefPaintProps} from './color_relief_style_layer_properties.g';
-import {Color, Interpolate, ZoomConstantExpression, type LayerSpecification, type EvaluationContext, type StylePropertyExpression} from '@maplibre/maplibre-gl-style-spec';
-import {warnOnce} from '../../util/util';
-import {Texture} from '../../render/texture';
-import {RGBAImage} from '../../util/image';
-import {type Context} from '../../gl/context';
-import {packDEMData} from '../../data/dem_data';
+import { Color, Interpolate, ZoomConstantExpression, type EvaluationContext, type LayerSpecification, type StylePropertyExpression } from '@emuanalytics/maplibre-gl-style-spec';
+import { packDEMData } from '../../data/dem_data';
+import { type Context } from '../../gl/context';
+import { Texture } from '../../render/texture';
+import { RGBAImage } from '../../util/image';
+import { warnOnce } from '../../util/util';
+import type { ColorReliefPaintProps } from './color_relief_style_layer_properties.g';
 
 export const isColorReliefStyleLayer = (layer: StyleLayer): layer is ColorReliefStyleLayer => layer.type === 'color-relief';
 

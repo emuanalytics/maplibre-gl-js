@@ -1,12 +1,12 @@
-import {StyleLayer} from '../style_layer';
+import { StyleLayer } from '../style_layer';
 
-import properties, {type HillshadePaintPropsPossiblyEvaluated} from './hillshade_style_layer_properties.g';
-import {type Transitionable, type Transitioning, type PossiblyEvaluated} from '../properties';
+import { type PossiblyEvaluated, type Transitionable, type Transitioning } from '../properties';
+import properties, { type HillshadePaintPropsPossiblyEvaluated } from './hillshade_style_layer_properties.g';
 
-import type {HillshadePaintProps} from './hillshade_style_layer_properties.g';
-import type {Color, LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {degreesToRadians} from '../../util/util';
-import type {EvaluationParameters} from '../evaluation_parameters';
+import type { Color, LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { degreesToRadians } from '../../util/util';
+import type { EvaluationParameters } from '../evaluation_parameters';
+import type { HillshadePaintProps } from './hillshade_style_layer_properties.g';
 
 export const isHillshadeStyleLayer = (layer: StyleLayer): layer is HillshadeStyleLayer => layer.type === 'hillshade';
 

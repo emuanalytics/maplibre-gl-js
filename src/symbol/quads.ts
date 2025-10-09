@@ -1,16 +1,16 @@
 import Point from '@mapbox/point-geometry';
 
-import {GLYPH_PBF_BORDER} from '../style/parse_glyph_pbf';
+import { GLYPH_PBF_BORDER } from '../style/parse_glyph_pbf';
 
-import type {Anchor} from './anchor';
-import type {Box, PositionedIcon, Shaping} from './shaping';
-import {SHAPING_DEFAULT_OFFSET, applyTextFit} from './shaping';
-import {IMAGE_PADDING} from '../render/image_atlas';
-import type {SymbolStyleLayer} from '../style/style_layer/symbol_style_layer';
-import type {Feature} from '@maplibre/maplibre-gl-style-spec';
-import type {StyleImage} from '../style/style_image';
+import type { Feature } from '@emuanalytics/maplibre-gl-style-spec';
+import { type Rect } from '../render/glyph_atlas';
+import { IMAGE_PADDING } from '../render/image_atlas';
+import type { StyleImage } from '../style/style_image';
+import type { SymbolStyleLayer } from '../style/style_layer/symbol_style_layer';
+import type { Anchor } from './anchor';
 import ONE_EM from './one_em';
-import {type Rect} from '../render/glyph_atlas';
+import type { Box, PositionedIcon, Shaping } from './shaping';
+import { SHAPING_DEFAULT_OFFSET, applyTextFit } from './shaping';
 
 /**
  * A textured quad for rendering a single icon or glyph.

@@ -1,11 +1,11 @@
-import type {CanonicalTileID} from '../../source/tile_id';
-import type {PreparedShader} from '../../shaders/shaders';
-import type {Context} from '../../gl/context';
-import type {Mesh} from '../../render/mesh';
-import type {Program} from '../../render/program';
-import type {SubdivisionGranularitySetting} from '../../render/subdivision_granularity_settings';
-import type {ProjectionSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {EvaluationParameters} from '../../style/evaluation_parameters';
+import type { ProjectionSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { Context } from '../../gl/context';
+import type { Mesh } from '../../render/mesh';
+import type { Program } from '../../render/program';
+import type { SubdivisionGranularitySetting } from '../../render/subdivision_granularity_settings';
+import type { PreparedShader } from '../../shaders/shaders';
+import type { CanonicalTileID } from '../../source/tile_id';
+import type { EvaluationParameters } from '../../style/evaluation_parameters';
 
 /**
  * Custom projections are handled both by a class which implements this `Projection` interface,
@@ -93,8 +93,8 @@ export interface Projection {
     /**
      * @internal
      * A number representing the current transition state of the projection.
-     * The return value should be a number between 0 and 1, 
-     * where 0 means the projection is fully in the initial state, 
+     * The return value should be a number between 0 and 1,
+     * where 0 means the projection is fully in the initial state,
      * and 1 means the projection is fully in the final state.
      */
     get transitionState(): number;

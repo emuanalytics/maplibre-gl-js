@@ -1,15 +1,15 @@
+import { interpolates } from '@emuanalytics/maplibre-gl-style-spec';
 import type Point from '@mapbox/point-geometry';
-import {LngLat, type LngLatLike} from '../lng_lat';
-import {cameraForBoxAndBearing, type CameraForBoxAndBearingHandlerResult, type EaseToHandlerResult, type EaseToHandlerOptions, type FlyToHandlerResult, type FlyToHandlerOptions, type ICameraHelper, type MapControlsDeltas, updateRotation, type UpdateRotationArgs} from './camera_helper';
-import {normalizeCenter} from '../transform_helper';
-import {rollPitchBearingEqual, scaleZoom, zoomScale} from '../../util/util';
-import {getMercatorHorizon, projectToWorldCoordinates, unprojectFromWorldCoordinates} from './mercator_utils';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import { rollPitchBearingEqual, scaleZoom, zoomScale } from '../../util/util';
+import { LngLat, type LngLatLike } from '../lng_lat';
+import { normalizeCenter } from '../transform_helper';
+import { cameraForBoxAndBearing, type CameraForBoxAndBearingHandlerResult, type EaseToHandlerOptions, type EaseToHandlerResult, type FlyToHandlerOptions, type FlyToHandlerResult, type ICameraHelper, type MapControlsDeltas, updateRotation, type UpdateRotationArgs } from './camera_helper';
+import { getMercatorHorizon, projectToWorldCoordinates, unprojectFromWorldCoordinates } from './mercator_utils';
 
-import type {IReadonlyTransform, ITransform} from '../transform_interface';
-import type {CameraForBoundsOptions} from '../../ui/camera';
-import type {PaddingOptions} from '../edge_insets';
-import type {LngLatBounds} from '../lng_lat_bounds';
+import type { CameraForBoundsOptions } from '../../ui/camera';
+import type { PaddingOptions } from '../edge_insets';
+import type { LngLatBounds } from '../lng_lat_bounds';
+import type { IReadonlyTransform, ITransform } from '../transform_interface';
 
 /**
  * @internal

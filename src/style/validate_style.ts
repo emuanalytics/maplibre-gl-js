@@ -1,7 +1,7 @@
-import {validateStyleMin} from '@maplibre/maplibre-gl-style-spec';
-import {ErrorEvent} from '../util/evented';
+import { validateStyleMin } from '@emuanalytics/maplibre-gl-style-spec';
+import { ErrorEvent } from '../util/evented';
 
-import type {Evented} from '../util/evented';
+import type { Evented } from '../util/evented';
 
 type ValidationError = {
     message: string;

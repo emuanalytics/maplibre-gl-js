@@ -1,6 +1,6 @@
-import {derefLayers, type StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import { derefLayers, type StyleSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { createStyleLayer } from '../../../src/style/create_style_layer';
 import Benchmark from '../lib/benchmark';
-import {createStyleLayer} from '../../../src/style/create_style_layer';
 import fetchStyle from '../lib/fetch_style';
 
 export default class StyleLayerCreate extends Benchmark {

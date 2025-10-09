@@ -1,31 +1,33 @@
-import {filterObject} from '../util/util';
+import { filterObject } from '../util/util';
 
-import {featureFilter, latest as styleSpec, supportsPropertyExpression} from '@maplibre/maplibre-gl-style-spec';
+import { featureFilter, latest as styleSpec, supportsPropertyExpression } from '@emuanalytics/maplibre-gl-style-spec';
+import { Evented } from '../util/evented';
+import { Layout, PossiblyEvaluated, PossiblyEvaluatedPropertyValue, Transitionable, type Properties, type Transitioning } from './properties';
 import {
-    validateStyle,
+    emitValidationErrors,
     validateLayoutProperty,
     validatePaintProperty,
-    emitValidationErrors
+    validateStyle
 } from './validate_style';
-import {Evented} from '../util/evented';
-import {Layout, Transitionable, type Transitioning, type Properties, PossiblyEvaluated, PossiblyEvaluatedPropertyValue} from './properties';
 
-import type {Bucket, BucketParameters} from '../data/bucket';
+import type {
+    FeatureFilter, FeatureState,
+    FilterSpecification,
+    LayerSpecification
+} from '@emuanalytics/maplibre-gl-style-spec';
 import type Point from '@mapbox/point-geometry';
-import type {FeatureFilter, FeatureState,
-    LayerSpecification,
-    FilterSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {TransitionParameters, PropertyValue} from './properties';
-import {type EvaluationParameters} from './evaluation_parameters';
-import type {CrossfadeParameters} from './evaluation_parameters';
+import type { Bucket, BucketParameters } from '../data/bucket';
+import type { CrossfadeParameters } from './evaluation_parameters';
+import { type EvaluationParameters } from './evaluation_parameters';
+import type { PropertyValue, TransitionParameters } from './properties';
 
-import type {IReadonlyTransform} from '../geo/transform_interface';
-import type {CustomLayerInterface} from './style_layer/custom_style_layer';
-import type {Map} from '../ui/map';
-import type {StyleSetterOptions} from './style';
-import {type mat4} from 'gl-matrix';
-import type {VectorTileFeature} from '@mapbox/vector-tile';
-import type {UnwrappedTileID} from '../source/tile_id';
+import type { VectorTileFeature } from '@mapbox/vector-tile';
+import { type mat4 } from 'gl-matrix';
+import type { IReadonlyTransform } from '../geo/transform_interface';
+import type { UnwrappedTileID } from '../source/tile_id';
+import type { Map } from '../ui/map';
+import type { StyleSetterOptions } from './style';
+import type { CustomLayerInterface } from './style_layer/custom_style_layer';
 
 const TRANSITION_SUFFIX = '-transition';
 

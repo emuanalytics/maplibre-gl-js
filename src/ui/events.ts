@@ -1,13 +1,13 @@
-import {Event} from '../util/evented';
+import { Event } from '../util/evented';
 
-import {DOM} from '../util/dom';
 import Point from '@mapbox/point-geometry';
-import {extend} from '../util/util';
-import type {MapGeoJSONFeature} from '../util/vectortile_to_geojson';
+import { DOM } from '../util/dom';
+import { extend } from '../util/util';
+import type { MapGeoJSONFeature } from '../util/vectortile_to_geojson';
 
-import type {Map} from './map';
-import type {LngLat} from '../geo/lng_lat';
-import type {ProjectionSpecification, SourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type { ProjectionSpecification, SourceSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { LngLat } from '../geo/lng_lat';
+import type { Map } from './map';
 
 /**
  * An event from the mouse relevant to a specific layer.

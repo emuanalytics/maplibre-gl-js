@@ -1,18 +1,18 @@
+import { pixelsToTileUnits } from '../../source/pixels_to_tile_units';
 import {
-    type Uniform1i,
     type Uniform1f,
+    type Uniform1i,
     type Uniform2f,
     type Uniform3f
 } from '../uniform_binding';
-import {pixelsToTileUnits} from '../../source/pixels_to_tile_units';
 
-import type {Painter} from '../painter';
-import type {OverscaledTileID} from '../../source/tile_id';
-import type {CrossFaded} from '../../style/properties';
-import type {CrossfadeParameters} from '../../style/evaluation_parameters';
-import type {UniformValues} from '../uniform_binding';
-import type {Tile} from '../../source/tile';
-import type {ResolvedImage} from '@maplibre/maplibre-gl-style-spec';
+import type { ResolvedImage } from '@emuanalytics/maplibre-gl-style-spec';
+import type { Tile } from '../../source/tile';
+import type { OverscaledTileID } from '../../source/tile_id';
+import type { CrossfadeParameters } from '../../style/evaluation_parameters';
+import type { CrossFaded } from '../../style/properties';
+import type { Painter } from '../painter';
+import type { UniformValues } from '../uniform_binding';
 
 type BackgroundPatternUniformsType = {
     'u_image': Uniform1i;
@@ -99,4 +99,5 @@ function bgPatternUniformValues(
         'u_pixel_coord_lower': [pixelX & 0xFFFF, pixelY & 0xFFFF]
     };
 }
-export {bgPatternUniformValues, patternUniformValues};
+export { bgPatternUniformValues, patternUniformValues };
+

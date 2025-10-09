@@ -1,17 +1,17 @@
 import Point from '@mapbox/point-geometry';
-import {drawCollisionDebug} from './draw_collision_debug';
+import { drawCollisionDebug } from './draw_collision_debug';
 
-import {SegmentVector} from '../data/segment';
-import {pixelsToTileUnits} from '../source/pixels_to_tile_units';
-import {type EvaluatedZoomSize, evaluateSizeForFeature, evaluateSizeForZoom} from '../symbol/symbol_size';
-import {mat4} from 'gl-matrix';
-import {StencilMode} from '../gl/stencil_mode';
-import {DepthMode} from '../gl/depth_mode';
-import {CullFaceMode} from '../gl/cull_face_mode';
-import {addDynamicAttributes} from '../data/bucket/symbol_bucket';
+import { mat4 } from 'gl-matrix';
+import { addDynamicAttributes } from '../data/bucket/symbol_bucket';
+import { SegmentVector } from '../data/segment';
+import { CullFaceMode } from '../gl/cull_face_mode';
+import { DepthMode } from '../gl/depth_mode';
+import { StencilMode } from '../gl/stencil_mode';
+import { pixelsToTileUnits } from '../source/pixels_to_tile_units';
+import { type EvaluatedZoomSize, evaluateSizeForFeature, evaluateSizeForZoom } from '../symbol/symbol_size';
 
-import {getAnchorAlignment, WritingMode} from '../symbol/shaping';
 import ONE_EM from '../symbol/one_em';
+import { getAnchorAlignment, WritingMode } from '../symbol/shaping';
 
 import {
     type SymbolIconUniformsType,
@@ -20,25 +20,25 @@ import {
     symbolTextAndIconUniformValues
 } from './program/symbol_program';
 
-import type {Painter, RenderOptions} from './painter';
-import type {SourceCache} from '../source/source_cache';
-import type {SymbolStyleLayer} from '../style/style_layer/symbol_style_layer';
+import type { SourceCache } from '../source/source_cache';
+import type { SymbolStyleLayer } from '../style/style_layer/symbol_style_layer';
+import type { Painter, RenderOptions } from './painter';
 
-import type {Texture, TextureFilter} from '../render/texture';
-import type {OverscaledTileID, UnwrappedTileID} from '../source/tile_id';
-import type {UniformValues} from './uniform_binding';
-import type {SymbolSDFUniformsType} from '../render/program/symbol_program';
-import type {CrossTileID, VariableOffset} from '../symbol/placement';
-import type {SymbolBucket, SymbolBuffers} from '../data/bucket/symbol_bucket';
-import type {TerrainData} from '../render/terrain';
-import type {SymbolLayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {IReadonlyTransform} from '../geo/transform_interface';
-import type {ColorMode} from '../gl/color_mode';
-import type {Program} from './program';
-import type {TextAnchor} from '../style/style_layer/variable_text_anchor';
-import {getGlCoordMatrix, getPerspectiveRatio, getPitchedLabelPlaneMatrix, hideGlyphs, projectWithMatrix, projectTileCoordinatesToClipSpace, projectTileCoordinatesToLabelPlane, type SymbolProjectionContext, updateLineLabels} from '../symbol/projection';
-import {translatePosition} from '../util/util';
-import type {ProjectionData} from '../geo/projection/projection_data';
+import type { SymbolLayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { SymbolBucket, SymbolBuffers } from '../data/bucket/symbol_bucket';
+import type { ProjectionData } from '../geo/projection/projection_data';
+import type { IReadonlyTransform } from '../geo/transform_interface';
+import type { ColorMode } from '../gl/color_mode';
+import type { SymbolSDFUniformsType } from '../render/program/symbol_program';
+import type { TerrainData } from '../render/terrain';
+import type { Texture, TextureFilter } from '../render/texture';
+import type { OverscaledTileID, UnwrappedTileID } from '../source/tile_id';
+import type { TextAnchor } from '../style/style_layer/variable_text_anchor';
+import type { CrossTileID, VariableOffset } from '../symbol/placement';
+import { getGlCoordMatrix, getPerspectiveRatio, getPitchedLabelPlaneMatrix, hideGlyphs, projectTileCoordinatesToClipSpace, projectTileCoordinatesToLabelPlane, projectWithMatrix, type SymbolProjectionContext, updateLineLabels } from '../symbol/projection';
+import { translatePosition } from '../util/util';
+import type { Program } from './program';
+import type { UniformValues } from './uniform_binding';
 
 type SymbolTileRenderState = {
     segments: SegmentVector;
@@ -304,7 +304,7 @@ function drawLayerSymbols(
     pitchAlignment: SymbolLayerSpecification['layout']['text-pitch-alignment'],
     keepUpright: boolean,
     stencilMode: StencilMode,
-    colorMode: Readonly<ColorMode>, 
+    colorMode: Readonly<ColorMode>,
     isRenderingToTexture: boolean) {
 
     const context = painter.context;

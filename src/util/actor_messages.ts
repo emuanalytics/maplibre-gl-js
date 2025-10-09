@@ -1,13 +1,13 @@
-import type {LoadGeoJSONParameters} from '../source/geojson_worker_source';
-import type {TileParameters, WorkerDEMTileParameters, WorkerTileParameters, WorkerTileResult} from '../source/worker_source';
-import type {DEMData} from '../data/dem_data';
-import type {StyleImage} from '../style/style_image';
-import type {StyleGlyph} from '../style/style_glyph';
-import type {PluginState} from '../source/rtl_text_plugin_status';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {OverscaledTileID} from '../source/tile_id';
-import type {GetResourceResponse, RequestParameters} from './ajax';
-import type {DashEntry} from '../render/line_atlas';
+import type { LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { DEMData } from '../data/dem_data';
+import type { DashEntry } from '../render/line_atlas';
+import type { LoadGeoJSONParameters } from '../source/geojson_worker_source';
+import type { PluginState } from '../source/rtl_text_plugin_status';
+import type { OverscaledTileID } from '../source/tile_id';
+import type { TileParameters, WorkerDEMTileParameters, WorkerTileParameters, WorkerTileResult } from '../source/worker_source';
+import type { StyleGlyph } from '../style/style_glyph';
+import type { StyleImage } from '../style/style_image';
+import type { GetResourceResponse, RequestParameters } from './ajax';
 
 /**
  * The parameters needed in order to get information about the cluster

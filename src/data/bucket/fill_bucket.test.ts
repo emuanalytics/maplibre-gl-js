@@ -1,16 +1,16 @@
-import {test, expect, describe, beforeAll} from 'vitest';
-import {type CreateBucketParameters, createPopulateOptions, getFeaturesFromLayer, loadVectorTile} from '../../../test/unit/lib/tile';
+import { type LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import {SegmentVector} from '../segment';
-import {FillBucket} from './fill_bucket';
-import {FillStyleLayer} from '../../style/style_layer/fill_style_layer';
-import {type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {type EvaluationParameters} from '../../style/evaluation_parameters';
-import {type ZoomHistory} from '../../style/zoom_history';
-import {type BucketFeature, type BucketParameters} from '../bucket';
-import {SubdivisionGranularitySetting} from '../../render/subdivision_granularity_settings';
-import {CanonicalTileID} from '../../source/tile_id';
-import {type VectorTileLayer} from '@mapbox/vector-tile';
+import { type VectorTileLayer } from '@mapbox/vector-tile';
+import { beforeAll, describe, expect, test } from 'vitest';
+import { type CreateBucketParameters, createPopulateOptions, getFeaturesFromLayer, loadVectorTile } from '../../../test/unit/lib/tile';
+import { SubdivisionGranularitySetting } from '../../render/subdivision_granularity_settings';
+import { CanonicalTileID } from '../../source/tile_id';
+import { type EvaluationParameters } from '../../style/evaluation_parameters';
+import { FillStyleLayer } from '../../style/style_layer/fill_style_layer';
+import { type ZoomHistory } from '../../style/zoom_history';
+import { type BucketFeature, type BucketParameters } from '../bucket';
+import { SegmentVector } from '../segment';
+import { FillBucket } from './fill_bucket';
 
 function createPolygon(numPoints) {
     const points = [];

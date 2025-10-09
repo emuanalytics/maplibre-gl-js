@@ -1,22 +1,22 @@
-import {extend, pick} from '../util/util';
+import { extend, pick } from '../util/util';
 
-import {ImageRequest} from '../util/image_request';
+import { ImageRequest } from '../util/image_request';
 
-import {ResourceType} from '../util/request_manager';
-import {Event, ErrorEvent, Evented} from '../util/evented';
-import {loadTileJson} from './load_tilejson';
-import {TileBounds} from './tile_bounds';
-import {Texture} from '../render/texture';
+import { Texture } from '../render/texture';
+import { ErrorEvent, Event, Evented } from '../util/evented';
+import { ResourceType } from '../util/request_manager';
+import { loadTileJson } from './load_tilejson';
+import { TileBounds } from './tile_bounds';
 
-import type {Source} from './source';
-import type {OverscaledTileID} from './tile_id';
-import type {Map} from '../ui/map';
-import type {Dispatcher} from '../util/dispatcher';
-import type {Tile} from './tile';
 import type {
-    RasterSourceSpecification,
-    RasterDEMSourceSpecification
-} from '@maplibre/maplibre-gl-style-spec';
+    RasterDEMSourceSpecification,
+    RasterSourceSpecification
+} from '@emuanalytics/maplibre-gl-style-spec';
+import type { Map } from '../ui/map';
+import type { Dispatcher } from '../util/dispatcher';
+import type { Source } from './source';
+import type { Tile } from './tile';
+import type { OverscaledTileID } from './tile_id';
 
 /**
  * A source containing raster tiles (See the [raster source documentation](https://maplibre.org/maplibre-style-spec/sources/#raster) for detailed documentation of options.)

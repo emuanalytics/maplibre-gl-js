@@ -1,12 +1,12 @@
-import {describe, test, expect} from 'vitest';
-import {CircleStyleLayer} from './circle_style_layer';
-import {type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {type EvaluationParameters} from '../evaluation_parameters';
-import {type CanonicalTileID, UnwrappedTileID} from '../../source/tile_id';
+import { type LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import {type VectorTileFeature} from '@mapbox/vector-tile';
-import {GlobeTransform} from '../../geo/projection/globe_transform';
-import {MercatorTransform} from '../../geo/projection/mercator_transform';
+import { type VectorTileFeature } from '@mapbox/vector-tile';
+import { describe, expect, test } from 'vitest';
+import { GlobeTransform } from '../../geo/projection/globe_transform';
+import { MercatorTransform } from '../../geo/projection/mercator_transform';
+import { type CanonicalTileID, UnwrappedTileID } from '../../source/tile_id';
+import { type EvaluationParameters } from '../evaluation_parameters';
+import { CircleStyleLayer } from './circle_style_layer';
 
 describe('CircleStyleLayer.queryIntersectsFeature', () => {
     const feature = {} as VectorTileFeature;

@@ -1,8 +1,8 @@
-import {OverscaledTileID} from '../../../src/source/tile_id';
+import { FeatureFilter } from '@emuanalytics/maplibre-gl-style-spec';
+import { VectorTileFeature, VectorTileLayer } from '@mapbox/vector-tile';
+import { FeatureIndex } from '../../../src/data/feature_index';
+import { OverscaledTileID } from '../../../src/source/tile_id';
 import Benchmark from '../lib/benchmark';
-import {FeatureIndex} from '../../../src/data/feature_index';
-import {VectorTileFeature, VectorTileLayer} from '@mapbox/vector-tile';
-import {FeatureFilter} from '@maplibre/maplibre-gl-style-spec';
 
 export default class LoadMatchingFeature extends Benchmark {
     featureIndex: FeatureIndex;

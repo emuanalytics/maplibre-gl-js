@@ -1,13 +1,13 @@
+import { interpolates } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import {type IReadonlyTransform, type ITransform} from '../transform_interface';
-import {type LngLat, type LngLatLike} from '../lng_lat';
-import {type CameraForBoundsOptions, type PointLike} from '../../ui/camera';
-import {type PaddingOptions} from '../edge_insets';
-import {type LngLatBounds} from '../lng_lat_bounds';
-import {degreesToRadians, getRollPitchBearing, type RollPitchBearing, rollPitchBearingToQuat, scaleZoom, warnOnce, zoomScale} from '../../util/util';
-import {quat} from 'gl-matrix';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
-import {projectToWorldCoordinates, unprojectFromWorldCoordinates} from './mercator_utils';
+import { quat } from 'gl-matrix';
+import { type CameraForBoundsOptions, type PointLike } from '../../ui/camera';
+import { degreesToRadians, getRollPitchBearing, type RollPitchBearing, rollPitchBearingToQuat, scaleZoom, warnOnce, zoomScale } from '../../util/util';
+import { type PaddingOptions } from '../edge_insets';
+import { type LngLat, type LngLatLike } from '../lng_lat';
+import { type LngLatBounds } from '../lng_lat_bounds';
+import { type IReadonlyTransform, type ITransform } from '../transform_interface';
+import { projectToWorldCoordinates, unprojectFromWorldCoordinates } from './mercator_utils';
 
 export type MapControlsDeltas = {
     panDelta: Point;

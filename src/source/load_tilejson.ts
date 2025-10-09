@@ -1,10 +1,10 @@
-import {pick, extend, type TileJSON} from '../util/util';
-import {getJSON} from '../util/ajax';
-import {ResourceType} from '../util/request_manager';
-import {browser} from '../util/browser';
+import { getJSON } from '../util/ajax';
+import { browser } from '../util/browser';
+import { ResourceType } from '../util/request_manager';
+import { extend, pick, type TileJSON } from '../util/util';
 
-import type {RequestManager} from '../util/request_manager';
-import type {RasterDEMSourceSpecification, RasterSourceSpecification, VectorSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type { RasterDEMSourceSpecification, RasterSourceSpecification, VectorSourceSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { RequestManager } from '../util/request_manager';
 
 export type LoadTileJsonResponse = {
     tiles: Array<string>;

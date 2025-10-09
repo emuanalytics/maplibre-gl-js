@@ -1,17 +1,17 @@
-import {interpolates, type Color, latest as styleSpec} from '@maplibre/maplibre-gl-style-spec';
+import { interpolates, latest as styleSpec, type Color } from '@emuanalytics/maplibre-gl-style-spec';
 
-import {sphericalToCartesian} from '../util/util';
-import {Evented} from '../util/evented';
+import { Evented } from '../util/evented';
+import { sphericalToCartesian } from '../util/util';
 import {
-    validateStyle,
+    emitValidationErrors,
     validateLight,
-    emitValidationErrors
+    validateStyle
 } from './validate_style';
 
-import type {StylePropertySpecification, LightSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {EvaluationParameters} from './evaluation_parameters';
-import type {StyleSetterOptions} from '../style/style';
-import {Properties, Transitionable, type Transitioning, type PossiblyEvaluated, DataConstantProperty} from './properties';
+import type { LightSpecification, StylePropertySpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { StyleSetterOptions } from '../style/style';
+import type { EvaluationParameters } from './evaluation_parameters';
+import { DataConstantProperty, Properties, Transitionable, type PossiblyEvaluated, type Transitioning } from './properties';
 
 import type {
     Property,

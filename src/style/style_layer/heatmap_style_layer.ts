@@ -1,18 +1,18 @@
-import {type QueryIntersectsFeatureParams, StyleLayer} from '../style_layer';
+import { type QueryIntersectsFeatureParams, StyleLayer } from '../style_layer';
 
-import {HeatmapBucket} from '../../data/bucket/heatmap_bucket';
-import {type RGBAImage} from '../../util/image';
-import properties, {type HeatmapPaintPropsPossiblyEvaluated} from './heatmap_style_layer_properties.g';
-import {renderColorRamp} from '../../util/color_ramp';
-import {type Transitionable, type Transitioning, type PossiblyEvaluated} from '../properties';
+import { HeatmapBucket } from '../../data/bucket/heatmap_bucket';
+import { renderColorRamp } from '../../util/color_ramp';
+import { type RGBAImage } from '../../util/image';
+import { type PossiblyEvaluated, type Transitionable, type Transitioning } from '../properties';
+import properties, { type HeatmapPaintPropsPossiblyEvaluated } from './heatmap_style_layer_properties.g';
 
-import type {Texture} from '../../render/texture';
-import type {Framebuffer} from '../../gl/framebuffer';
-import type {HeatmapPaintProps} from './heatmap_style_layer_properties.g';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type { LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { Framebuffer } from '../../gl/framebuffer';
+import type { Texture } from '../../render/texture';
+import type { HeatmapPaintProps } from './heatmap_style_layer_properties.g';
 
-import {circleIntersection, getMaximumPaintValue} from '../query_utils';
-import type {Bucket} from '../../data/bucket';
+import type { Bucket } from '../../data/bucket';
+import { circleIntersection, getMaximumPaintValue } from '../query_utils';
 
 export const HEATMAP_FULL_RENDER_FBO_KEY = 'big-fb';
 

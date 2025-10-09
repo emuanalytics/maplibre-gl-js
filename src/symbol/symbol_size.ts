@@ -1,15 +1,15 @@
-import {Interpolate, interpolates} from '@maplibre/maplibre-gl-style-spec';
-import {clamp} from '../util/util';
-import {EvaluationParameters} from '../style/evaluation_parameters';
+import { Interpolate, interpolates } from '@emuanalytics/maplibre-gl-style-spec';
+import { EvaluationParameters } from '../style/evaluation_parameters';
+import { clamp } from '../util/util';
 
-import type {PropertyValue, PossiblyEvaluatedPropertyValue} from '../style/properties';
-import type {InterpolationType} from '@maplibre/maplibre-gl-style-spec';
+import type { InterpolationType } from '@emuanalytics/maplibre-gl-style-spec';
+import type { PossiblyEvaluatedPropertyValue, PropertyValue } from '../style/properties';
 
 const MAX_GLYPH_ICON_SIZE = 255;
 const SIZE_PACK_FACTOR = 128;
 const MAX_PACKED_SIZE = MAX_GLYPH_ICON_SIZE * SIZE_PACK_FACTOR;
 
-export {getSizeData, evaluateSizeForFeature, evaluateSizeForZoom, SIZE_PACK_FACTOR, MAX_GLYPH_ICON_SIZE, MAX_PACKED_SIZE};
+export { evaluateSizeForFeature, evaluateSizeForZoom, getSizeData, MAX_GLYPH_ICON_SIZE, MAX_PACKED_SIZE, SIZE_PACK_FACTOR };
 
 export type SizeData = {
     kind: 'constant';

@@ -1,8 +1,8 @@
-import {createStyleLayer} from './create_style_layer';
-import {featureFilter, groupByLayout} from '@maplibre/maplibre-gl-style-spec';
-import type {StyleLayer} from './style_layer';
+import { featureFilter, groupByLayout } from '@emuanalytics/maplibre-gl-style-spec';
+import { createStyleLayer } from './create_style_layer';
+import type { StyleLayer } from './style_layer';
 
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type { LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 
 export type LayerConfigs = {[_: string]: LayerSpecification};
 

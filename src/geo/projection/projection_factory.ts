@@ -1,18 +1,18 @@
-import {warnOnce} from '../../util/util';
-import {MercatorProjection} from './mercator_projection';
-import {MercatorTransform} from './mercator_transform';
-import {MercatorCameraHelper} from './mercator_camera_helper';
-import {GlobeProjection} from './globe_projection';
-import {GlobeTransform} from './globe_transform';
-import {GlobeCameraHelper} from './globe_camera_helper';
-import {VerticalPerspectiveCameraHelper} from './vertical_perspective_camera_helper';
-import {VerticalPerspectiveTransform} from './vertical_perspective_transform';
-import {VerticalPerspectiveProjection} from './vertical_perspective_projection';
+import { warnOnce } from '../../util/util';
+import { GlobeCameraHelper } from './globe_camera_helper';
+import { GlobeProjection } from './globe_projection';
+import { GlobeTransform } from './globe_transform';
+import { MercatorCameraHelper } from './mercator_camera_helper';
+import { MercatorProjection } from './mercator_projection';
+import { MercatorTransform } from './mercator_transform';
+import { VerticalPerspectiveCameraHelper } from './vertical_perspective_camera_helper';
+import { VerticalPerspectiveProjection } from './vertical_perspective_projection';
+import { VerticalPerspectiveTransform } from './vertical_perspective_transform';
 
-import type {ProjectionSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {Projection} from './projection';
-import type {ITransform} from '../transform_interface';
-import type {ICameraHelper} from './camera_helper';
+import type { ProjectionSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { ITransform } from '../transform_interface';
+import type { ICameraHelper } from './camera_helper';
+import type { Projection } from './projection';
 
 export function createProjectionFromName(name: ProjectionSpecification['type']): {
     projection: Projection;

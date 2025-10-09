@@ -1,29 +1,29 @@
-import {FeatureIndex} from '../data/feature_index';
-import {performSymbolLayout} from '../symbol/symbol_layout';
-import {CollisionBoxArray} from '../data/array_types.g';
-import {DictionaryCoder} from '../util/dictionary_coder';
-import {SymbolBucket} from '../data/bucket/symbol_bucket';
-import {LineBucket} from '../data/bucket/line_bucket';
-import {FillBucket} from '../data/bucket/fill_bucket';
-import {FillExtrusionBucket} from '../data/bucket/fill_extrusion_bucket';
-import {warnOnce, mapObject} from '../util/util';
-import {ImageAtlas} from '../render/image_atlas';
-import {GlyphAtlas} from '../render/glyph_atlas';
-import {EvaluationParameters} from '../style/evaluation_parameters';
-import {OverscaledTileID} from './tile_id';
+import { CollisionBoxArray } from '../data/array_types.g';
+import { FillBucket } from '../data/bucket/fill_bucket';
+import { FillExtrusionBucket } from '../data/bucket/fill_extrusion_bucket';
+import { LineBucket } from '../data/bucket/line_bucket';
+import { SymbolBucket } from '../data/bucket/symbol_bucket';
+import { FeatureIndex } from '../data/feature_index';
+import { GlyphAtlas } from '../render/glyph_atlas';
+import { ImageAtlas } from '../render/image_atlas';
+import { EvaluationParameters } from '../style/evaluation_parameters';
+import { performSymbolLayout } from '../symbol/symbol_layout';
+import { DictionaryCoder } from '../util/dictionary_coder';
+import { mapObject, warnOnce } from '../util/util';
+import { OverscaledTileID } from './tile_id';
 
-import type {Bucket} from '../data/bucket';
-import type {IActor} from '../util/actor';
-import type {StyleLayer} from '../style/style_layer';
-import type {StyleLayerIndex} from '../style/style_layer_index';
+import type { PromoteIdSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { VectorTile } from '@mapbox/vector-tile';
+import type { Bucket } from '../data/bucket';
+import type { SubdivisionGranularitySetting } from '../render/subdivision_granularity_settings';
 import type {
     WorkerTileParameters,
     WorkerTileResult,
 } from '../source/worker_source';
-import type {PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {VectorTile} from '@mapbox/vector-tile';
-import {type GetDashesResponse, MessageType, type GetGlyphsResponse, type GetImagesResponse} from '../util/actor_messages';
-import type {SubdivisionGranularitySetting} from '../render/subdivision_granularity_settings';
+import type { StyleLayer } from '../style/style_layer';
+import type { StyleLayerIndex } from '../style/style_layer_index';
+import type { IActor } from '../util/actor';
+import { MessageType, type GetDashesResponse, type GetGlyphsResponse, type GetImagesResponse } from '../util/actor_messages';
 export class WorkerTile {
     tileID: OverscaledTileID;
     uid: string | number;

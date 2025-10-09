@@ -1,9 +1,9 @@
-import {describe, test, expect} from 'vitest';
-import {ColorReliefStyleLayer} from './color_relief_style_layer';
-import {Color, type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {createStyleLayer} from '../create_style_layer';
-import {extend} from '../../util/util';
-import {type EvaluationParameters} from '../evaluation_parameters';
+import { Color, type LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { describe, expect, test } from 'vitest';
+import { extend } from '../../util/util';
+import { createStyleLayer } from '../create_style_layer';
+import { type EvaluationParameters } from '../evaluation_parameters';
+import { ColorReliefStyleLayer } from './color_relief_style_layer';
 
 function createColorReliefLayerSpec(properties?: {paint: {'color-relief-opacity'?: number; 'color-relief-color'?: Array<any>}}): LayerSpecification {
     return extend({

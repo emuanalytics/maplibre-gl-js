@@ -1,8 +1,13 @@
-import {TransferableGridIndex} from './transferable_grid_index';
-import {Color, CompoundExpression, expressions, ResolvedImage, StylePropertyFunction,
-    StyleExpression, ZoomDependentExpression, ZoomConstantExpression} from '@maplibre/maplibre-gl-style-spec';
-import {AJAXError} from './ajax';
-import {isImageBitmap} from './util';
+import {
+    Color, CompoundExpression, expressions, ResolvedImage,
+    StyleExpression,
+    StylePropertyFunction,
+    ZoomConstantExpression,
+    ZoomDependentExpression
+} from '@emuanalytics/maplibre-gl-style-spec';
+import { AJAXError } from './ajax';
+import { TransferableGridIndex } from './transferable_grid_index';
+import { isImageBitmap } from './util';
 
 /**
  * A class that is serialized to and json, that can be constructed back to the original class in the worker or in the main thread

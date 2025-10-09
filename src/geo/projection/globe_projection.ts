@@ -1,15 +1,15 @@
-import {ProjectionDefinition, type ProjectionDefinitionSpecification, type ProjectionSpecification, type StylePropertySpecification, latest as styleSpec} from '@maplibre/maplibre-gl-style-spec';
-import {DataConstantProperty, type PossiblyEvaluated, Properties, Transitionable, type Transitioning, type TransitionParameters} from '../../style/properties';
-import {Evented} from '../../util/evented';
-import {EvaluationParameters} from '../../style/evaluation_parameters';
-import {MercatorProjection} from './mercator_projection';
-import {VerticalPerspectiveProjection} from './vertical_perspective_projection';
-import {type Projection, type ProjectionGPUContext, type TileMeshUsage} from './projection';
-import {type PreparedShader} from '../../shaders/shaders';
-import {type SubdivisionGranularitySetting} from '../../render/subdivision_granularity_settings';
-import {type Context} from '../../gl/context';
-import {type CanonicalTileID} from '../../source/tile_id';
-import {type Mesh} from '../../render/mesh';
+import { ProjectionDefinition, type ProjectionDefinitionSpecification, type ProjectionSpecification, type StylePropertySpecification, latest as styleSpec } from '@emuanalytics/maplibre-gl-style-spec';
+import { type Context } from '../../gl/context';
+import { type Mesh } from '../../render/mesh';
+import { type SubdivisionGranularitySetting } from '../../render/subdivision_granularity_settings';
+import { type PreparedShader } from '../../shaders/shaders';
+import { type CanonicalTileID } from '../../source/tile_id';
+import { EvaluationParameters } from '../../style/evaluation_parameters';
+import { DataConstantProperty, type PossiblyEvaluated, Properties, Transitionable, type Transitioning, type TransitionParameters } from '../../style/properties';
+import { Evented } from '../../util/evented';
+import { MercatorProjection } from './mercator_projection';
+import { type Projection, type ProjectionGPUContext, type TileMeshUsage } from './projection';
+import { VerticalPerspectiveProjection } from './vertical_perspective_projection';
 
 type ProjectionProps = {
     type: DataConstantProperty<ProjectionDefinition>;

@@ -1,25 +1,25 @@
 
-import {type Tile} from '../source/tile';
-import {mat4, vec2} from 'gl-matrix';
-import {OverscaledTileID} from '../source/tile_id';
-import {RGBAImage} from '../util/image';
-import {warnOnce} from '../util/util';
-import {Pos3dArray, TriangleIndexArray} from '../data/array_types.g';
-import pos3dAttributes from '../data/pos3d_attributes';
-import {SegmentVector} from '../data/segment';
-import {type Painter} from './painter';
-import {Texture} from '../render/texture';
-import type {Framebuffer} from '../gl/framebuffer';
+import type { TerrainSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 import type Point from '@mapbox/point-geometry';
-import {MercatorCoordinate} from '../geo/mercator_coordinate';
-import {TerrainSourceCache} from '../source/terrain_source_cache';
-import {type SourceCache} from '../source/source_cache';
-import {EXTENT} from '../data/extent';
-import type {TerrainSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {type LngLat, earthRadius} from '../geo/lng_lat';
-import {Mesh} from './mesh';
-import {isInBoundsForZoomLngLat} from '../util/world_bounds';
-import {NORTH_POLE_Y, SOUTH_POLE_Y} from './subdivision';
+import { mat4, vec2 } from 'gl-matrix';
+import { Pos3dArray, TriangleIndexArray } from '../data/array_types.g';
+import { EXTENT } from '../data/extent';
+import pos3dAttributes from '../data/pos3d_attributes';
+import { SegmentVector } from '../data/segment';
+import { type LngLat, earthRadius } from '../geo/lng_lat';
+import { MercatorCoordinate } from '../geo/mercator_coordinate';
+import type { Framebuffer } from '../gl/framebuffer';
+import { Texture } from '../render/texture';
+import { type SourceCache } from '../source/source_cache';
+import { TerrainSourceCache } from '../source/terrain_source_cache';
+import { type Tile } from '../source/tile';
+import { OverscaledTileID } from '../source/tile_id';
+import { RGBAImage } from '../util/image';
+import { warnOnce } from '../util/util';
+import { isInBoundsForZoomLngLat } from '../util/world_bounds';
+import { Mesh } from './mesh';
+import { type Painter } from './painter';
+import { NORTH_POLE_Y, SOUTH_POLE_Y } from './subdivision';
 
 /**
  * @internal

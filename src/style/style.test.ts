@@ -1,27 +1,27 @@
-import {describe, beforeEach, afterEach, test, expect, vi, type MockInstance} from 'vitest';
-import {Style} from './style';
-import {SourceCache} from '../source/source_cache';
-import {StyleLayer} from './style_layer';
-import {extend} from '../util/util';
-import {Event} from '../util/evented';
-import {RGBAImage} from '../util/image';
-import {rtlMainThreadPluginFactory} from '../source/rtl_text_plugin_main_thread';
-import {browser} from '../util/browser';
-import {OverscaledTileID} from '../source/tile_id';
-import {fakeServer, type FakeServer} from 'nise';
+import { fakeServer, type FakeServer } from 'nise';
+import { afterEach, beforeEach, describe, expect, test, vi, type MockInstance } from 'vitest';
+import { rtlMainThreadPluginFactory } from '../source/rtl_text_plugin_main_thread';
+import { SourceCache } from '../source/source_cache';
+import { OverscaledTileID } from '../source/tile_id';
+import { browser } from '../util/browser';
+import { Event } from '../util/evented';
+import { RGBAImage } from '../util/image';
+import { extend } from '../util/util';
+import { Style } from './style';
+import { StyleLayer } from './style_layer';
 
-import {type EvaluationParameters} from './evaluation_parameters';
-import {Color, type Feature, type LayerSpecification, type GeoJSONSourceSpecification, type FilterSpecification, type SourceSpecification, type StyleSpecification, type SymbolLayerSpecification, type SkySpecification} from '@maplibre/maplibre-gl-style-spec';
-import {type GeoJSONSource} from '../source/geojson_source';
-import {StubMap, sleep, waitForEvent} from '../util/test/util';
-import {RTLPluginLoadedEventName} from '../source/rtl_text_plugin_status';
-import {MessageType} from '../util/actor_messages';
-import {MercatorTransform} from '../geo/projection/mercator_transform';
-import {type Tile} from '../source/tile';
+import { Color, type Feature, type FilterSpecification, type GeoJSONSourceSpecification, type LayerSpecification, type SkySpecification, type SourceSpecification, type StyleSpecification, type SymbolLayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 import type Point from '@mapbox/point-geometry';
-import {type PossiblyEvaluated} from './properties';
-import {type SymbolLayoutProps, type SymbolLayoutPropsPossiblyEvaluated} from './style_layer/symbol_style_layer_properties.g';
-import {type CirclePaintProps, type CirclePaintPropsPossiblyEvaluated} from './style_layer/circle_style_layer_properties.g';
+import { MercatorTransform } from '../geo/projection/mercator_transform';
+import { type GeoJSONSource } from '../source/geojson_source';
+import { RTLPluginLoadedEventName } from '../source/rtl_text_plugin_status';
+import { type Tile } from '../source/tile';
+import { MessageType } from '../util/actor_messages';
+import { StubMap, sleep, waitForEvent } from '../util/test/util';
+import { type EvaluationParameters } from './evaluation_parameters';
+import { type PossiblyEvaluated } from './properties';
+import { type CirclePaintProps, type CirclePaintPropsPossiblyEvaluated } from './style_layer/circle_style_layer_properties.g';
+import { type SymbolLayoutProps, type SymbolLayoutPropsPossiblyEvaluated } from './style_layer/symbol_style_layer_properties.g';
 
 function createStyleJSON(properties?): StyleSpecification {
     return extend({

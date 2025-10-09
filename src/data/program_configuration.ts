@@ -1,35 +1,35 @@
-import {packUint8ToFloat} from '../shaders/encode_attribute';
-import {type Color, supportsPropertyExpression} from '@maplibre/maplibre-gl-style-spec';
-import {register} from '../util/web_worker_transfer';
-import {PossiblyEvaluatedPropertyValue} from '../style/properties';
-import {StructArrayLayout1f4, StructArrayLayout2f8, StructArrayLayout4f16, PatternLayoutArray, DashLayoutArray} from './array_types.g';
-import {clamp} from '../util/util';
-import {patternAttributes} from './bucket/pattern_attributes';
-import {dashAttributes} from './bucket/dash_attributes';
-import {EvaluationParameters} from '../style/evaluation_parameters';
-import {FeaturePositionMap} from './feature_position_map';
-import {type Uniform, Uniform1f, UniformColor, Uniform4f} from '../render/uniform_binding';
+import { type Color, supportsPropertyExpression } from '@emuanalytics/maplibre-gl-style-spec';
+import { type Uniform, Uniform1f, Uniform4f, UniformColor } from '../render/uniform_binding';
+import { packUint8ToFloat } from '../shaders/encode_attribute';
+import { EvaluationParameters } from '../style/evaluation_parameters';
+import { PossiblyEvaluatedPropertyValue } from '../style/properties';
+import { clamp } from '../util/util';
+import { register } from '../util/web_worker_transfer';
+import { DashLayoutArray, PatternLayoutArray, StructArrayLayout1f4, StructArrayLayout2f8, StructArrayLayout4f16 } from './array_types.g';
+import { dashAttributes } from './bucket/dash_attributes';
+import { patternAttributes } from './bucket/pattern_attributes';
+import { FeaturePositionMap } from './feature_position_map';
 
-import type {UniformLocations} from '../render/uniform_binding';
+import type { UniformLocations } from '../render/uniform_binding';
 
-import type {CanonicalTileID} from '../source/tile_id';
-import type {Context} from '../gl/context';
-import type {TypedStyleLayer} from '../style/style_layer/typed_style_layer';
-import type {CrossfadeParameters} from '../style/evaluation_parameters';
-import type {StructArray, StructArrayMember} from '../util/struct_array';
-import type {VertexBuffer} from '../gl/vertex_buffer';
-import type {ImagePosition} from '../render/image_atlas';
 import type {
+    CompositeExpression,
     Feature,
     FeatureState,
+    FormattedSection,
     GlobalProperties,
-    SourceExpression,
-    CompositeExpression,
-    FormattedSection
-} from '@maplibre/maplibre-gl-style-spec';
-import type {FeatureStates} from '../source/source_state';
-import type {VectorTileLayer} from '@mapbox/vector-tile';
-import type {DashEntry} from '../render/line_atlas';
+    SourceExpression
+} from '@emuanalytics/maplibre-gl-style-spec';
+import type { VectorTileLayer } from '@mapbox/vector-tile';
+import type { Context } from '../gl/context';
+import type { VertexBuffer } from '../gl/vertex_buffer';
+import type { ImagePosition } from '../render/image_atlas';
+import type { DashEntry } from '../render/line_atlas';
+import type { FeatureStates } from '../source/source_state';
+import type { CanonicalTileID } from '../source/tile_id';
+import type { CrossfadeParameters } from '../style/evaluation_parameters';
+import type { TypedStyleLayer } from '../style/style_layer/typed_style_layer';
+import type { StructArray, StructArrayMember } from '../util/struct_array';
 
 export type BinderUniform = {
     name: string;

@@ -1,17 +1,17 @@
-import {describe, expect, test} from 'vitest';
-import {FeatureIndex} from './feature_index';
-import {type Feature, fromVectorTileJs, GeoJSONWrapper} from '@maplibre/vt-pbf';
-import {MercatorTransform} from '../geo/projection/mercator_transform';
-import {OverscaledTileID} from '../source/tile_id';
-import {Tile} from '../source/tile';
-import {CircleStyleLayer} from '../style/style_layer/circle_style_layer';
-import type {VectorTileFeature} from '@mapbox/vector-tile';
+import type { LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import {CollisionBoxArray} from '../data/array_types.g';
-import {extend} from '../util/util';
-import {serialize, deserialize} from '../util/web_worker_transfer';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {EvaluationParameters} from '../style/evaluation_parameters';
+import type { VectorTileFeature } from '@mapbox/vector-tile';
+import { type Feature, fromVectorTileJs, GeoJSONWrapper } from '@maplibre/vt-pbf';
+import { describe, expect, test } from 'vitest';
+import { CollisionBoxArray } from '../data/array_types.g';
+import { MercatorTransform } from '../geo/projection/mercator_transform';
+import { Tile } from '../source/tile';
+import { OverscaledTileID } from '../source/tile_id';
+import type { EvaluationParameters } from '../style/evaluation_parameters';
+import { CircleStyleLayer } from '../style/style_layer/circle_style_layer';
+import { extend } from '../util/util';
+import { deserialize, serialize } from '../util/web_worker_transfer';
+import { FeatureIndex } from './feature_index';
 
 describe('FeatureIndex', () => {
     describe('getId', () => {

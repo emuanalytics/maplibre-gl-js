@@ -1,12 +1,12 @@
-import {StencilMode} from '../gl/stencil_mode';
-import {DepthMode} from '../gl/depth_mode';
-import {terrainUniformValues, terrainDepthUniformValues, terrainCoordsUniformValues} from './program/terrain_program';
-import type {Painter, RenderOptions} from './painter';
-import type {Tile} from '../source/tile';
-import {CullFaceMode} from '../gl/cull_face_mode';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
-import {ColorMode} from '../gl/color_mode';
-import {type Terrain} from './terrain';
+import { Color } from '@emuanalytics/maplibre-gl-style-spec';
+import { ColorMode } from '../gl/color_mode';
+import { CullFaceMode } from '../gl/cull_face_mode';
+import { DepthMode } from '../gl/depth_mode';
+import { StencilMode } from '../gl/stencil_mode';
+import type { Tile } from '../source/tile';
+import type { Painter, RenderOptions } from './painter';
+import { terrainCoordsUniformValues, terrainDepthUniformValues, terrainUniformValues } from './program/terrain_program';
+import { type Terrain } from './terrain';
 
 /**
  * Redraw the Depth Framebuffer
@@ -96,7 +96,6 @@ function drawTerrain(painter: Painter, terrain: Terrain, tiles: Array<Tile>, ren
 }
 
 export {
-    drawTerrain,
-    drawDepth,
-    drawCoords
+    drawCoords, drawDepth, drawTerrain
 };
+

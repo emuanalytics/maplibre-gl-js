@@ -1,22 +1,22 @@
-import {Event, ErrorEvent, Evented} from '../util/evented';
+import { ErrorEvent, Event, Evented } from '../util/evented';
 
-import {extend, warnOnce} from '../util/util';
-import {EXTENT} from '../data/extent';
-import {ResourceType} from '../util/request_manager';
-import {browser} from '../util/browser';
-import {LngLatBounds} from '../geo/lng_lat_bounds';
-import {mergeSourceDiffs} from './geojson_source_diff';
+import { EXTENT } from '../data/extent';
+import { LngLatBounds } from '../geo/lng_lat_bounds';
+import { browser } from '../util/browser';
+import { ResourceType } from '../util/request_manager';
+import { extend, warnOnce } from '../util/util';
+import { mergeSourceDiffs } from './geojson_source_diff';
 
-import type {Source} from './source';
-import type {Map} from '../ui/map';
-import type {Dispatcher} from '../util/dispatcher';
-import type {Tile} from './tile';
-import type {Actor} from '../util/actor';
-import type {GeoJSONSourceSpecification, PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {GeoJSONSourceDiff} from './geojson_source_diff';
-import type {GeoJSONWorkerOptions, LoadGeoJSONParameters} from './geojson_worker_source';
-import type {WorkerTileParameters} from './worker_source';
-import {MessageType} from '../util/actor_messages';
+import type { GeoJSONSourceSpecification, PromoteIdSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { Map } from '../ui/map';
+import type { Actor } from '../util/actor';
+import { MessageType } from '../util/actor_messages';
+import type { Dispatcher } from '../util/dispatcher';
+import type { GeoJSONSourceDiff } from './geojson_source_diff';
+import type { GeoJSONWorkerOptions, LoadGeoJSONParameters } from './geojson_worker_source';
+import type { Source } from './source';
+import type { Tile } from './tile';
+import type { WorkerTileParameters } from './worker_source';
 
 /**
  * Options object for GeoJSONSource.

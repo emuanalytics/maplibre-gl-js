@@ -1,12 +1,12 @@
-import {DataConstantProperty, type PossiblyEvaluated, Properties, Transitionable, type Transitioning, type TransitionParameters} from './properties';
-import {Evented} from '../util/evented';
-import {EvaluationParameters} from './evaluation_parameters';
-import {emitValidationErrors, validateSky, validateStyle} from './validate_style';
-import {extend} from '../util/util';
-import {type Color, latest as styleSpec} from '@maplibre/maplibre-gl-style-spec';
-import {type Mesh} from '../render/mesh';
-import type {StylePropertySpecification, SkySpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {StyleSetterOptions} from './style';
+import type { SkySpecification, StylePropertySpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { type Color, latest as styleSpec } from '@emuanalytics/maplibre-gl-style-spec';
+import { type Mesh } from '../render/mesh';
+import { Evented } from '../util/evented';
+import { extend } from '../util/util';
+import { EvaluationParameters } from './evaluation_parameters';
+import { DataConstantProperty, type PossiblyEvaluated, Properties, Transitionable, type Transitioning, type TransitionParameters } from './properties';
+import type { StyleSetterOptions } from './style';
+import { emitValidationErrors, validateSky, validateStyle } from './validate_style';
 
 type SkyProps = {
     'sky-color': DataConstantProperty<Color>;

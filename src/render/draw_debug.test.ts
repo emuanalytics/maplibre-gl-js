@@ -1,10 +1,10 @@
-import {describe, test, expect, vi} from 'vitest';
-import {type SourceCache} from '../source/source_cache';
-import {type RasterSourceSpecification, type SourceSpecification, type VectorSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {Style} from '../style/style';
-import {FillStyleLayer} from '../style/style_layer/fill_style_layer';
-import {RasterStyleLayer} from '../style/style_layer/raster_style_layer';
-import {selectDebugSource} from './draw_debug';
+import { type RasterSourceSpecification, type SourceSpecification, type VectorSourceSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { describe, expect, test, vi } from 'vitest';
+import { type SourceCache } from '../source/source_cache';
+import { Style } from '../style/style';
+import { FillStyleLayer } from '../style/style_layer/fill_style_layer';
+import { RasterStyleLayer } from '../style/style_layer/raster_style_layer';
+import { selectDebugSource } from './draw_debug';
 
 vi.mock('../style/style');
 

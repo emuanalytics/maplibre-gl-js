@@ -1,35 +1,36 @@
-import {StyleLayer} from '../style_layer';
+import { StyleLayer } from '../style_layer';
 
-import {SymbolBucket, type SymbolFeature} from '../../data/bucket/symbol_bucket';
-import {resolveTokens} from '../../util/resolve_tokens';
-import properties, {type SymbolLayoutPropsPossiblyEvaluated, type SymbolPaintPropsPossiblyEvaluated} from './symbol_style_layer_properties.g';
+import { SymbolBucket, type SymbolFeature } from '../../data/bucket/symbol_bucket';
+import { resolveTokens } from '../../util/resolve_tokens';
+import properties, { type SymbolLayoutPropsPossiblyEvaluated, type SymbolPaintPropsPossiblyEvaluated } from './symbol_style_layer_properties.g';
 
 import {
-    type Transitionable,
-    type Transitioning,
     type Layout,
     type PossiblyEvaluated,
     PossiblyEvaluatedPropertyValue,
-    type PropertyValue
+    type PropertyValue,
+    type Transitionable,
+    type Transitioning
 } from '../properties';
 
 import {
-    isExpression,
-    StyleExpression,
-    ZoomConstantExpression,
-    ZoomDependentExpression,
-    FormattedType,
-    typeOf,
-    Formatted,
     FormatExpression,
-    Literal} from '@maplibre/maplibre-gl-style-spec';
+    Formatted,
+    FormattedType,
+    isExpression,
+    Literal,
+    StyleExpression,
+    typeOf,
+    ZoomConstantExpression,
+    ZoomDependentExpression
+} from '@emuanalytics/maplibre-gl-style-spec';
 
-import type {BucketParameters} from '../../data/bucket';
-import type {SymbolLayoutProps, SymbolPaintProps} from './symbol_style_layer_properties.g';
-import type {EvaluationParameters} from '../evaluation_parameters';
-import type {Expression, Feature, SourceExpression, LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {CanonicalTileID} from '../../source/tile_id';
-import {FormatSectionOverride} from '../format_section_override';
+import type { Expression, Feature, LayerSpecification, SourceExpression } from '@emuanalytics/maplibre-gl-style-spec';
+import type { BucketParameters } from '../../data/bucket';
+import type { CanonicalTileID } from '../../source/tile_id';
+import type { EvaluationParameters } from '../evaluation_parameters';
+import { FormatSectionOverride } from '../format_section_override';
+import type { SymbolLayoutProps, SymbolPaintProps } from './symbol_style_layer_properties.g';
 
 export const isSymbolStyleLayer = (layer: StyleLayer): layer is SymbolStyleLayer => layer.type === 'symbol';
 

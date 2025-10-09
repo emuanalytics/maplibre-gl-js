@@ -1,16 +1,16 @@
-import {type QueryIntersectsFeatureParams, StyleLayer} from '../style_layer';
-import {LineBucket} from '../../data/bucket/line_bucket';
-import {polygonIntersectsBufferedMultiLine} from '../../util/intersection_tests';
-import {getMaximumPaintValue, translateDistance, translate, offsetLine} from '../query_utils';
-import properties, {type LineLayoutPropsPossiblyEvaluated, type LinePaintPropsPossiblyEvaluated} from './line_style_layer_properties.g';
-import {extend} from '../../util/util';
-import {EvaluationParameters} from '../evaluation_parameters';
-import {type Transitionable, type Transitioning, type Layout, type PossiblyEvaluated, DataDrivenProperty} from '../properties';
+import { LineBucket } from '../../data/bucket/line_bucket';
+import { polygonIntersectsBufferedMultiLine } from '../../util/intersection_tests';
+import { extend } from '../../util/util';
+import { EvaluationParameters } from '../evaluation_parameters';
+import { type Layout, type PossiblyEvaluated, type Transitionable, type Transitioning, DataDrivenProperty } from '../properties';
+import { getMaximumPaintValue, offsetLine, translate, translateDistance } from '../query_utils';
+import { type QueryIntersectsFeatureParams, StyleLayer } from '../style_layer';
+import properties, { type LineLayoutPropsPossiblyEvaluated, type LinePaintPropsPossiblyEvaluated } from './line_style_layer_properties.g';
 
-import {isZoomExpression, Step} from '@maplibre/maplibre-gl-style-spec';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {Bucket, BucketParameters} from '../../data/bucket';
-import type {LineLayoutProps, LinePaintProps} from './line_style_layer_properties.g';
+import type { LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { isZoomExpression, Step } from '@emuanalytics/maplibre-gl-style-spec';
+import type { Bucket, BucketParameters } from '../../data/bucket';
+import type { LineLayoutProps, LinePaintProps } from './line_style_layer_properties.g';
 
 export class LineFloorwidthProperty extends DataDrivenProperty<number> {
     useIntegerZoom: true;

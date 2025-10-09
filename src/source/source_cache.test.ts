@@ -1,22 +1,22 @@
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {describe, beforeEach, afterEach, test, expect, vi} from 'vitest';
-import {SourceCache} from './source_cache';
-import {type Source, addSourceType} from './source';
-import {Tile, FadingRoles, FadingDirections} from './tile';
-import {CanonicalTileID, OverscaledTileID} from './tile_id';
-import {LngLat} from '../geo/lng_lat';
+import type { StyleSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import {Event, ErrorEvent, Evented} from '../util/evented';
-import {extend} from '../util/util';
-import {type Dispatcher} from '../util/dispatcher';
-import {TileBounds} from './tile_bounds';
-import {sleep, waitForEvent, beforeMapTest, createMap as globalCreateMap} from '../util/test/util';
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
+import { LngLat } from '../geo/lng_lat';
+import { type Dispatcher } from '../util/dispatcher';
+import { ErrorEvent, Event, Evented } from '../util/evented';
+import { beforeMapTest, createMap as globalCreateMap, sleep, waitForEvent } from '../util/test/util';
+import { extend } from '../util/util';
+import { type Source, addSourceType } from './source';
+import { SourceCache } from './source_cache';
+import { FadingDirections, FadingRoles, Tile } from './tile';
+import { TileBounds } from './tile_bounds';
+import { CanonicalTileID, OverscaledTileID } from './tile_id';
 
-import {type Map} from '../ui/map';
-import {type TileCache} from './tile_cache';
-import {MercatorTransform} from '../geo/projection/mercator_transform';
-import {GlobeTransform} from '../geo/projection/globe_transform';
-import {coveringTiles} from '../geo/projection/covering_tiles';
+import { coveringTiles } from '../geo/projection/covering_tiles';
+import { GlobeTransform } from '../geo/projection/globe_transform';
+import { MercatorTransform } from '../geo/projection/mercator_transform';
+import { type Map } from '../ui/map';
+import { type TileCache } from './tile_cache';
 
 class SourceMock extends Evented implements Source {
     id: string;
@@ -128,7 +128,7 @@ describe('SourceCache.addTile', () => {
         const sourceCache = createSourceCache();
         const spy = vi.fn();
         sourceCache._source.loadTile = spy;
-        
+
         sourceCache.onAdd(undefined);
         sourceCache._addTile(tileID);
         expect(spy).toHaveBeenCalledTimes(1);
@@ -661,7 +661,7 @@ describe('SourceCache.update', () => {
             hasTile: (coord) => (coord.canonical.x !== 0)
         });
         const dataPromise = waitForEvent(sourceCache, 'data', e => e.sourceDataType === 'metadata');
-                
+
         sourceCache.onAdd(undefined);
         await dataPromise;
         sourceCache.update(transform);
@@ -2075,16 +2075,16 @@ describe('SourceCache.tilesIn', () => {
         transform.resize(512, 512);
         transform.setZoom(1.05);
         transform.setCenter(new LngLat(-179.9, 0.1));
-    
+
         const sourceCache = createSourceCache();
         sourceCache._source.loadTile = async (tile) => {
             tile.state = 'loaded';
         };
-    
+
         const dataPromise = waitForEvent(sourceCache, 'data', e => e.sourceDataType === 'metadata');
         sourceCache.onAdd(undefined);
         await dataPromise;
-    
+
         sourceCache.update(transform);
 
         expect(sourceCache.tilesIn([
@@ -2457,7 +2457,7 @@ describe('SourceCache.usedForTerrain', () => {
     });
 
 });
-    
+
 describe('SourceCache::refreshTiles', () => {
     test('calls reloadTile when tile exists', async () => {
         const coord = new OverscaledTileID(1, 0, 1, 0, 1);
@@ -2474,7 +2474,7 @@ describe('SourceCache::refreshTiles', () => {
         expect(spy).toHaveBeenCalledOnce();
         expect(spy.mock.calls[0][1]).toBe('expired');
     });
-    
+
     test('does not call reloadTile when tile does not exist', async () => {
         const coord = new OverscaledTileID(1, 0, 1, 1, 1);
         const sourceCache = createSourceCache();

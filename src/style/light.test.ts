@@ -1,9 +1,9 @@
-import {describe, test, expect, vi} from 'vitest';
-import {Light} from './light';
-import {Color, latest as styleSpec, type LightSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {sphericalToCartesian} from '../util/util';
-import {type EvaluationParameters} from './evaluation_parameters';
-import {type TransitionParameters} from './properties';
+import { Color, latest as styleSpec, type LightSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { describe, expect, test, vi } from 'vitest';
+import { sphericalToCartesian } from '../util/util';
+import { type EvaluationParameters } from './evaluation_parameters';
+import { Light } from './light';
+import { type TransitionParameters } from './properties';
 
 const spec = styleSpec.light;
 

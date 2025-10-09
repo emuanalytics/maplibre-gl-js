@@ -1,15 +1,15 @@
-import {type QueryIntersectsFeatureParams, StyleLayer} from '../style_layer';
+import { type QueryIntersectsFeatureParams, StyleLayer } from '../style_layer';
 
-import {FillExtrusionBucket} from '../../data/bucket/fill_extrusion_bucket';
-import {polygonIntersectsPolygon, polygonIntersectsMultiPolygon} from '../../util/intersection_tests';
-import {translateDistance, translate} from '../query_utils';
-import properties, {type FillExtrusionPaintPropsPossiblyEvaluated} from './fill_extrusion_style_layer_properties.g';
-import {type Transitionable, type Transitioning, type PossiblyEvaluated} from '../properties';
-import {type mat4, vec4} from 'gl-matrix';
+import type { LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {BucketParameters} from '../../data/bucket';
-import type {FillExtrusionPaintProps} from './fill_extrusion_style_layer_properties.g';
+import { type mat4, vec4 } from 'gl-matrix';
+import type { BucketParameters } from '../../data/bucket';
+import { FillExtrusionBucket } from '../../data/bucket/fill_extrusion_bucket';
+import { polygonIntersectsMultiPolygon, polygonIntersectsPolygon } from '../../util/intersection_tests';
+import { type PossiblyEvaluated, type Transitionable, type Transitioning } from '../properties';
+import { translate, translateDistance } from '../query_utils';
+import type { FillExtrusionPaintProps } from './fill_extrusion_style_layer_properties.g';
+import properties, { type FillExtrusionPaintPropsPossiblyEvaluated } from './fill_extrusion_style_layer_properties.g';
 
 export class Point3D extends Point {
     z: number;

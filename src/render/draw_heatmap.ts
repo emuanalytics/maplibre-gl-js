@@ -1,23 +1,23 @@
-import {Texture} from './texture';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
-import {DepthMode} from '../gl/depth_mode';
-import {StencilMode} from '../gl/stencil_mode';
-import {ColorMode} from '../gl/color_mode';
-import {CullFaceMode} from '../gl/cull_face_mode';
-import {type Context} from '../gl/context';
-import {type Framebuffer} from '../gl/framebuffer';
-import {type Tile} from '../source/tile';
+import { Color } from '@emuanalytics/maplibre-gl-style-spec';
+import { ColorMode } from '../gl/color_mode';
+import { type Context } from '../gl/context';
+import { CullFaceMode } from '../gl/cull_face_mode';
+import { DepthMode } from '../gl/depth_mode';
+import { type Framebuffer } from '../gl/framebuffer';
+import { StencilMode } from '../gl/stencil_mode';
+import { type Tile } from '../source/tile';
+import { HEATMAP_FULL_RENDER_FBO_KEY } from '../style/style_layer/heatmap_style_layer';
 import {
-    heatmapUniformValues,
-    heatmapTextureUniformValues
+    heatmapTextureUniformValues,
+    heatmapUniformValues
 } from './program/heatmap_program';
-import {HEATMAP_FULL_RENDER_FBO_KEY} from '../style/style_layer/heatmap_style_layer';
+import { Texture } from './texture';
 
-import type {Painter, RenderOptions} from './painter';
-import type {SourceCache} from '../source/source_cache';
-import type {HeatmapStyleLayer} from '../style/style_layer/heatmap_style_layer';
-import type {HeatmapBucket} from '../data/bucket/heatmap_bucket';
-import type {OverscaledTileID} from '../source/tile_id';
+import type { HeatmapBucket } from '../data/bucket/heatmap_bucket';
+import type { SourceCache } from '../source/source_cache';
+import type { OverscaledTileID } from '../source/tile_id';
+import type { HeatmapStyleLayer } from '../style/style_layer/heatmap_style_layer';
+import type { Painter, RenderOptions } from './painter';
 
 export function drawHeatmap(painter: Painter, sourceCache: SourceCache, layer: HeatmapStyleLayer, tileIDs: Array<OverscaledTileID>, renderOptions: RenderOptions) {
     if (layer.paint.get('heatmap-opacity') === 0) {

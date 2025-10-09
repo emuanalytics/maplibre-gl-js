@@ -1,8 +1,8 @@
-import {describe, test, expect} from 'vitest';
-import {type IValue, ClearColor, ClearDepth, ClearStencil, ColorMask, DepthMask, StencilMask, StencilFunc, StencilOp, StencilTest, DepthRange, DepthTest, DepthFunc, Blend, BlendFunc, BlendColor, ProgramValue, ActiveTextureUnit, Viewport, BindFramebuffer, BindRenderbuffer, BindTexture, BindVertexBuffer, BindElementBuffer, BindVertexArray, PixelStoreUnpack, PixelStoreUnpackPremultiplyAlpha} from './value';
-import {Context} from './context';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
-import {deepEqual} from '../util/util';
+import { Color } from '@emuanalytics/maplibre-gl-style-spec';
+import { describe, expect, test } from 'vitest';
+import { deepEqual } from '../util/util';
+import { Context } from './context';
+import { type IValue, ActiveTextureUnit, BindElementBuffer, BindFramebuffer, BindRenderbuffer, BindTexture, BindVertexArray, BindVertexBuffer, Blend, BlendColor, BlendFunc, ClearColor, ClearDepth, ClearStencil, ColorMask, DepthFunc, DepthMask, DepthRange, DepthTest, PixelStoreUnpack, PixelStoreUnpackPremultiplyAlpha, ProgramValue, StencilFunc, StencilMask, StencilOp, StencilTest, Viewport } from './value';
 
 describe('Value classes', () => {
 

@@ -1,23 +1,23 @@
-import {getJSON} from '../util/ajax';
-import {RequestPerformance} from '../util/performance';
+import { createExpression } from '@emuanalytics/maplibre-gl-style-spec';
 import rewind from '@mapbox/geojson-rewind';
-import {fromVectorTileJs, GeoJSONWrapper} from '@maplibre/vt-pbf';
-import {EXTENT} from '../data/extent';
-import Supercluster, {type Options as SuperclusterOptions, type ClusterProperties} from 'supercluster';
-import geojsonvt, {type Options as GeoJSONVTOptions} from 'geojson-vt';
-import {VectorTileWorkerSource} from './vector_tile_worker_source';
-import {createExpression} from '@maplibre/maplibre-gl-style-spec';
-import {isAbortError} from '../util/abort_error';
+import { fromVectorTileJs, GeoJSONWrapper } from '@maplibre/vt-pbf';
+import geojsonvt, { type Options as GeoJSONVTOptions } from 'geojson-vt';
+import Supercluster, { type ClusterProperties, type Options as SuperclusterOptions } from 'supercluster';
+import { EXTENT } from '../data/extent';
+import { isAbortError } from '../util/abort_error';
+import { getJSON } from '../util/ajax';
+import { RequestPerformance } from '../util/performance';
+import { VectorTileWorkerSource } from './vector_tile_worker_source';
 
 import type {
     WorkerTileParameters,
     WorkerTileResult,
 } from '../source/worker_source';
 
-import type {LoadVectorTileResult} from './vector_tile_worker_source';
-import type {RequestParameters} from '../util/ajax';
-import {isUpdateableGeoJSON, type GeoJSONSourceDiff, applySourceDiff, toUpdateable, type GeoJSONFeatureId} from './geojson_source_diff';
-import type {ClusterIDAndSource, GeoJSONWorkerSourceLoadDataResult, RemoveSourceParams} from '../util/actor_messages';
+import type { ClusterIDAndSource, GeoJSONWorkerSourceLoadDataResult, RemoveSourceParams } from '../util/actor_messages';
+import type { RequestParameters } from '../util/ajax';
+import { applySourceDiff, isUpdateableGeoJSON, toUpdateable, type GeoJSONFeatureId, type GeoJSONSourceDiff } from './geojson_source_diff';
+import type { LoadVectorTileResult } from './vector_tile_worker_source';
 
 /**
  * The geojson worker options that can be passed to the worker

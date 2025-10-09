@@ -1,12 +1,12 @@
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import { interpolates } from '@emuanalytics/maplibre-gl-style-spec';
 
-import {Anchor} from '../symbol/anchor';
-import {checkMaxAngle} from './check_max_angle';
+import { Anchor } from '../symbol/anchor';
+import { checkMaxAngle } from './check_max_angle';
 
 import type Point from '@mapbox/point-geometry';
-import type {Shaping, PositionedIcon} from './shaping';
+import type { PositionedIcon, Shaping } from './shaping';
 
-export {getAnchors, getCenterAnchor};
+export { getAnchors, getCenterAnchor };
 
 function getLineLength(line: Array<Point>): number {
     let lineLength = 0;

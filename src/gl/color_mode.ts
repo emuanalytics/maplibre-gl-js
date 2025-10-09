@@ -1,6 +1,6 @@
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import { Color } from '@emuanalytics/maplibre-gl-style-spec';
 
-import type {BlendFuncType, ColorMaskType} from './types';
+import type { BlendFuncType, ColorMaskType } from './types';
 
 const ZERO = 0x0000;
 const ONE = 0x0001;

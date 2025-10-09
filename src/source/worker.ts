@@ -1,22 +1,21 @@
-import {Actor, type ActorTarget, type IActor} from '../util/actor';
-import {StyleLayerIndex} from '../style/style_layer_index';
-import {VectorTileWorkerSource} from './vector_tile_worker_source';
-import {RasterDEMTileWorkerSource} from './raster_dem_tile_worker_source';
-import {rtlWorkerPlugin, type RTLTextPlugin} from './rtl_text_plugin_worker';
-import {GeoJSONWorkerSource, type LoadGeoJSONParameters} from './geojson_worker_source';
-import {isWorker} from '../util/util';
-import {addProtocol, removeProtocol} from './protocol_crud';
-import {type PluginState} from './rtl_text_plugin_status';
 import type {
+    TileParameters,
+    WorkerDEMTileParameters,
     WorkerSource,
     WorkerSourceConstructor,
-    WorkerTileParameters,
-    WorkerDEMTileParameters,
-    TileParameters
+    WorkerTileParameters
 } from '../source/worker_source';
+import { StyleLayerIndex } from '../style/style_layer_index';
+import { Actor, type ActorTarget, type IActor } from '../util/actor';
+import { isWorker } from '../util/util';
+import { GeoJSONWorkerSource, type LoadGeoJSONParameters } from './geojson_worker_source';
+import { addProtocol, removeProtocol } from './protocol_crud';
+import { RasterDEMTileWorkerSource } from './raster_dem_tile_worker_source';
+import { type PluginState } from './rtl_text_plugin_status';
+import { rtlWorkerPlugin, type RTLTextPlugin } from './rtl_text_plugin_worker';
+import { VectorTileWorkerSource } from './vector_tile_worker_source';
 
-import type {WorkerGlobalScopeInterface} from '../util/web_worker';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type { LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 import {
     MessageType,
     type ClusterIDAndSource,
@@ -24,6 +23,7 @@ import {
     type RemoveSourceParams,
     type UpdateLayersParameters
 } from '../util/actor_messages';
+import type { WorkerGlobalScopeInterface } from '../util/web_worker';
 
 /**
  * The Worker class responsible for background thread related execution

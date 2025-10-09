@@ -1,9 +1,9 @@
-import {DOM} from '../../util/dom';
+import { DOM } from '../../util/dom';
 
-import type {Map} from '../map';
-import type {ControlPosition, IControl} from './control';
-import type {MapDataEvent} from '../events';
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type { StyleSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { MapDataEvent } from '../events';
+import type { Map } from '../map';
+import type { ControlPosition, IControl } from './control';
 /**
  * The {@link AttributionControl} options object
  */

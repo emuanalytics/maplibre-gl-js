@@ -1,5 +1,5 @@
-import {type Color} from '@maplibre/maplibre-gl-style-spec';
-import {register} from './web_worker_transfer';
+import { type Color } from '@emuanalytics/maplibre-gl-style-spec';
+import { register } from './web_worker_transfer';
 
 export type Size = {
     width: number;

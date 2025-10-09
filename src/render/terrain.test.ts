@@ -1,17 +1,17 @@
-import {describe, beforeEach, afterEach, test, expect, vi} from 'vitest';
+import type { TerrainSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import {Terrain} from './terrain';
-import {Context} from '../gl/context';
-import {RGBAImage} from '../util/image';
-import type {SourceCache} from '../source/source_cache';
-import {OverscaledTileID} from '../source/tile_id';
-import type {TerrainSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {DEMData} from '../data/dem_data';
-import {Tile} from '../source/tile';
-import {type Painter} from './painter';
-import {mat4} from 'gl-matrix';
-import {LngLat} from '../geo/lng_lat';
-import {MAX_TILE_ZOOM, MIN_TILE_ZOOM} from '../util/util';
+import { mat4 } from 'gl-matrix';
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
+import type { DEMData } from '../data/dem_data';
+import { LngLat } from '../geo/lng_lat';
+import { Context } from '../gl/context';
+import type { SourceCache } from '../source/source_cache';
+import { Tile } from '../source/tile';
+import { OverscaledTileID } from '../source/tile_id';
+import { RGBAImage } from '../util/image';
+import { MAX_TILE_ZOOM, MIN_TILE_ZOOM } from '../util/util';
+import { type Painter } from './painter';
+import { Terrain } from './terrain';
 
 describe('Terrain', () => {
     let gl: WebGLRenderingContext;

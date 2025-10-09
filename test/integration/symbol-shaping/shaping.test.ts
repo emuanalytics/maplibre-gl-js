@@ -1,21 +1,21 @@
-import {describe, test, expect} from 'vitest';
+import { Formatted, FormattedSection, ResolvedImage, type VerticalAlign } from '@emuanalytics/maplibre-gl-style-spec';
 import fs from 'fs';
 import path from 'path';
-import {WritingMode, shapeText, type Shaping} from '../../../src/symbol/shaping';
-import {ResolvedImage, Formatted, FormattedSection, type VerticalAlign} from '@maplibre/maplibre-gl-style-spec';
-import {ImagePosition} from '../../../src/render/image_atlas';
-import type {StyleImage} from '../../../src/style/style_image';
-import type {StyleGlyph} from '../../../src/style/style_glyph';
+import { describe, expect, test } from 'vitest';
+import { ImagePosition } from '../../../src/render/image_atlas';
+import type { StyleGlyph } from '../../../src/style/style_glyph';
+import type { StyleImage } from '../../../src/style/style_image';
+import { WritingMode, shapeText, type Shaping } from '../../../src/symbol/shaping';
 
-import glyphsJson from '../assets/glyphs/fontstack-glyphs.json' with {type: 'json'};
-import expectedJson from './tests/text-shaping-linebreak.json' with {type: 'json'};
-import expectedImagesHorizontal from './tests/text-shaping-images-horizontal.json' with {type: 'json'};
-import expectedNewLine from './tests/text-shaping-newline.json' with {type: 'json'};
-import expectedNewLinesInMiddle from './tests/text-shaping-newlines-in-middle.json' with {type: 'json'};
-import expectedBreakBeforeBracket from './tests/text-shaping-break-before-bracket.json' with {type: 'json'};
+import glyphsJson from '../assets/glyphs/fontstack-glyphs.json' with { type: 'json' };
+import expectedBreakBeforeBracket from './tests/text-shaping-break-before-bracket.json' with { type: 'json' };
+import expectedImagesHorizontal from './tests/text-shaping-images-horizontal.json' with { type: 'json' };
+import expectedJson from './tests/text-shaping-linebreak.json' with { type: 'json' };
+import expectedNewLine from './tests/text-shaping-newline.json' with { type: 'json' };
+import expectedNewLinesInMiddle from './tests/text-shaping-newlines-in-middle.json' with { type: 'json' };
 // Prefer zero width spaces when breaking lines. Zero width spaces are used by MapLibre data sources as a hint that
 // a position is ideal for breaking.
-import expectedZeroWidthSpaceBreak from './tests/text-shaping-zero-width-space.json' with {type: 'json'};
+import expectedZeroWidthSpaceBreak from './tests/text-shaping-zero-width-space.json' with { type: 'json' };
 
 let UPDATE = false;
 if (typeof process !== 'undefined' && process.env !== undefined) {

@@ -1,36 +1,36 @@
-import {FillLayoutArray} from '../array_types.g';
+import { FillLayoutArray } from '../array_types.g';
 
-import {members as layoutAttributes} from './fill_attributes';
-import {SegmentVector} from '../segment';
-import {ProgramConfigurationSet} from '../program_configuration';
-import {LineIndexArray, TriangleIndexArray} from '../index_array_type';
-import {classifyRings} from '@maplibre/maplibre-gl-style-spec';
+import { classifyRings } from '@emuanalytics/maplibre-gl-style-spec';
+import { EvaluationParameters } from '../../style/evaluation_parameters';
+import { register } from '../../util/web_worker_transfer';
+import { toEvaluationFeature } from '../evaluation_feature';
+import { LineIndexArray, TriangleIndexArray } from '../index_array_type';
+import { loadGeometry } from '../load_geometry';
+import { ProgramConfigurationSet } from '../program_configuration';
+import { SegmentVector } from '../segment';
+import { members as layoutAttributes } from './fill_attributes';
+import { addPatternDependencies, hasPattern } from './pattern_bucket_features';
 const EARCUT_MAX_RINGS = 500;
-import {register} from '../../util/web_worker_transfer';
-import {hasPattern, addPatternDependencies} from './pattern_bucket_features';
-import {loadGeometry} from '../load_geometry';
-import {toEvaluationFeature} from '../evaluation_feature';
-import {EvaluationParameters} from '../../style/evaluation_parameters';
 
-import type {CanonicalTileID} from '../../source/tile_id';
+import type Point from '@mapbox/point-geometry';
+import type { VectorTileLayer } from '@mapbox/vector-tile';
+import type { Context } from '../../gl/context';
+import type { IndexBuffer } from '../../gl/index_buffer';
+import type { VertexBuffer } from '../../gl/vertex_buffer';
+import { fillLargeMeshArrays } from '../../render/fill_large_mesh_arrays';
+import type { ImagePosition } from '../../render/image_atlas';
+import { subdividePolygon } from '../../render/subdivision';
+import type { SubdivisionGranularitySetting } from '../../render/subdivision_granularity_settings';
+import type { FeatureStates } from '../../source/source_state';
+import type { CanonicalTileID } from '../../source/tile_id';
+import type { FillStyleLayer } from '../../style/style_layer/fill_style_layer';
 import type {
     Bucket,
-    BucketParameters,
     BucketFeature,
+    BucketParameters,
     IndexedFeature,
     PopulateParameters
 } from '../bucket';
-import type {FillStyleLayer} from '../../style/style_layer/fill_style_layer';
-import type {Context} from '../../gl/context';
-import type {IndexBuffer} from '../../gl/index_buffer';
-import type {VertexBuffer} from '../../gl/vertex_buffer';
-import type Point from '@mapbox/point-geometry';
-import type {FeatureStates} from '../../source/source_state';
-import type {ImagePosition} from '../../render/image_atlas';
-import type {VectorTileLayer} from '@mapbox/vector-tile';
-import {subdividePolygon} from '../../render/subdivision';
-import type {SubdivisionGranularitySetting} from '../../render/subdivision_granularity_settings';
-import {fillLargeMeshArrays} from '../../render/fill_large_mesh_arrays';
 
 export class FillBucket implements Bucket {
     index: number;

@@ -1,13 +1,13 @@
-import {type GetResourceResponse, getJSON} from '../util/ajax';
-import {ImageRequest} from '../util/image_request';
-import {ResourceType} from '../util/request_manager';
+import { type GetResourceResponse, getJSON } from '../util/ajax';
+import { ImageRequest } from '../util/image_request';
+import { ResourceType } from '../util/request_manager';
 
-import {browser} from '../util/browser';
-import {coerceSpriteToArray} from '../util/style';
+import { browser } from '../util/browser';
+import { coerceSpriteToArray } from '../util/style';
 
-import type {SpriteSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {SpriteJSON, StyleImage} from './style_image';
-import type {RequestManager} from '../util/request_manager';
+import type { SpriteSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { RequestManager } from '../util/request_manager';
+import type { SpriteJSON, StyleImage } from './style_image';
 
 export type LoadSpriteResult = {
     [spriteName: string]: {

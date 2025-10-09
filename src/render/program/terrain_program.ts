@@ -1,15 +1,15 @@
+import { Color } from '@emuanalytics/maplibre-gl-style-spec';
+import { type mat4 } from 'gl-matrix';
+import type { Context } from '../../gl/context';
+import type { UniformLocations, UniformValues } from '../../render/uniform_binding';
+import { type Sky } from '../../style/sky';
 import {
-    Uniform1i,
     Uniform1f,
+    Uniform1i,
     Uniform4f,
-    UniformMatrix4f,
-    UniformColor
+    UniformColor,
+    UniformMatrix4f
 } from '../uniform_binding';
-import type {Context} from '../../gl/context';
-import type {UniformValues, UniformLocations} from '../../render/uniform_binding';
-import {type Sky} from '../../style/sky';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
-import {type mat4} from 'gl-matrix';
 
 export type TerrainPreludeUniformsType = {
     'u_depth': Uniform1i;
@@ -106,4 +106,5 @@ const terrainCoordsUniformValues = (
     'u_ele_delta': eleDelta
 });
 
-export {terrainUniforms, terrainDepthUniforms, terrainCoordsUniforms, terrainPreludeUniforms, terrainUniformValues, terrainDepthUniformValues, terrainCoordsUniformValues};
+export { terrainCoordsUniforms, terrainCoordsUniformValues, terrainDepthUniforms, terrainDepthUniformValues, terrainPreludeUniforms, terrainUniforms, terrainUniformValues };
+

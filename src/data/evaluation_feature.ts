@@ -1,7 +1,7 @@
-import {loadGeometry} from './load_geometry';
+import type { Feature } from '@emuanalytics/maplibre-gl-style-spec';
 import type Point from '@mapbox/point-geometry';
-import type {VectorTileFeature} from '@mapbox/vector-tile';
-import type {Feature} from '@maplibre/maplibre-gl-style-spec';
+import type { VectorTileFeature } from '@mapbox/vector-tile';
+import { loadGeometry } from './load_geometry';
 
 type EvaluationFeature = Feature & { geometry: Array<Array<Point>> };
 /**

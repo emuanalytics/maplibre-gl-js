@@ -1,7 +1,7 @@
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import { Color } from '@emuanalytics/maplibre-gl-style-spec';
 
-import type {Context} from '../gl/context';
-import {type mat4, type vec2, type vec3, type vec4} from 'gl-matrix';
+import { type mat4, type vec2, type vec3, type vec4 } from 'gl-matrix';
+import type { Context } from '../gl/context';
 
 type $ObjMap<T extends {}, F extends (v: any) => any> = {
     [K in keyof T]: F extends (v: T[K]) => infer R ? R : never;
@@ -176,10 +176,7 @@ class UniformMatrix4f extends Uniform<mat4> {
 }
 
 export {
-    Uniform,
-    Uniform1i,
-    Uniform1f,
-    Uniform2f,
+    Uniform, Uniform1f, Uniform1i, Uniform2f,
     Uniform3f,
     Uniform4f,
     UniformColor,

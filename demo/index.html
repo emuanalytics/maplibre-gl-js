@@ -1,0 +1,25 @@
+<html>
+
+<script src='../dist/maplibre-gl.js'></script>
+<link href='../dist/maplibre-gl.css' rel='stylesheet' />
+
+
+<body>
+
+
+    <div id='map' style='width: 400px; height: 300px;'></div>
+    <script>
+        var map = new maplibregl.Map({
+            container: 'map',
+            style: 'https://demotiles.maplibre.org/globe.json', // stylesheet location
+            center: [-74.5, 40], // starting position [lng, lat]
+            zoom: 9 // starting zoom
+        });
+
+        map.on('load', () => {
+
+        });
+    </script>
+
+
+</html>

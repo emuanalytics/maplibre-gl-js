@@ -1,16 +1,16 @@
-import {describe, beforeEach, test, expect, vi} from 'vitest';
-import {ImageSource} from './image_source';
-import {Evented} from '../util/evented';
-import {type IReadonlyTransform} from '../geo/transform_interface';
-import {extend, MAX_TILE_ZOOM} from '../util/util';
-import {type FakeServer, fakeServer} from 'nise';
-import {type RequestManager} from '../util/request_manager';
-import {sleep, stubAjaxGetImage, waitForEvent} from '../util/test/util';
-import {Tile} from './tile';
-import {OverscaledTileID} from './tile_id';
-import {type Texture} from '../render/texture';
-import type {ImageSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {MercatorTransform} from '../geo/projection/mercator_transform';
+import type { ImageSourceSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { type FakeServer, fakeServer } from 'nise';
+import { beforeEach, describe, expect, test, vi } from 'vitest';
+import { MercatorTransform } from '../geo/projection/mercator_transform';
+import { type IReadonlyTransform } from '../geo/transform_interface';
+import { type Texture } from '../render/texture';
+import { Evented } from '../util/evented';
+import { type RequestManager } from '../util/request_manager';
+import { sleep, stubAjaxGetImage, waitForEvent } from '../util/test/util';
+import { extend, MAX_TILE_ZOOM } from '../util/util';
+import { ImageSource } from './image_source';
+import { Tile } from './tile';
+import { OverscaledTileID } from './tile_id';
 
 function createSource(options) {
     options = extend({

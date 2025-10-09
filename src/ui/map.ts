@@ -1,73 +1,73 @@
-import {extend, warnOnce, uniqueId, isImageBitmap, type Complete, pick, type Subscription} from '../util/util';
-import {browser} from '../util/browser';
-import {DOM} from '../util/dom';
-import packageJSON from '../../package.json' with {type: 'json'};
-import {type GetResourceResponse, getJSON} from '../util/ajax';
-import {ImageRequest} from '../util/image_request';
-import {RequestManager, ResourceType} from '../util/request_manager';
-import {Style, type StyleSwapOptions} from '../style/style';
-import {EvaluationParameters} from '../style/evaluation_parameters';
-import {Painter} from '../render/painter';
-import {Hash} from './hash';
-import {HandlerManager} from './handler_manager';
-import {Camera, type CameraOptions, type CameraUpdateTransformFunction, type FitBoundsOptions} from './camera';
-import {LngLat} from '../geo/lng_lat';
-import {LngLatBounds} from '../geo/lng_lat_bounds';
 import Point from '@mapbox/point-geometry';
-import {AttributionControl, type AttributionControlOptions, defaultAttributionControlOptions} from './control/attribution_control';
-import {LogoControl} from './control/logo_control';
-import {RGBAImage} from '../util/image';
-import {Event, ErrorEvent, type Listener} from '../util/evented';
-import {type MapEventType, type MapLayerEventType, MapMouseEvent, type MapSourceDataEvent, type MapStyleDataEvent} from './events';
-import {TaskQueue} from '../util/task_queue';
-import {throttle} from '../util/throttle';
-import {webpSupported} from '../util/webp_supported';
-import {PerformanceMarkers, PerformanceUtils} from '../util/performance';
-import {type Source} from '../source/source';
-import {type StyleLayer} from '../style/style_layer';
-import {Terrain} from '../render/terrain';
-import {RenderToTexture} from '../render/render_to_texture';
-import {config} from '../util/config';
-import {defaultLocale} from './default_locale';
-import {MercatorTransform} from '../geo/projection/mercator_transform';
-import {MercatorCameraHelper} from '../geo/projection/mercator_camera_helper';
-import {isAbortError} from '../util/abort_error';
-import {isFramebufferNotCompleteError} from '../util/framebuffer_error';
-import {coveringTiles, type CoveringTilesOptions, createCalculateTileZoomFunction} from '../geo/projection/covering_tiles';
-import {CanonicalTileID, type OverscaledTileID} from '../source/tile_id';
+import packageJSON from '../../package.json' with { type: 'json' };
+import { LngLat } from '../geo/lng_lat';
+import { LngLatBounds } from '../geo/lng_lat_bounds';
+import { coveringTiles, type CoveringTilesOptions, createCalculateTileZoomFunction } from '../geo/projection/covering_tiles';
+import { MercatorCameraHelper } from '../geo/projection/mercator_camera_helper';
+import { MercatorTransform } from '../geo/projection/mercator_transform';
+import { Painter } from '../render/painter';
+import { RenderToTexture } from '../render/render_to_texture';
+import { Terrain } from '../render/terrain';
+import { type Source } from '../source/source';
+import { CanonicalTileID, type OverscaledTileID } from '../source/tile_id';
+import { EvaluationParameters } from '../style/evaluation_parameters';
+import { Style, type StyleSwapOptions } from '../style/style';
+import { type StyleLayer } from '../style/style_layer';
+import { isAbortError } from '../util/abort_error';
+import { getJSON, type GetResourceResponse } from '../util/ajax';
+import { browser } from '../util/browser';
+import { config } from '../util/config';
+import { DOM } from '../util/dom';
+import { ErrorEvent, Event, type Listener } from '../util/evented';
+import { isFramebufferNotCompleteError } from '../util/framebuffer_error';
+import { RGBAImage } from '../util/image';
+import { ImageRequest } from '../util/image_request';
+import { PerformanceMarkers, PerformanceUtils } from '../util/performance';
+import { RequestManager, ResourceType } from '../util/request_manager';
+import { TaskQueue } from '../util/task_queue';
+import { throttle } from '../util/throttle';
+import { type Complete, extend, isImageBitmap, pick, type Subscription, uniqueId, warnOnce } from '../util/util';
+import { webpSupported } from '../util/webp_supported';
+import { Camera, type CameraOptions, type CameraUpdateTransformFunction, type FitBoundsOptions } from './camera';
+import { AttributionControl, type AttributionControlOptions, defaultAttributionControlOptions } from './control/attribution_control';
+import { LogoControl } from './control/logo_control';
+import { defaultLocale } from './default_locale';
+import { type MapEventType, type MapLayerEventType, MapMouseEvent, type MapSourceDataEvent, type MapStyleDataEvent } from './events';
+import { HandlerManager } from './handler_manager';
+import { Hash } from './hash';
 
-import type {RequestTransformFunction} from '../util/request_manager';
-import type {LngLatLike} from '../geo/lng_lat';
-import type {LngLatBoundsLike} from '../geo/lng_lat_bounds';
-import type {AddLayerObject, FeatureIdentifier, StyleOptions, StyleSetterOptions} from '../style/style';
-import type {MapDataEvent} from './events';
-import type {StyleImage, StyleImageInterface, StyleImageMetadata} from '../style/style_image';
-import type {PointLike} from './camera';
-import type {ScrollZoomHandler} from './handler/scroll_zoom';
-import type {BoxZoomHandler} from './handler/box_zoom';
-import type {AroundCenterOptions, TwoFingersTouchPitchHandler} from './handler/two_fingers_touch';
-import type {DragRotateHandler} from './handler/shim/drag_rotate';
-import type {DragPanHandler, DragPanOptions} from './handler/shim/drag_pan';
-import type {CooperativeGesturesHandler, GestureOptions} from './handler/cooperative_gestures';
-import type {KeyboardHandler} from './handler/keyboard';
-import type {DoubleClickZoomHandler} from './handler/shim/dblclick_zoom';
-import type {TwoFingersTouchZoomRotateHandler} from './handler/shim/two_fingers_touch';
-import type {TaskID} from '../util/task_queue';
 import type {
     FilterSpecification,
-    StyleSpecification,
     LightSpecification,
-    SourceSpecification,
-    TerrainSpecification,
     ProjectionSpecification,
     SkySpecification,
-} from '@maplibre/maplibre-gl-style-spec';
-import type {CanvasSourceSpecification} from '../source/canvas_source';
-import type {GeoJSONFeature, MapGeoJSONFeature} from '../util/vectortile_to_geojson';
-import type {ControlPosition, IControl} from './control/control';
-import type {QueryRenderedFeaturesOptions, QuerySourceFeatureOptions} from '../source/query_features';
-import type {ITransform} from '../geo/transform_interface';
-import type {ICameraHelper} from '../geo/projection/camera_helper';
+    SourceSpecification,
+    StyleSpecification,
+    TerrainSpecification,
+} from '@emuanalytics/maplibre-gl-style-spec';
+import type { LngLatLike } from '../geo/lng_lat';
+import type { LngLatBoundsLike } from '../geo/lng_lat_bounds';
+import type { ICameraHelper } from '../geo/projection/camera_helper';
+import type { ITransform } from '../geo/transform_interface';
+import type { CanvasSourceSpecification } from '../source/canvas_source';
+import type { QueryRenderedFeaturesOptions, QuerySourceFeatureOptions } from '../source/query_features';
+import type { AddLayerObject, FeatureIdentifier, StyleOptions, StyleSetterOptions } from '../style/style';
+import type { StyleImage, StyleImageInterface, StyleImageMetadata } from '../style/style_image';
+import type { RequestTransformFunction } from '../util/request_manager';
+import type { TaskID } from '../util/task_queue';
+import type { GeoJSONFeature, MapGeoJSONFeature } from '../util/vectortile_to_geojson';
+import type { PointLike } from './camera';
+import type { ControlPosition, IControl } from './control/control';
+import type { MapDataEvent } from './events';
+import type { BoxZoomHandler } from './handler/box_zoom';
+import type { CooperativeGesturesHandler, GestureOptions } from './handler/cooperative_gestures';
+import type { KeyboardHandler } from './handler/keyboard';
+import type { ScrollZoomHandler } from './handler/scroll_zoom';
+import type { DoubleClickZoomHandler } from './handler/shim/dblclick_zoom';
+import type { DragPanHandler, DragPanOptions } from './handler/shim/drag_pan';
+import type { DragRotateHandler } from './handler/shim/drag_rotate';
+import type { TwoFingersTouchZoomRotateHandler } from './handler/shim/two_fingers_touch';
+import type { AroundCenterOptions, TwoFingersTouchPitchHandler } from './handler/two_fingers_touch';
 
 const version = packageJSON.version;
 
@@ -207,7 +207,7 @@ export type MapOptions = {
      */
     trackResize?: boolean;
     /**
-     * The initial geographical centerpoint of the map. If `center` is not specified in the constructor options, MapLibre GL JS will look for it in the map's style object. If it is not specified in the style, either, it will default to `[0, 0]` 
+     * The initial geographical centerpoint of the map. If `center` is not specified in the constructor options, MapLibre GL JS will look for it in the map's style object. If it is not specified in the style, either, it will default to `[0, 0]`
      * !!! note
      *     MapLibre GL JS uses longitude, latitude coordinate order (as opposed to latitude, longitude) to match GeoJSON.
      * @defaultValue [0, 0]

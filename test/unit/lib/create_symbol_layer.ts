@@ -1,9 +1,9 @@
-import {SymbolBucket} from '../../../src/data/bucket/symbol_bucket';
-import {SymbolStyleLayer} from '../../../src/style/style_layer/symbol_style_layer';
-import {featureFilter, type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {type EvaluationParameters} from '../../../src/style/evaluation_parameters';
-import {type BucketParameters} from '../../../src/data/bucket';
-import {type CollisionBoxArray} from '../../../src/data/array_types.g';
+import { featureFilter, type LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { type CollisionBoxArray } from '../../../src/data/array_types.g';
+import { type BucketParameters } from '../../../src/data/bucket';
+import { SymbolBucket } from '../../../src/data/bucket/symbol_bucket';
+import { type EvaluationParameters } from '../../../src/style/evaluation_parameters';
+import { SymbolStyleLayer } from '../../../src/style/style_layer/symbol_style_layer';
 
 export function createSymbolBucket(layerId: string, font: string, text: string,  collisionBoxArray: CollisionBoxArray) {
     const layer = new SymbolStyleLayer({

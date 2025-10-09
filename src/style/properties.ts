@@ -1,15 +1,21 @@
-import {clone, extend, easeCubicInOut} from '../util/util';
-import {interpolates, type Color, type StylePropertySpecification, normalizePropertyExpression,
+import {
+    interpolates,
+    normalizePropertyExpression,
+    type Color,
+    type CompositeExpression,
     type Feature,
     type FeatureState,
-    type StylePropertyExpression,
+    type PropertyValueSpecification,
     type SourceExpression,
-    type CompositeExpression, type TransitionSpecification,
-    type PropertyValueSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {register} from '../util/web_worker_transfer';
-import {EvaluationParameters} from './evaluation_parameters';
+    type StylePropertyExpression,
+    type StylePropertySpecification,
+    type TransitionSpecification
+} from '@emuanalytics/maplibre-gl-style-spec';
+import { clone, easeCubicInOut, extend } from '../util/util';
+import { register } from '../util/web_worker_transfer';
+import { EvaluationParameters } from './evaluation_parameters';
 
-import {type CanonicalTileID} from '../source/tile_id';
+import { type CanonicalTileID } from '../source/tile_id';
 
 type TimePoint = number;
 

@@ -1,31 +1,31 @@
-import {create as createSource} from './source';
+import { create as createSource } from './source';
 
-import {Tile, FadingDirections, FadingRoles} from './tile';
-import {ErrorEvent, Event, Evented} from '../util/evented';
-import {TileCache} from './tile_cache';
-import {MercatorCoordinate} from '../geo/mercator_coordinate';
-import {EXTENT} from '../data/extent';
-import {type Context} from '../gl/context';
 import Point from '@mapbox/point-geometry';
-import {browser} from '../util/browser';
-import {OverscaledTileID} from './tile_id';
-import {SourceFeatureState} from './source_state';
-import {getEdgeTiles} from '../util/util';
-import {config} from '../util/config';
+import { EXTENT } from '../data/extent';
+import { MercatorCoordinate } from '../geo/mercator_coordinate';
+import { type Context } from '../gl/context';
+import { browser } from '../util/browser';
+import { config } from '../util/config';
+import { ErrorEvent, Event, Evented } from '../util/evented';
+import { getEdgeTiles } from '../util/util';
+import { SourceFeatureState } from './source_state';
+import { FadingDirections, FadingRoles, Tile } from './tile';
+import { TileCache } from './tile_cache';
+import { OverscaledTileID } from './tile_id';
 
-import type {Source} from './source';
-import type {Map} from '../ui/map';
-import type {Style} from '../style/style';
-import type {Dispatcher} from '../util/dispatcher';
-import type {IReadonlyTransform, ITransform} from '../geo/transform_interface';
-import type {TileState} from './tile';
-import type {ICanonicalTileID, SourceSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {MapSourceDataEvent} from '../ui/events';
-import type {Terrain} from '../render/terrain';
-import type {CanvasSourceSpecification} from './canvas_source';
-import {coveringTiles, coveringZoomLevel} from '../geo/projection/covering_tiles';
-import {Bounds} from '../geo/bounds';
-import {EXTENT_BOUNDS} from '../data/extent_bounds';
+import type { ICanonicalTileID, SourceSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { EXTENT_BOUNDS } from '../data/extent_bounds';
+import { Bounds } from '../geo/bounds';
+import { coveringTiles, coveringZoomLevel } from '../geo/projection/covering_tiles';
+import type { IReadonlyTransform, ITransform } from '../geo/transform_interface';
+import type { Terrain } from '../render/terrain';
+import type { Style } from '../style/style';
+import type { MapSourceDataEvent } from '../ui/events';
+import type { Map } from '../ui/map';
+import type { Dispatcher } from '../util/dispatcher';
+import type { CanvasSourceSpecification } from './canvas_source';
+import type { Source } from './source';
+import type { TileState } from './tile';
 
 type TileResult = {
     tile: Tile;
@@ -1115,7 +1115,7 @@ export class SourceCache extends Evented {
             bounds.shrinkBy(Math.min(bounds.width(), bounds.height()) * 0.001);
             const projected = bounds.map(project);
 
-            const newBounds = Bounds.fromPoints(transformed); 
+            const newBounds = Bounds.fromPoints(transformed);
 
             if (!newBounds.covers(projected)) {
                 transformed = transformed.map((coord) => coord.x > 0.5 ?

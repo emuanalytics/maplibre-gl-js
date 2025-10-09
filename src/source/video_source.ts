@@ -1,15 +1,15 @@
-import {getVideo} from '../util/ajax';
-import {ResourceType} from '../util/request_manager';
+import { getVideo } from '../util/ajax';
+import { ResourceType } from '../util/request_manager';
 
-import {ImageSource} from './image_source';
-import {Texture} from '../render/texture';
-import {Event, ErrorEvent} from '../util/evented';
-import {ValidationError} from '@maplibre/maplibre-gl-style-spec';
+import { ValidationError } from '@emuanalytics/maplibre-gl-style-spec';
+import { Texture } from '../render/texture';
+import { ErrorEvent, Event } from '../util/evented';
+import { ImageSource } from './image_source';
 
-import type {Map} from '../ui/map';
-import type {Dispatcher} from '../util/dispatcher';
-import type {Evented} from '../util/evented';
-import type {VideoSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type { VideoSourceSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { Map } from '../ui/map';
+import type { Dispatcher } from '../util/dispatcher';
+import type { Evented } from '../util/evented';
 
 /**
  * A data source containing video.

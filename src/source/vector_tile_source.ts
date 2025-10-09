@@ -1,18 +1,18 @@
-import {Event, ErrorEvent, Evented} from '../util/evented';
+import { ErrorEvent, Event, Evented } from '../util/evented';
 
-import {extend, pick} from '../util/util';
-import {loadTileJson} from './load_tilejson';
-import {TileBounds} from './tile_bounds';
-import {ResourceType} from '../util/request_manager';
+import { ResourceType } from '../util/request_manager';
+import { extend, pick } from '../util/util';
+import { loadTileJson } from './load_tilejson';
+import { TileBounds } from './tile_bounds';
 
-import type {Source} from './source';
-import type {OverscaledTileID} from './tile_id';
-import type {Map} from '../ui/map';
-import type {Dispatcher} from '../util/dispatcher';
-import type {Tile} from './tile';
-import type {VectorSourceSpecification, PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {WorkerTileParameters, WorkerTileResult} from './worker_source';
-import {MessageType} from '../util/actor_messages';
+import type { PromoteIdSpecification, VectorSourceSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { Map } from '../ui/map';
+import { MessageType } from '../util/actor_messages';
+import type { Dispatcher } from '../util/dispatcher';
+import type { Source } from './source';
+import type { Tile } from './tile';
+import type { OverscaledTileID } from './tile_id';
+import type { WorkerTileParameters, WorkerTileResult } from './worker_source';
 
 export type VectorTileSourceOptions = VectorSourceSpecification & {
     collectResourceTiming?: boolean;

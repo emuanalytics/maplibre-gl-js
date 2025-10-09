@@ -1,20 +1,20 @@
-import type {ExpiryData, RequestParameters} from '../util/ajax';
-import type {RGBAImage, AlphaImage} from '../util/image';
-import type {GlyphPositions} from '../render/glyph_atlas';
-import type {ImageAtlas} from '../render/image_atlas';
-import type {OverscaledTileID} from './tile_id';
-import type {Bucket} from '../data/bucket';
-import type {FeatureIndex} from '../data/feature_index';
-import type {CollisionBoxArray} from '../data/array_types.g';
-import type {DEMEncoding} from '../data/dem_data';
-import type {StyleGlyph} from '../style/style_glyph';
-import type {StyleImage} from '../style/style_image';
-import type {PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {RemoveSourceParams} from '../util/actor_messages';
-import type {IActor} from '../util/actor';
-import type {StyleLayerIndex} from '../style/style_layer_index';
-import type {SubdivisionGranularitySetting} from '../render/subdivision_granularity_settings';
-import type {DashEntry} from '../render/line_atlas';
+import type { PromoteIdSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import type { CollisionBoxArray } from '../data/array_types.g';
+import type { Bucket } from '../data/bucket';
+import type { DEMEncoding } from '../data/dem_data';
+import type { FeatureIndex } from '../data/feature_index';
+import type { GlyphPositions } from '../render/glyph_atlas';
+import type { ImageAtlas } from '../render/image_atlas';
+import type { DashEntry } from '../render/line_atlas';
+import type { SubdivisionGranularitySetting } from '../render/subdivision_granularity_settings';
+import type { StyleGlyph } from '../style/style_glyph';
+import type { StyleImage } from '../style/style_image';
+import type { StyleLayerIndex } from '../style/style_layer_index';
+import type { IActor } from '../util/actor';
+import type { RemoveSourceParams } from '../util/actor_messages';
+import type { ExpiryData, RequestParameters } from '../util/ajax';
+import type { AlphaImage, RGBAImage } from '../util/image';
+import type { OverscaledTileID } from './tile_id';
 
 /**
  * Parameters to identify a tile

@@ -1,23 +1,23 @@
+import { VectorTile } from '@mapbox/vector-tile';
 import Protobuf from 'pbf';
-import {VectorTile} from '@mapbox/vector-tile';
 
-import {derefLayers} from '@maplibre/maplibre-gl-style-spec'
-import {Style} from '../../../src/style/style';
-import {IReadonlyTransform} from '../../../src/geo/transform_interface';
-import {Evented} from '../../../src/util/evented';
-import {RequestManager} from '../../../src/util/request_manager';
-import {WorkerTile} from '../../../src/source/worker_tile';
-import {StyleLayerIndex} from '../../../src/style/style_layer_index';
+import { derefLayers } from '@emuanalytics/maplibre-gl-style-spec';
+import { IReadonlyTransform } from '../../../src/geo/transform_interface';
+import { WorkerTile } from '../../../src/source/worker_tile';
+import { Style } from '../../../src/style/style';
+import { StyleLayerIndex } from '../../../src/style/style_layer_index';
+import { Evented } from '../../../src/util/evented';
+import { RequestManager } from '../../../src/util/request_manager';
 
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
-import type {WorkerTileResult} from '../../../src/source/worker_source';
-import type {OverscaledTileID} from '../../../src/source/tile_id';
-import type {TileJSON} from '../../../src/util/util';
-import type {Map} from '../../../src/ui/map';
-import type {IActor} from '../../../src/util/actor';
-import {SubdivisionGranularitySetting} from '../../../src/render/subdivision_granularity_settings';
-import {MessageType} from '../../../src/util/actor_messages';
-import {MercatorTransform} from '../../../src/geo/projection/mercator_transform';
+import type { StyleSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { MercatorTransform } from '../../../src/geo/projection/mercator_transform';
+import { SubdivisionGranularitySetting } from '../../../src/render/subdivision_granularity_settings';
+import type { OverscaledTileID } from '../../../src/source/tile_id';
+import type { WorkerTileResult } from '../../../src/source/worker_source';
+import type { Map } from '../../../src/ui/map';
+import type { IActor } from '../../../src/util/actor';
+import { MessageType } from '../../../src/util/actor_messages';
+import type { TileJSON } from '../../../src/util/util';
 
 class StubMap extends Evented {
     style: Style;

@@ -1,21 +1,21 @@
-import {Color} from '@maplibre/maplibre-gl-style-spec';
-import {DepthMode} from '../gl/depth_mode';
-import {CullFaceMode} from '../gl/cull_face_mode';
-import {type ColorMode} from '../gl/color_mode';
+import { Color } from '@emuanalytics/maplibre-gl-style-spec';
+import { type ColorMode } from '../gl/color_mode';
+import { CullFaceMode } from '../gl/cull_face_mode';
+import { DepthMode } from '../gl/depth_mode';
 import {
-    fillUniformValues,
-    fillPatternUniformValues,
+    fillOutlinePatternUniformValues,
     fillOutlineUniformValues,
-    fillOutlinePatternUniformValues
+    fillPatternUniformValues,
+    fillUniformValues
 } from './program/fill_program';
 
-import type {Painter, RenderOptions} from './painter';
-import type {SourceCache} from '../source/source_cache';
-import type {FillStyleLayer} from '../style/style_layer/fill_style_layer';
-import type {FillBucket} from '../data/bucket/fill_bucket';
-import type {OverscaledTileID} from '../source/tile_id';
-import {updatePatternPositionsInProgram} from './update_pattern_positions_in_program';
-import {translatePosition} from '../util/util';
+import type { FillBucket } from '../data/bucket/fill_bucket';
+import type { SourceCache } from '../source/source_cache';
+import type { OverscaledTileID } from '../source/tile_id';
+import type { FillStyleLayer } from '../style/style_layer/fill_style_layer';
+import { translatePosition } from '../util/util';
+import type { Painter, RenderOptions } from './painter';
+import { updatePatternPositionsInProgram } from './update_pattern_positions_in_program';
 
 export function drawFill(painter: Painter, sourceCache: SourceCache, layer: FillStyleLayer, coords: Array<OverscaledTileID>, renderOptions: RenderOptions) {
     const color = layer.paint.get('fill-color');

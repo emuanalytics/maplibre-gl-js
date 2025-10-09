@@ -1,13 +1,13 @@
-import {describe, beforeEach, afterEach, test, expect, vi} from 'vitest';
-import {GeoJSONWorkerSource, type LoadGeoJSONParameters} from './geojson_worker_source';
-import {StyleLayerIndex} from '../style/style_layer_index';
-import {OverscaledTileID} from './tile_id';
+import { type LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { type FakeServer, fakeServer } from 'nise';
+import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest';
+import { StyleLayerIndex } from '../style/style_layer_index';
+import { type Actor } from '../util/actor';
 import perf from '../util/performance';
-import {type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {type Actor} from '../util/actor';
-import {type WorkerTileParameters} from './worker_source';
-import {setPerformance, sleep} from '../util/test/util';
-import {type FakeServer, fakeServer} from 'nise';
+import { setPerformance, sleep } from '../util/test/util';
+import { GeoJSONWorkerSource, type LoadGeoJSONParameters } from './geojson_worker_source';
+import { OverscaledTileID } from './tile_id';
+import { type WorkerTileParameters } from './worker_source';
 
 const actor = {send: () => {}} as any as Actor;
 

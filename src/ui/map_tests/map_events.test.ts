@@ -1,13 +1,13 @@
-import {describe, beforeEach, test, expect, vi} from 'vitest';
+import { type StyleSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { beforeEach, describe, expect, test, vi } from 'vitest';
 import simulate from '../../../test/unit/lib/simulate_interaction';
-import {type StyleLayer} from '../../style/style_layer';
-import {createMap, beforeMapTest, createStyle, sleep, createTerrain} from '../../util/test/util';
-import {type MapGeoJSONFeature} from '../../util/vectortile_to_geojson';
-import {type MapLayerEventType, type MapLibreEvent} from '../events';
-import {Map, type MapOptions} from '../map';
-import {Event as EventedEvent, ErrorEvent} from '../../util/evented';
-import {GlobeProjection} from '../../geo/projection/globe_projection';
-import {type StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import { GlobeProjection } from '../../geo/projection/globe_projection';
+import { type StyleLayer } from '../../style/style_layer';
+import { ErrorEvent, Event as EventedEvent } from '../../util/evented';
+import { beforeMapTest, createMap, createStyle, createTerrain, sleep } from '../../util/test/util';
+import { type MapGeoJSONFeature } from '../../util/vectortile_to_geojson';
+import { type MapLayerEventType, type MapLibreEvent } from '../events';
+import { Map, type MapOptions } from '../map';
 
 type IsAny<T> = 0 extends T & 1 ? T : never;
 type NotAny<T> = T extends IsAny<T> ? never : T;

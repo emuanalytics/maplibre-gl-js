@@ -1,23 +1,23 @@
-import {LngLat, type LngLatLike} from '../lng_lat';
-import {MercatorCoordinate, mercatorXfromLng, mercatorYfromLat, mercatorZfromAltitude} from '../mercator_coordinate';
+import { interpolates } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import {wrap, clamp, createIdentityMat4f64, createMat4f64, degreesToRadians, createIdentityMat4f32, zoomScale, scaleZoom} from '../../util/util';
-import {type mat2, mat4, vec3, vec4} from 'gl-matrix';
-import {UnwrappedTileID, OverscaledTileID, type CanonicalTileID, calculateTileKey} from '../../source/tile_id';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
-import {type PointProjection, xyTransformMat4} from '../../symbol/projection';
-import {LngLatBounds} from '../lng_lat_bounds';
-import {getMercatorHorizon, projectToWorldCoordinates, unprojectFromWorldCoordinates, calculateTileMatrix, maxMercatorHorizonAngle, cameraMercatorCoordinateFromCenterAndRotation} from './mercator_utils';
-import {EXTENT} from '../../data/extent';
-import {TransformHelper} from '../transform_helper';
-import {MercatorCoveringTilesDetailsProvider} from './mercator_covering_tiles_details_provider';
-import {Frustum} from '../../util/primitives/frustum';
+import { type mat2, mat4, vec3, vec4 } from 'gl-matrix';
+import { EXTENT } from '../../data/extent';
+import { type CanonicalTileID, OverscaledTileID, UnwrappedTileID, calculateTileKey } from '../../source/tile_id';
+import { type PointProjection, xyTransformMat4 } from '../../symbol/projection';
+import { Frustum } from '../../util/primitives/frustum';
+import { clamp, createIdentityMat4f32, createIdentityMat4f64, createMat4f64, degreesToRadians, scaleZoom, wrap, zoomScale } from '../../util/util';
+import { LngLat, type LngLatLike } from '../lng_lat';
+import { LngLatBounds } from '../lng_lat_bounds';
+import { MercatorCoordinate, mercatorXfromLng, mercatorYfromLat, mercatorZfromAltitude } from '../mercator_coordinate';
+import { TransformHelper } from '../transform_helper';
+import { MercatorCoveringTilesDetailsProvider } from './mercator_covering_tiles_details_provider';
+import { calculateTileMatrix, cameraMercatorCoordinateFromCenterAndRotation, getMercatorHorizon, maxMercatorHorizonAngle, projectToWorldCoordinates, unprojectFromWorldCoordinates } from './mercator_utils';
 
-import type {Terrain} from '../../render/terrain';
-import type {IReadonlyTransform, ITransform} from '../transform_interface';
-import type {PaddingOptions} from '../edge_insets';
-import type {ProjectionData, ProjectionDataParams} from './projection_data';
-import type {CoveringTilesDetailsProvider} from './covering_tiles_details_provider';
+import type { Terrain } from '../../render/terrain';
+import type { PaddingOptions } from '../edge_insets';
+import type { IReadonlyTransform, ITransform } from '../transform_interface';
+import type { CoveringTilesDetailsProvider } from './covering_tiles_details_provider';
+import type { ProjectionData, ProjectionDataParams } from './projection_data';
 
 export class MercatorTransform implements ITransform {
     private _helper: TransformHelper;
@@ -198,17 +198,17 @@ export class MercatorTransform implements ITransform {
     get renderWorldCopies(): boolean {
         return this._helper.renderWorldCopies;
     }
-    get cameraToCenterDistance(): number { 
+    get cameraToCenterDistance(): number {
         return this._helper.cameraToCenterDistance;
     }
-    public get nearZ(): number { 
-        return this._helper.nearZ; 
+    public get nearZ(): number {
+        return this._helper.nearZ;
     }
-    public get farZ(): number { 
-        return this._helper.farZ; 
+    public get farZ(): number {
+        return this._helper.farZ;
     }
-    public get autoCalculateNearFarZ(): boolean { 
-        return this._helper.autoCalculateNearFarZ; 
+    public get autoCalculateNearFarZ(): boolean {
+        return this._helper.autoCalculateNearFarZ;
     }
     setTransitionState(_value: number, _error: number): void {
         // Do nothing
@@ -719,7 +719,7 @@ export class MercatorTransform implements ITransform {
         const {overscaledTileID, aligned, applyTerrainMatrix} = params;
         const mercatorTileCoordinates = this._helper.getMercatorTileCoordinates(overscaledTileID);
         const tilePosMatrix = overscaledTileID ? this.calculatePosMatrix(overscaledTileID, aligned, true) : null;
-        
+
         let mainMatrix: mat4;
         if (overscaledTileID && overscaledTileID.terrainRttPosMatrix32f && applyTerrainMatrix) {
             mainMatrix = overscaledTileID.terrainRttPosMatrix32f;

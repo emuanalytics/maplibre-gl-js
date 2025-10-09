@@ -1,20 +1,20 @@
-import {extend, wrap, defaultEasing, pick, scaleZoom} from '../util/util';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
-import {browser} from '../util/browser';
-import {LngLat} from '../geo/lng_lat';
-import {LngLatBounds} from '../geo/lng_lat_bounds';
+import { interpolates } from '@emuanalytics/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
-import {Event, Evented} from '../util/evented';
-import {MercatorCoordinate} from '../geo/mercator_coordinate';
+import { LngLat } from '../geo/lng_lat';
+import { LngLatBounds } from '../geo/lng_lat_bounds';
+import { MercatorCoordinate } from '../geo/mercator_coordinate';
+import { browser } from '../util/browser';
+import { Event, Evented } from '../util/evented';
+import { defaultEasing, extend, pick, scaleZoom, wrap } from '../util/util';
 
-import type {Terrain} from '../render/terrain';
-import type {ITransform} from '../geo/transform_interface';
-import type {LngLatLike} from '../geo/lng_lat';
-import type {LngLatBoundsLike} from '../geo/lng_lat_bounds';
-import type {TaskID} from '../util/task_queue';
-import type {PaddingOptions} from '../geo/edge_insets';
-import type {HandlerManager} from './handler_manager';
-import type {ICameraHelper} from '../geo/projection/camera_helper';
+import type { PaddingOptions } from '../geo/edge_insets';
+import type { LngLatLike } from '../geo/lng_lat';
+import type { LngLatBoundsLike } from '../geo/lng_lat_bounds';
+import type { ICameraHelper } from '../geo/projection/camera_helper';
+import type { ITransform } from '../geo/transform_interface';
+import type { Terrain } from '../render/terrain';
+import type { TaskID } from '../util/task_queue';
+import type { HandlerManager } from './handler_manager';
 
 /**
  * A [Point](https://github.com/mapbox/point-geometry) or an array of two numbers representing `x` and `y` screen coordinates in pixels.

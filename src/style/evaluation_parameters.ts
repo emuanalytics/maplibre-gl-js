@@ -1,8 +1,8 @@
-import {ZoomHistory} from './zoom_history';
-import {isStringInSupportedScript} from '../util/script_detection';
-import {rtlWorkerPlugin} from '../source/rtl_text_plugin_worker';
+import { rtlWorkerPlugin } from '../source/rtl_text_plugin_worker';
+import { isStringInSupportedScript } from '../util/script_detection';
+import { ZoomHistory } from './zoom_history';
 
-import type {GlobalProperties, TransitionSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type { GlobalProperties, TransitionSpecification } from '@emuanalytics/maplibre-gl-style-spec';
 
 export type CrossfadeParameters = {
     fromScale: number;

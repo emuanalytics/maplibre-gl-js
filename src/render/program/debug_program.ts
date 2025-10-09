@@ -1,8 +1,8 @@
-import {UniformColor, Uniform1i, Uniform1f} from '../uniform_binding';
+import { Uniform1f, Uniform1i, UniformColor } from '../uniform_binding';
 
-import type {Context} from '../../gl/context';
-import type {UniformValues, UniformLocations} from '../uniform_binding';
-import type {Color} from '@maplibre/maplibre-gl-style-spec';
+import type { Color } from '@emuanalytics/maplibre-gl-style-spec';
+import type { Context } from '../../gl/context';
+import type { UniformLocations, UniformValues } from '../uniform_binding';
 
 export type DebugUniformsType = {
     'u_color': UniformColor;
@@ -22,4 +22,5 @@ const debugUniformValues = (color: Color, scaleRatio: number = 1): UniformValues
     'u_overlay_scale': scaleRatio
 });
 
-export {debugUniforms, debugUniformValues};
+export { debugUniforms, debugUniformValues };
+

@@ -1,17 +1,17 @@
-import {describe, test, expect} from 'vitest';
-import {type mat4} from 'gl-matrix';
-import {type Context} from '../gl/context';
+import { Color } from '@emuanalytics/maplibre-gl-style-spec';
+import { type mat4 } from 'gl-matrix';
+import { describe, expect, test } from 'vitest';
+import { type Context } from '../gl/context';
 import {
-    Uniform1i,
     Uniform1f,
+    Uniform1i,
     Uniform2f,
     Uniform3f,
     Uniform4f,
-    UniformFloatArray,
     UniformColorArray,
+    UniformFloatArray,
     UniformMatrix4f
 } from './uniform_binding';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
 
 describe('Uniform Binding', () => {
     test('Uniform1i', () => {

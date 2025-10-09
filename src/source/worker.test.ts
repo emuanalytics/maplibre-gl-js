@@ -1,13 +1,13 @@
-import {describe, beforeEach, test, expect, vi} from 'vitest';
-import {fakeServer} from 'nise';
+import { type LayerSpecification } from '@emuanalytics/maplibre-gl-style-spec';
+import { fakeServer } from 'nise';
+import { beforeEach, describe, expect, test, vi } from 'vitest';
+import { type ActorTarget, type IActor } from '../util/actor';
+import { MessageType } from '../util/actor_messages';
+import { type WorkerGlobalScopeInterface } from '../util/web_worker';
+import { rtlWorkerPlugin } from './rtl_text_plugin_worker';
+import { type CanonicalTileID, type OverscaledTileID } from './tile_id';
 import Worker from './worker';
-import {type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {type WorkerGlobalScopeInterface} from '../util/web_worker';
-import {type CanonicalTileID, type OverscaledTileID} from './tile_id';
-import {type WorkerSource, type WorkerTileParameters, type WorkerTileResult} from './worker_source';
-import {rtlWorkerPlugin} from './rtl_text_plugin_worker';
-import {type ActorTarget, type IActor} from '../util/actor';
-import {MessageType} from '../util/actor_messages';
+import { type WorkerSource, type WorkerTileParameters, type WorkerTileResult } from './worker_source';
 
 class WorkerSourceMock implements WorkerSource {
     availableImages: string[];
