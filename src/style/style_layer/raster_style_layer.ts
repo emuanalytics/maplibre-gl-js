@@ -3,7 +3,7 @@ import properties, {type RasterPaintPropsPossiblyEvaluated} from './raster_style
 
 import type {Transitionable, Transitioning, PossiblyEvaluated} from '../properties.ts';
 import type {RasterPaintProps} from './raster_style_layer_properties.g.ts';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 export const isRasterStyleLayer = (layer: StyleLayer): layer is RasterStyleLayer => layer.type === 'raster';
 

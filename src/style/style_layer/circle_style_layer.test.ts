@@ -5,7 +5,7 @@ import Point from '@mapbox/point-geometry';
 import {createTestCamera} from '../../util/test/util.ts';
 
 import type {EvaluationParameters} from '../evaluation_parameters.ts';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {VectorTileFeatureLike} from '@maplibre/vt-pbf';
 
 describe('CircleStyleLayer.queryIntersectsFeature', () => {

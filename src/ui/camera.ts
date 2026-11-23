@@ -1,7 +1,7 @@
 import Point from '@mapbox/point-geometry';
 import {vec3} from 'gl-matrix';
 import {extend, wrap, defaultEasing, evaluateZoomSnap, lerp, scaleZoom, zoomScale} from '../util/util.ts';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@emuanalytics/maplibre-gl-style-spec';
 import {browser} from '../util/browser.ts';
 import {LngLat, earthRadius} from '../geo/lng_lat.ts';
 import {LngLatBounds} from '../geo/lng_lat_bounds.ts';

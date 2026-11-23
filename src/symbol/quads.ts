@@ -7,7 +7,7 @@ import ONE_EM from './one_em.ts';
 import type {Anchor} from './anchor.ts';
 import type {Box, PositionedIcon, Shaping} from './shaping.ts';
 import type {SymbolStyleLayer} from '../style/style_layer/symbol_style_layer.ts';
-import type {Feature} from '@maplibre/maplibre-gl-style-spec';
+import type {Feature} from '@emuanalytics/maplibre-gl-style-spec';
 import type {StyleImage} from '../style/style_image.ts';
 import type {Rect} from '../render/glyph_atlas.ts';
 

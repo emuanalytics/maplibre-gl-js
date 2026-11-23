@@ -2,7 +2,7 @@ import {getArrayBuffer} from '../util/ajax.ts';
 import {ResourceType} from '../util/request_manager.ts';
 import {ensureError, warnOnce} from '../util/util.ts';
 
-import type {FontFacesSpecification, MLFontFace} from '@maplibre/maplibre-gl-style-spec';
+import type {FontFacesSpecification, MLFontFace} from '@emuanalytics/maplibre-gl-style-spec';
 import type {RequestManager} from '../util/request_manager.ts';
 
 /**

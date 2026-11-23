@@ -12,7 +12,7 @@ import {createIdentityMat4f32} from '../../util/util.ts';
 import {createFrameRenderData, createTestCamera} from '../../util/test/util.ts';
 
 import type {ProgramConfiguration, ProgramConfigurationSet} from '../../data/program_configuration.ts';
-import type {FillLayerSpecification, AllPaintProperties} from '@maplibre/maplibre-gl-style-spec';
+import type {FillLayerSpecification, AllPaintProperties} from '@emuanalytics/maplibre-gl-style-spec';
 import type {EvaluationParameters} from '../../style/evaluation_parameters.ts';
 import type {Map} from '../../ui/map.ts';
 import type {ZoomHistory} from '../../style/zoom_history.ts';

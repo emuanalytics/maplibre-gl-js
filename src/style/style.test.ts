@@ -12,7 +12,7 @@ import {OverscaledTileID} from '../tile/tile_id.ts';
 import {fakeServer, type FakeServer} from 'nise';
 import {ImageRequest} from '../util/image_request.ts';
 import {EvaluationParameters} from './evaluation_parameters.ts';
-import {Color, type Feature, type LayerSpecification, type GeoJSONSourceSpecification, type FilterSpecification, type SourceSpecification, type StyleSpecification, type SymbolLayerSpecification, type SkySpecification, type CameraFunctionSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {Color, type Feature, type LayerSpecification, type GeoJSONSourceSpecification, type FilterSpecification, type SourceSpecification, type StyleSpecification, type SymbolLayerSpecification, type SkySpecification, type CameraFunctionSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import {StubMap, createTestCamera, sleep, waitForEvent} from '../util/test/util.ts';
 import {setNow, restoreNow} from '../util/time_control.ts';
 import {RTLPluginLoadedEventName} from '../source/rtl_text_plugin_status.ts';

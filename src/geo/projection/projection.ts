@@ -3,7 +3,7 @@ import type {PreparedShader} from '../../shaders/shaders.ts';
 import type {Context} from '../../webgl/context.ts';
 import type {Mesh} from '../../render/mesh.ts';
 import type {SubdivisionGranularitySetting} from '../../render/subdivision_granularity_settings.ts';
-import type {ProjectionSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {ProjectionSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {EvaluationParameters} from '../../style/evaluation_parameters.ts';
 import type {WorldCoordinateHelper} from '../world_types.ts';
 

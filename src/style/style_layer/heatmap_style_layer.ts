@@ -9,7 +9,7 @@ import type {RGBAImage} from '../../util/image.ts';
 import type {Texture} from '../../webgl/texture.ts';
 import type {Framebuffer} from '../../webgl/framebuffer.ts';
 import type {HeatmapPaintProps} from './heatmap_style_layer_properties.g.ts';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {Bucket} from '../../data/bucket.ts';
 
 export const HEATMAP_FULL_RENDER_FBO_KEY = 'big-fb';

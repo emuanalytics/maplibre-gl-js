@@ -32,7 +32,7 @@ import type {SymbolSDFUniformsType} from '../program/symbol_program.ts';
 import type {CrossTileID, VariableOffset} from '../../symbol/placement.ts';
 import type {SymbolBucket, SymbolBuffers} from '../../data/bucket/symbol_bucket.ts';
 import type {TerrainData} from '../../render/terrain.ts';
-import type {SymbolLayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {SymbolLayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {ColorMode} from '../color_mode.ts';
 import type {Program} from '../program.ts';
 import type {TextAnchor} from '../../style/style_layer/variable_text_anchor.ts';

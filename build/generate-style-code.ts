@@ -1,7 +1,7 @@
 'use strict';
 
 import * as fs from 'fs';
-import {latest, type StylePropertySpecification} from '@maplibre/maplibre-gl-style-spec';
+import {latest, type StylePropertySpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 /**
  * Which kind of value a property holds, and so which `Property` class implements it.
@@ -265,7 +265,7 @@ function emitHeader(propertiesPath: string): string {
     return `// This file is generated. Edit build/generate-style-code.ts, then run 'npm run codegen'.
 /* eslint-disable */
 
-import {latest as styleSpec} from '@maplibre/maplibre-gl-style-spec';
+import {latest as styleSpec} from '@emuanalytics/maplibre-gl-style-spec';
 
 import {
     Properties,
@@ -278,8 +278,8 @@ import {
     CrossFaded
 } from '${propertiesPath}';
 
-import type {Color, Formatted, Padding, NumberArray, ColorArray, ResolvedImage, VariableAnchorOffsetCollection, ProjectionDefinitionSpecification} from '@maplibre/maplibre-gl-style-spec';
-import {StylePropertySpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {Color, Formatted, Padding, NumberArray, ColorArray, ResolvedImage, VariableAnchorOffsetCollection, ProjectionDefinitionSpecification} from '@emuanalytics/maplibre-gl-style-spec';
+import {StylePropertySpecification} from '@emuanalytics/maplibre-gl-style-spec';
 `;
 }
 
@@ -320,7 +320,7 @@ function emitLayerProperties({type, layoutProperties, paintProperties}: LayerPro
     if (overridables.length) {
         output.push(`import {
             ${overridables.map(runtimeType).join(',\n    ')}
-        } from '@maplibre/maplibre-gl-style-spec';
+        } from '@emuanalytics/maplibre-gl-style-spec';
         `);
     }
 

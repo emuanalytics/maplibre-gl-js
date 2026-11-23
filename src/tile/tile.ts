@@ -2,7 +2,7 @@ import {uniqueId, parseCacheControl} from '../util/util.ts';
 import {deserialize as deserializeBucket} from '../data/bucket.ts';
 import {GEOJSON_TILE_LAYER_NAME, type FeatureIndex, type QueryResults} from '../data/feature_index.ts';
 import {GeoJSONFeature} from '../util/vectortile_to_geojson.ts';
-import {featureFilter} from '@maplibre/maplibre-gl-style-spec';
+import {featureFilter} from '@emuanalytics/maplibre-gl-style-spec';
 import {SymbolBucket} from '../data/bucket/symbol_bucket.ts';
 import {CollisionBoxArray} from '../data/array_types.g.ts';
 import {Texture} from '../webgl/texture.ts';

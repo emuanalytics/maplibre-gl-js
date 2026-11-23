@@ -1,10 +1,10 @@
 import {afterEach, describe, expect, test, vi} from 'vitest';
-import {Formatted, FormattedSection} from '@maplibre/maplibre-gl-style-spec';
+import {Formatted, FormattedSection} from '@emuanalytics/maplibre-gl-style-spec';
 import {transformText} from './transform_text.ts';
 import {rtlWorkerPlugin} from '../source/rtl_text_plugin_worker.ts';
 
 import type {SymbolStyleLayer} from '../style/style_layer/symbol_style_layer.ts';
-import type {Feature} from '@maplibre/maplibre-gl-style-spec';
+import type {Feature} from '@emuanalytics/maplibre-gl-style-spec';
 
 afterEach(() => {
     rtlWorkerPlugin.applyArabicShaping = null;

@@ -17,7 +17,7 @@ import type {Tile} from '../tile/tile.ts';
 import type {
     RasterSourceSpecification,
     RasterDEMSourceSpecification
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@emuanalytics/maplibre-gl-style-spec';
 
 /**
  * A source containing raster tiles (See the [raster source documentation](https://maplibre.org/maplibre-style-spec/sources/#raster) for detailed documentation of options.)

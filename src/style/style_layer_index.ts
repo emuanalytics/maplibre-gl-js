@@ -1,9 +1,9 @@
 import {createStyleLayer} from './create_style_layer.ts';
-import {featureFilter, groupByLayout} from '@maplibre/maplibre-gl-style-spec';
+import {featureFilter, groupByLayout} from '@emuanalytics/maplibre-gl-style-spec';
 import {GEOJSON_TILE_LAYER_NAME} from '../data/feature_index.ts';
 
 import type {StyleLayer} from './style_layer.ts';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 export type LayerConfigs = {[_: string]: LayerSpecification};
 

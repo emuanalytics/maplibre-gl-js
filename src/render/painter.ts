@@ -11,7 +11,7 @@ import {StencilMode} from '../webgl/stencil_mode.ts';
 import {ColorMode} from '../webgl/color_mode.ts';
 import {CullFaceMode} from '../webgl/cull_face_mode.ts';
 import {Texture} from '../webgl/texture.ts';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@emuanalytics/maplibre-gl-style-spec';
 import {selectDebugSource, webglDrawFunctions, type DrawFunctions} from '../webgl/draw/index.ts';
 import {layerBlendsInShader} from '../webgl/draw/draw_layer_composite.ts';
 import {Mesh} from './mesh.ts';

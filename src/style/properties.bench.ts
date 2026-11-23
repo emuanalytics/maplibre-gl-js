@@ -1,8 +1,8 @@
 import {test} from 'vitest';
-import {latest as spec, convertFunction, isFunction, createFunction, createPropertyExpression} from '@maplibre/maplibre-gl-style-spec';
+import {latest as spec, convertFunction, isFunction, createFunction, createPropertyExpression} from '@emuanalytics/maplibre-gl-style-spec';
 import brightV9 from '../../test/integration/assets/styles/bright-v9.json' with {type: 'json'};
 
-import type {StyleSpecification, StylePropertyExpression, StylePropertySpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {StyleSpecification, StylePropertyExpression, StylePropertySpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 type Sample = {
     propertySpec: StylePropertySpecification;

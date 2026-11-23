@@ -1,7 +1,7 @@
 import {describe, test, expect} from 'vitest';
 import {AJAXError} from './ajax.ts';
 import {register, serialize, deserialize} from './web_worker_transfer.ts';
-import {featureFilter} from '@maplibre/maplibre-gl-style-spec';
+import {featureFilter} from '@emuanalytics/maplibre-gl-style-spec';
 import {EvaluationParameters} from '../style/evaluation_parameters.ts';
 
 describe('web worker transfer', () => {

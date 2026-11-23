@@ -1,5 +1,5 @@
 import type {CrossFaded} from '../style/properties.ts';
-import type {ResolvedImage} from '@maplibre/maplibre-gl-style-spec';
+import type {ResolvedImage} from '@emuanalytics/maplibre-gl-style-spec';
 import type {Tile} from '../tile/tile.ts';
 import type {ProgramConfiguration} from '../data/program_configuration.ts';
 import type {FillExtrusionStyleLayer} from '../style/style_layer/fill_extrusion_style_layer.ts';

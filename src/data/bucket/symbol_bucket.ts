@@ -34,7 +34,7 @@ import {performSymbolLayout} from '../../symbol/symbol_layout.ts';
 import {isOutsideTile} from '../extent_bounds.ts';
 import {register} from '../../util/web_worker_transfer.ts';
 import {EvaluationParameters} from '../../style/evaluation_parameters.ts';
-import {Formatted, ResolvedImage} from '@maplibre/maplibre-gl-style-spec';
+import {Formatted, ResolvedImage} from '@emuanalytics/maplibre-gl-style-spec';
 import {getOverlapMode} from '../../style/style_layer/overlap_mode.ts';
 
 import type {Anchor} from '../../symbol/anchor.ts';

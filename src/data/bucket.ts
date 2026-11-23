@@ -9,7 +9,7 @@ import type {CanonicalTileID} from '../tile/tile_id.ts';
 import type Point from '@mapbox/point-geometry';
 import type {SubdivisionGranularitySetting} from '../render/subdivision_granularity_settings.ts';
 import type {DashEntry} from '../render/line_atlas.ts';
-import type {Feature as StyleFeature} from '@maplibre/maplibre-gl-style-spec';
+import type {Feature as StyleFeature} from '@emuanalytics/maplibre-gl-style-spec';
 import type {VectorTileFeatureLike, VectorTileLayerLike} from '@maplibre/vt-pbf';
 import type {GetImagesResponse} from '../util/actor_messages.ts';
 import type {GlyphPositions} from '../render/glyph_atlas.ts';

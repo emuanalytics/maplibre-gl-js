@@ -4,7 +4,7 @@ import {ResourceType} from '../util/request_manager.ts';
 import {browser} from '../util/browser.ts';
 import {coerceSpriteToArray} from '../util/style.ts';
 
-import type {SpriteSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {SpriteSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {SpriteJSON, StyleImage} from './style_image.ts';
 import type {RequestManager} from '../util/request_manager.ts';
 

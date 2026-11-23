@@ -8,7 +8,7 @@ import {warnOnce} from '../util/util.ts';
 
 import type {GlyphMap} from '../style/style_glyph.ts';
 import type {ImagePosition} from '../render/image_atlas.ts';
-import type {Formatted, FormattedSection, VerticalAlign} from '@maplibre/maplibre-gl-style-spec';
+import type {Formatted, FormattedSection, VerticalAlign} from '@emuanalytics/maplibre-gl-style-spec';
 
 export type TextSectionOptions = {
     scale: number;

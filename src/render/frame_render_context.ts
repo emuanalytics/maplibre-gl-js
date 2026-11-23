@@ -1,4 +1,4 @@
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@emuanalytics/maplibre-gl-style-spec';
 import {TileManager} from '../tile/tile_manager.ts';
 import {DepthMode} from '../webgl/depth_mode.ts';
 import {ColorMode} from '../webgl/color_mode.ts';

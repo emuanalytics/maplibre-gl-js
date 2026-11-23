@@ -6,7 +6,7 @@ import {ABORT_ERROR} from '../util/abort_error.ts';
 import {sleep} from '../util/test/util.ts';
 
 import type {VectorTileSourceOptions} from './vector_tile_source.ts';
-import type {RasterSourceSpecification, VectorSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {RasterSourceSpecification, VectorSourceSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 describe('loadTileJson', () => {
     let server: FakeServer;

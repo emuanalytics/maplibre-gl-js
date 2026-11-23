@@ -1,6 +1,6 @@
 import {StyleLayer} from '../style_layer.ts';
 import properties, {type ColorReliefPaintPropsPossiblyEvaluated} from './color_relief_style_layer_properties.g.ts';
-import {Color, Interpolate, ZoomConstantExpression, type LayerSpecification, type EvaluationContext, type StylePropertyExpression} from '@maplibre/maplibre-gl-style-spec';
+import {Color, Interpolate, ZoomConstantExpression, type LayerSpecification, type EvaluationContext, type StylePropertyExpression} from '@emuanalytics/maplibre-gl-style-spec';
 import {warnOnce} from '../../util/util.ts';
 import {Texture} from '../../webgl/texture.ts';
 import {RGBAImage} from '../../util/image.ts';

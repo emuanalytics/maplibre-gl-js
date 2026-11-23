@@ -25,7 +25,7 @@ import type {
     TileParameters
 } from '../source/worker_source.ts';
 import type {WorkerGlobalScopeInterface} from '../util/web_worker.ts';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 /**
  * Loads an external script into worker (global) scope. The loader picks a

@@ -1,7 +1,7 @@
 import {readdirSync, readFileSync} from 'fs';
 import {PbfReader} from 'pbf';
 import {VectorTile} from '@mapbox/vector-tile';
-import {derefLayers} from '@maplibre/maplibre-gl-style-spec';
+import {derefLayers} from '@emuanalytics/maplibre-gl-style-spec';
 import {WorkerTile} from '../../../src/source/worker_tile.ts';
 import {StyleLayerIndex} from '../../../src/style/style_layer_index.ts';
 import {parseGlyphPbf} from '../../../src/style/parse_glyph_pbf.ts';
@@ -11,7 +11,7 @@ import {SubdivisionGranularitySetting} from '../../../src/render/subdivision_gra
 import {MessageType} from '../../../src/util/actor_messages.ts';
 import {isCluster} from '../../../src/util/graphemes.ts';
 
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {StyleSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {GlyphMap, StyleGlyph} from '../../../src/style/style_glyph.ts';
 import type {IActor} from '../../../src/util/actor.ts';
 import type {ActorMessage, GetDashesResponse} from '../../../src/util/actor_messages.ts';

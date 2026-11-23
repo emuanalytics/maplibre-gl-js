@@ -5,7 +5,7 @@ import {VerticalPerspectiveProjection} from './vertical_perspective_projection.t
 import {CRSWorldCoordinateHelper} from './crs.ts';
 import {getRegisteredProjection} from './projection_crud.ts';
 
-import type {ProjectionSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {ProjectionSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {Projection} from './projection.ts';
 import type {CameraProjectionKind} from '../../camera/camera_context.ts';
 

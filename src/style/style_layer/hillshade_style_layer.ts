@@ -4,7 +4,7 @@ import {degreesToRadians} from '../../util/util.ts';
 
 import type {Transitionable, Transitioning, PossiblyEvaluated} from '../properties.ts';
 import type {HillshadePaintProps} from './hillshade_style_layer_properties.g.ts';
-import type {Color, LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {Color, LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {EvaluationParameters} from '../evaluation_parameters.ts';
 
 export const isHillshadeStyleLayer = (layer: StyleLayer): layer is HillshadeStyleLayer => layer.type === 'hillshade';

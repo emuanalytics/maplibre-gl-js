@@ -1,9 +1,9 @@
 import {StyleLayer} from '../style_layer.ts';
-import {ValidationError} from '@maplibre/maplibre-gl-style-spec';
+import {ValidationError} from '@emuanalytics/maplibre-gl-style-spec';
 
 import type {Map} from '../../ui/map.ts';
 import type {mat4} from 'gl-matrix';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {CustomLayerProjectionData, RendererProjectionData} from '../../geo/projection/projection_data.ts';
 import type {TerrainHeightMapTarget} from '../../render/terrain.ts';
 

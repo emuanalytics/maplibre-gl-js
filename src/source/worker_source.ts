@@ -9,7 +9,7 @@ import type {CollisionBoxArray} from '../data/array_types.g.ts';
 import type {DEMEncoding} from '../data/dem_data.ts';
 import type {GlyphMap} from '../style/style_glyph.ts';
 import type {StyleImage} from '../style/style_image.ts';
-import type {PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {PromoteIdSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {RemoveSourceParams} from '../util/actor_messages.ts';
 import type {IActor} from '../util/actor.ts';
 import type {StyleLayerIndex} from '../style/style_layer_index.ts';

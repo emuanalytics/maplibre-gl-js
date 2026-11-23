@@ -6,7 +6,7 @@ import {StyleLayerIndex} from '../style/style_layer_index.ts';
 import {MessageType} from '../util/actor_messages.ts';
 import {SubdivisionGranularitySetting} from '../render/subdivision_granularity_settings.ts';
 import {createFakeActor} from '../util/test/util.ts';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@emuanalytics/maplibre-gl-style-spec';
 
 import type {WorkerTileParameters, WorkerTileWithData} from './worker_source.ts';
 import type {EvaluationParameters} from '../style/evaluation_parameters.ts';

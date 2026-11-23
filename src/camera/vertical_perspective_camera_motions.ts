@@ -3,7 +3,7 @@ import {LngLat, type LngLatLike} from '../geo/lng_lat.ts';
 import {angularCoordinatesToSurfaceVector, computeGlobePanCenter, getGlobeRadiusPixels, getZoomAdjustment, globeDistanceOfLocationsPixels, interpolateLngLatForGlobe} from '../geo/projection/globe_utils.ts';
 import {clamp, createVec3f64, differenceOfAnglesDegrees, lerp, remapSaturate, rollPitchBearingEqual, scaleZoom, warnOnce, zoomScale} from '../util/util.ts';
 import {type mat4, vec3} from 'gl-matrix';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@emuanalytics/maplibre-gl-style-spec';
 import {getCenterPoint, isPaddingEqual} from './camera_view_state.ts';
 import {applyConstrain} from './camera_constrain.ts';
 import {getCameraMath} from './camera_math_factory.ts';

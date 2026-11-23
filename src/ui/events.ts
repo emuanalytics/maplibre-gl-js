@@ -6,7 +6,7 @@ import {extend} from '../util/util.ts';
 import type {MapGeoJSONFeature} from '../util/vectortile_to_geojson.ts';
 import type {Map} from './map.ts';
 import type {LngLat} from '../geo/lng_lat.ts';
-import type {ProjectionSpecification, SourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {ProjectionSpecification, SourceSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {GeoJSONSourceShouldReloadTileOptions} from '../source/geojson_source.ts';
 import type {OverscaledTileID} from '../tile/tile_id.ts';
 

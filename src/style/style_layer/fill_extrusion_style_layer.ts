@@ -7,7 +7,7 @@ import Point from '@mapbox/point-geometry';
 import {getCameraMath} from '../../camera/camera_math_factory.ts';
 
 import type {Layout, Transitionable, Transitioning, PossiblyEvaluated} from '../properties.ts';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {BucketParameters} from '../../data/bucket.ts';
 import type {FillExtrusionLayoutProps, FillExtrusionPaintProps} from './fill_extrusion_style_layer_properties.g.ts';
 import type {ProjectedCamera} from '../../camera/projected_camera.ts';

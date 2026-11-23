@@ -9,7 +9,7 @@ import type {StyleImage} from '../style/style_image.ts';
 import type {CrossFaded} from '../style/properties.ts';
 import type {Context} from '../webgl/context.ts';
 import type {PotpackBox} from 'potpack';
-import type {ResolvedImage} from '@maplibre/maplibre-gl-style-spec';
+import type {ResolvedImage} from '@emuanalytics/maplibre-gl-style-spec';
 
 type Pattern = {
     bin: PotpackBox;

@@ -2,7 +2,7 @@ import {type VectorTileFeatureLike, type VectorTileLayerLike, GEOJSON_TILE_LAYER
 import {loadGeometry} from './load_geometry.ts';
 import {toEvaluationFeature} from './evaluation_feature.ts';
 import {EXTENT} from './extent.ts';
-import {featureFilter} from '@maplibre/maplibre-gl-style-spec';
+import {featureFilter} from '@emuanalytics/maplibre-gl-style-spec';
 import {TransferableGridIndex} from '../util/transferable_grid_index.ts';
 import {DictionaryCoder} from '../util/dictionary_coder.ts';
 import {PbfReader} from 'pbf';
@@ -23,7 +23,7 @@ import type {SourceFeatureState} from '../source/source_state.ts';
 import type {PossiblyEvaluatedPropertyValue} from '../style/properties.ts';
 import type {MapGeoJSONFeature} from '../util/vectortile_to_geojson.ts';
 import type {StyleLayer} from '../style/style_layer.ts';
-import type {Feature, FeatureFilter, FeatureState, FilterSpecification, PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {Feature, FeatureFilter, FeatureState, FilterSpecification, PromoteIdSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {TileEncoding} from '../source/worker_source.ts';
 import type {ProjectedCamera} from '../camera/projected_camera.ts';
 import type {GetElevation, WorldCoordinateHelper} from '../geo/world_types.ts';

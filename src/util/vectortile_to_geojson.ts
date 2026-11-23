@@ -3,7 +3,7 @@ import {JSON_PREFIX} from './util.ts';
 import {mercatorWorldCoordinateHelper} from '../geo/mercator_coordinate.ts';
 
 import type Point from '@mapbox/point-geometry';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {VectorTileFeatureLike} from '@maplibre/vt-pbf';
 import type {WorldCoordinateHelper} from '../geo/world_types.ts';
 

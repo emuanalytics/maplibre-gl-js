@@ -5,7 +5,7 @@ import type {TileManager} from '../tile/tile_manager.ts';
 import type {StyleLayer} from '../style/style_layer.ts';
 import type {CollisionIndex} from '../symbol/collision_index.ts';
 import type {RetainedQueryData} from '../symbol/placement.ts';
-import type {FilterSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {FilterSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {GeoJSONFeature, MapGeoJSONFeature} from '../util/vectortile_to_geojson.ts';
 import type {QueryResults, QueryResultsItem} from '../data/feature_index.ts';
 import type {OverscaledTileID} from '../tile/tile_id.ts';

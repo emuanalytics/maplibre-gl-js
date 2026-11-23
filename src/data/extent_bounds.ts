@@ -2,7 +2,7 @@ import Point from '@mapbox/point-geometry';
 import {Bounds, type ReadOnlyBounds} from '../geo/bounds.ts';
 import {EXTENT} from './extent.ts';
 
-import type {Point2D} from '@maplibre/maplibre-gl-style-spec';
+import type {Point2D} from '@emuanalytics/maplibre-gl-style-spec';
 
 /**
  * The bounding box covering the entire extent of a tile.

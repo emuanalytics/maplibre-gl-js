@@ -1,5 +1,5 @@
 import {describe, test, expect, vi, afterEach, beforeEach} from 'vitest';
-import {ColorArray} from '@maplibre/maplibre-gl-style-spec';
+import {ColorArray} from '@emuanalytics/maplibre-gl-style-spec';
 import {DataDrivenProperty, Layout, PossiblyEvaluatedPropertyValue, PropertyValue, Transitionable} from './properties.ts';
 import symbolProperties from './style_layer/symbol_style_layer_properties.g.ts';
 import hillshadeProperties from './style_layer/hillshade_style_layer_properties.g.ts';

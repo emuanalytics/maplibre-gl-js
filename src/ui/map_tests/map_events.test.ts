@@ -7,7 +7,7 @@ import {ErrorEvent} from '../../util/evented.ts';
 
 import type {MapGeoJSONFeature} from '../../util/vectortile_to_geojson.ts';
 import type {StyleLayer} from '../../style/style_layer.ts';
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {StyleSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 type IsAny<T> = 0 extends T & 1 ? T : never;
 type NotAny<T> = T extends IsAny<T> ? never : T;

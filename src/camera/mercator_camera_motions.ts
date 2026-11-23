@@ -2,7 +2,7 @@ import Point from '@mapbox/point-geometry';
 import {LngLat, type LngLatLike} from '../geo/lng_lat.ts';
 import {clamp, degreesToRadians, MAX_VALID_LATITUDE, rollPitchBearingEqual, scaleZoom, zoomScale} from '../util/util.ts';
 import {getMercatorHorizon, lngLatBoxToWorldSamples, projectToWorldCoordinates, unprojectFromWorldCoordinates} from '../geo/projection/mercator_utils.ts';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@emuanalytics/maplibre-gl-style-spec';
 import {getCenterPoint, isPaddingEqual} from './camera_view_state.ts';
 import {applyConstrain} from './camera_constrain.ts';
 import {projectCamera, getCameraMetrics} from './project_camera.ts';

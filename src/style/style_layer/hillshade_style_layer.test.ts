@@ -1,6 +1,6 @@
 import {describe, test, expect} from 'vitest';
 import {HillshadeStyleLayer} from './hillshade_style_layer.ts';
-import {Color, type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {Color, type LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import {createStyleLayer} from '../create_style_layer.ts';
 import {degreesToRadians, extend} from '../../util/util.ts';
 

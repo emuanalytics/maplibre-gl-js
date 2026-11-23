@@ -3,7 +3,7 @@ import {DOM} from '../../util/dom.ts';
 import type {Map} from '../map.ts';
 import type {ControlPosition, IControl} from './control.ts';
 import type {MapSourceDataEvent, MapStyleDataEvent, MapTerrainEvent} from '../events.ts';
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {StyleSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 /**
  * The {@link AttributionControl} options object
  */

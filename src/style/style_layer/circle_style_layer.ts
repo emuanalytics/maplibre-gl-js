@@ -5,7 +5,7 @@ import properties, {type CircleLayoutPropsPossiblyEvaluated, type CirclePaintPro
 
 import type {Transitionable, Transitioning, Layout, PossiblyEvaluated} from '../properties.ts';
 import type Point from '@mapbox/point-geometry';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {Bucket, BucketParameters} from '../../data/bucket.ts';
 import type {CircleLayoutProps, CirclePaintProps} from './circle_style_layer_properties.g.ts';
 

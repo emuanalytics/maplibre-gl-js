@@ -9,7 +9,7 @@ import {
     UniformColorArray,
     UniformMatrix4f
 } from './uniform_binding.ts';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@emuanalytics/maplibre-gl-style-spec';
 
 import type {mat4} from 'gl-matrix';
 import type {Context} from './context.ts';

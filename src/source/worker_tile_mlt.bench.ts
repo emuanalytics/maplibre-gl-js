@@ -1,13 +1,13 @@
 import {readFileSync} from 'fs';
 import {test} from 'vitest';
-import {derefLayers} from '@maplibre/maplibre-gl-style-spec';
+import {derefLayers} from '@emuanalytics/maplibre-gl-style-spec';
 import {WorkerTile} from './worker_tile.ts';
 import {MLTVectorTile} from './vector_tile_mlt.ts';
 import {StyleLayerIndex} from '../style/style_layer_index.ts';
 import {OverscaledTileID} from '../tile/tile_id.ts';
 import {SubdivisionGranularitySetting} from '../render/subdivision_granularity_settings.ts';
 
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {IActor} from '../util/actor.ts';
 
 /**

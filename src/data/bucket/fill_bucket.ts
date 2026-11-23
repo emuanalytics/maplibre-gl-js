@@ -3,7 +3,7 @@ import {members as layoutAttributes} from './fill_attributes.ts';
 import {SegmentVector} from '../segment.ts';
 import {ProgramConfigurationSet} from '../program_configuration.ts';
 import {LineIndexArray, TriangleIndexArray} from '../index_array_type.ts';
-import {classifyRings} from '@maplibre/maplibre-gl-style-spec';
+import {classifyRings} from '@emuanalytics/maplibre-gl-style-spec';
 const EARCUT_MAX_RINGS = 500;
 import {register} from '../../util/web_worker_transfer.ts';
 import {hasPattern, addPatternDependencies} from './pattern_bucket_features.ts';

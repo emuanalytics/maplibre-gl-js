@@ -1,9 +1,9 @@
-import {Interpolate, interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {Interpolate, interpolates} from '@emuanalytics/maplibre-gl-style-spec';
 import {clamp} from '../util/util.ts';
 import {EvaluationParameters} from '../style/evaluation_parameters.ts';
 
 import type {PropertyValue, PossiblyEvaluatedPropertyValue} from '../style/properties.ts';
-import type {InterpolationType, StylePropertyExpression} from '@maplibre/maplibre-gl-style-spec';
+import type {InterpolationType, StylePropertyExpression} from '@emuanalytics/maplibre-gl-style-spec';
 
 const MAX_GLYPH_ICON_SIZE = 255;
 const SIZE_PACK_FACTOR = 128;

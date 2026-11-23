@@ -2,7 +2,7 @@ import {ImageSource} from './image_source.ts';
 import {Texture} from '../webgl/texture.ts';
 import {ErrorEvent} from '../util/evented.ts';
 import {MapSourceDataEvent} from '../ui/events.ts';
-import {ValidationError} from '@maplibre/maplibre-gl-style-spec';
+import {ValidationError} from '@emuanalytics/maplibre-gl-style-spec';
 
 import type {Map} from '../ui/map.ts';
 import type {Dispatcher} from '../util/dispatcher.ts';

@@ -74,7 +74,7 @@ import type {
     SkySpecification,
     AllPaintProperties,
     AllLayoutProperties,
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@emuanalytics/maplibre-gl-style-spec';
 import type {CanvasSourceSpecification} from '../source/canvas_source.ts';
 import type {GeoJSONFeature, MapGeoJSONFeature} from '../util/vectortile_to_geojson.ts';
 import type {ControlPosition, IControl} from './control/control.ts';

@@ -1,5 +1,5 @@
 import {filterObject} from '../util/util.ts';
-import {createVisibilityExpression, featureFilter, supportsPropertyExpression} from '@maplibre/maplibre-gl-style-spec';
+import {createVisibilityExpression, featureFilter, supportsPropertyExpression} from '@emuanalytics/maplibre-gl-style-spec';
 import {validateStyle, validateAndEmit, type Validator} from './validate_style.ts';
 import {Evented, ErrorEvent, type ErrorEventType} from '../util/evented.ts';
 import {Layout, Transitionable, type Transitioning, type Properties, PossiblyEvaluated, PossiblyEvaluatedPropertyValue, TRANSITION_SUFFIX} from './properties.ts';
@@ -15,7 +15,7 @@ import type {
     VisibilityExpression,
     AllPaintProperties,
     AllLayoutProperties,
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@emuanalytics/maplibre-gl-style-spec';
 import type {TransitionParameters, PropertyValue} from './properties.ts';
 import type {EvaluationParameters} from './evaluation_parameters.ts';
 import type {CrossfadeParameters} from './evaluation_parameters.ts';

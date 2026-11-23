@@ -1,6 +1,6 @@
 import {describe, expect, test, vi, afterEach} from 'vitest';
 import {Sky} from './sky.ts';
-import {latest as styleSpec} from '@maplibre/maplibre-gl-style-spec';
+import {latest as styleSpec} from '@emuanalytics/maplibre-gl-style-spec';
 
 import type {EvaluationParameters} from './evaluation_parameters.ts';
 import type {TransitionParameters} from './properties.ts';

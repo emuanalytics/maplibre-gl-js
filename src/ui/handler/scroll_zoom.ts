@@ -1,7 +1,7 @@
 import {DOM} from '../../util/dom.ts';
 import {defaultEasing, bezier, zoomScale, scaleZoom, evaluateZoomSnap} from '../../util/util.ts';
 import {now} from '../../util/time_control.ts';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@emuanalytics/maplibre-gl-style-spec';
 import {getCameraMath} from '../../camera/camera_math_factory.ts';
 import {applyConstrain} from '../../camera/camera_constrain.ts';
 

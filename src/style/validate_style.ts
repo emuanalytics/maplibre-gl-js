@@ -1,8 +1,8 @@
-import {latest as styleSpec, validateStyleMin} from '@maplibre/maplibre-gl-style-spec';
+import {latest as styleSpec, validateStyleMin} from '@emuanalytics/maplibre-gl-style-spec';
 import {ErrorEvent} from '../util/evented.ts';
 import {warnOnce} from '../util/util.ts';
 
-import type {StyleSpecification, ValidationError} from '@maplibre/maplibre-gl-style-spec';
+import type {StyleSpecification, ValidationError} from '@emuanalytics/maplibre-gl-style-spec';
 import type {Evented} from '../util/evented.ts';
 import type {StyleSetterOptions} from './style.ts';
 

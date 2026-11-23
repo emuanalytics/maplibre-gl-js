@@ -5,7 +5,7 @@ import {updatePatternPositionsInProgram} from './update_pattern_positions_in_pro
 import {FillStyleLayer} from '../style/style_layer/fill_style_layer.ts';
 
 import type {CrossFaded} from '../style/properties.ts';
-import type {FillLayerSpecification, ResolvedImage} from '@maplibre/maplibre-gl-style-spec';
+import type {FillLayerSpecification, ResolvedImage} from '@emuanalytics/maplibre-gl-style-spec';
 import type {ProgramConfiguration} from '../data/program_configuration.ts';
 import type {ImagePosition} from './image_atlas.ts';
 import type {Rect} from './glyph_atlas.ts';

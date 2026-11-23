@@ -10,7 +10,7 @@ import {BackgroundStyleLayer} from './style_layer/background_style_layer.ts';
 import {RasterStyleLayer} from './style_layer/raster_style_layer.ts';
 import {CustomStyleLayer, type CustomLayerInterface} from './style_layer/custom_style_layer.ts';
 
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 export type AnyStyleLayer =
     | HeatmapStyleLayer

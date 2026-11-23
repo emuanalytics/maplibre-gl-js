@@ -22,7 +22,7 @@ import {IMAGE_PADDING} from '../render/image_atlas.ts';
 import type {ImagePosition} from '../render/image_atlas.ts';
 import type {StyleGlyph, GlyphMap, GlyphMetrics} from '../style/style_glyph.ts';
 import type {Rect, GlyphPosition, GlyphPositions} from '../render/glyph_atlas.ts';
-import type {Formatted, VerticalAlign} from '@maplibre/maplibre-gl-style-spec';
+import type {Formatted, VerticalAlign} from '@emuanalytics/maplibre-gl-style-spec';
 
 enum WritingMode {
     none = 0,

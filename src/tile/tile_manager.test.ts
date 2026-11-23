@@ -21,7 +21,7 @@ import {CRSWorldCoordinateHelper} from '../geo/projection/crs.ts';
 import type {TileCache} from './tile_cache.ts';
 import type {Map} from '../ui/map.ts';
 import type {Dispatcher} from '../util/dispatcher.ts';
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {StyleSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {SymbolBucket} from '../data/bucket/symbol_bucket.ts';
 
 class SourceMock extends Evented implements Source {

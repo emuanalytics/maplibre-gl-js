@@ -20,7 +20,7 @@ import type {Dispatcher} from '../util/dispatcher.ts';
 import type {Tile} from '../tile/tile.ts';
 import type {Actor} from '../util/actor.ts';
 import type {GeoJSONWorkerSourceLoadDataResult} from '../util/actor_messages.ts';
-import type {GeoJSONSourceSpecification, PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {GeoJSONSourceSpecification, PromoteIdSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {GeoJSONFeatureId, GeoJSONSourceDiff} from './geojson_source_diff.ts';
 import type {GeoJSONWorkerOptions, LoadGeoJSONParameters} from './geojson_worker_source.ts';
 import type {WorkerTileParameters} from './worker_source.ts';

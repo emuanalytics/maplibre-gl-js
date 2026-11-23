@@ -5,7 +5,7 @@ import {
     UniformMatrix4f,
     UniformColor
 } from '../uniform_binding.ts';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@emuanalytics/maplibre-gl-style-spec';
 import {calculateFogBlendOpacity} from '../../style/sky.ts';
 
 import type {SkyPropsPossiblyEvaluated} from '../../style/sky_properties.g.ts';

@@ -8,7 +8,7 @@ import {CanvasSource} from '../source/canvas_source.ts';
 
 import type {CalculateTileZoomFunction} from '../geo/projection/covering_tiles.ts';
 import type {Dispatcher} from '../util/dispatcher.ts';
-import type {SourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {SourceSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {Event, Evented} from '../util/evented.ts';
 import type {Map} from '../ui/map.ts';
 import type {Tile} from '../tile/tile.ts';

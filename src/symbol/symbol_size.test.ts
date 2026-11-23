@@ -2,7 +2,7 @@ import {describe, test, expect} from 'vitest';
 import {SymbolStyleLayer} from '../style/style_layer/symbol_style_layer.ts';
 import {evaluateSizeForFeature, evaluateSizeForZoom, getSizeData} from './symbol_size.ts';
 
-import type {SymbolLayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {SymbolLayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 function createTextSizeValue(textSize: SymbolLayerSpecification['layout']['text-size']) {
     const layer = new SymbolStyleLayer({

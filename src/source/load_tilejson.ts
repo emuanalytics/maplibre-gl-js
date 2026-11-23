@@ -4,7 +4,7 @@ import {ResourceType} from '../util/request_manager.ts';
 import {browser} from '../util/browser.ts';
 
 import type {RequestManager} from '../util/request_manager.ts';
-import type {RasterDEMSourceSpecification, RasterSourceSpecification, VectorSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {RasterDEMSourceSpecification, RasterSourceSpecification, VectorSourceSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 export type LoadTileJsonResponse = {
     tiles: string[];

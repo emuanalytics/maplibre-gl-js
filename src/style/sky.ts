@@ -4,7 +4,7 @@ import {EvaluationParameters} from './evaluation_parameters.ts';
 import {validateStyle, validateAndEmit, type Validator} from './validate_style.ts';
 import {getProperties, type SkyProps, type SkyPropsPossiblyEvaluated} from './sky_properties.g.ts';
 
-import type {SkySpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {SkySpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {StyleSetterOptions} from './style.ts';
 
 export class Sky extends Evented {

@@ -1,7 +1,7 @@
 import {RGBAImage} from './image.ts';
 import {isPowerOfTwo} from './util.ts';
 
-import type {StylePropertyExpression} from '@maplibre/maplibre-gl-style-spec';
+import type {StylePropertyExpression} from '@emuanalytics/maplibre-gl-style-spec';
 
 export type ColorRampParams = {
     expression: StylePropertyExpression;

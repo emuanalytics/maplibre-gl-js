@@ -10,7 +10,7 @@ import {CRSWorldCoordinateHelper, identityCrs} from '../geo/projection/crs.ts';
 import {MercatorProjection} from '../geo/projection/mercator_projection.ts';
 
 import type {Texture} from '../webgl/texture.ts';
-import type {ImageSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {ImageSourceSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {MapSourceDataEvent} from '../ui/events.ts';
 import type {Map} from '../ui/map.ts';
 

@@ -4,7 +4,7 @@ import type {DEMData} from '../data/dem_data.ts';
 import type {StyleImage} from '../style/style_image.ts';
 import type {GlyphMap, GlyphRequests} from '../style/style_glyph.ts';
 import type {PluginState} from '../source/rtl_text_plugin_status.ts';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {OverscaledTileID} from '../tile/tile_id.ts';
 import type {GetResourceResponse, RequestParameters} from './ajax.ts';
 import type {DashEntry} from '../render/line_atlas.ts';

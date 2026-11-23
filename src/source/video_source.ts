@@ -5,12 +5,12 @@ import {Texture} from '../webgl/texture.ts';
 import {ErrorEvent} from '../util/evented.ts';
 import {MapSourceDataEvent} from '../ui/events.ts';
 import {ensureError} from '../util/util.ts';
-import {ValidationError} from '@maplibre/maplibre-gl-style-spec';
+import {ValidationError} from '@emuanalytics/maplibre-gl-style-spec';
 
 import type {Map} from '../ui/map.ts';
 import type {Dispatcher} from '../util/dispatcher.ts';
 import type {Evented} from '../util/evented.ts';
-import type {VideoSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {VideoSourceSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 /**
  * A data source containing video.

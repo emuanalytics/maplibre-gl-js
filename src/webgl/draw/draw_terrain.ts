@@ -2,7 +2,7 @@ import {StencilMode} from '../stencil_mode.ts';
 import {DepthMode} from '../depth_mode.ts';
 import {terrainUniformValues, terrainDepthUniformValues, terrainHeightUniformValues} from '../program/terrain_program.ts';
 import {CullFaceMode} from '../cull_face_mode.ts';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@emuanalytics/maplibre-gl-style-spec';
 import {ColorMode} from '../color_mode.ts';
 import {getCameraMath} from '../../camera/camera_math_factory.ts';
 

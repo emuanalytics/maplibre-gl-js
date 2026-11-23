@@ -1,4 +1,4 @@
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@emuanalytics/maplibre-gl-style-spec';
 import {drawTerrain} from './draw/draw_terrain.ts';
 import {setFrameUniformWorldSize} from './frame_uniform_buffer.ts';
 import {ImageSource} from '../source/image_source.ts';

@@ -1,4 +1,4 @@
-import {ProjectionDefinition, type ProjectionSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {ProjectionDefinition, type ProjectionSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import {type PossiblyEvaluated, Transitionable, type Transitioning, type TransitionParameters} from '../../style/properties.ts';
 import {getProperties, type ProjectionProps, type ProjectionPropsPossiblyEvaluated} from '../../style/projection_properties.g.ts';
 import {Evented} from '../../util/evented.ts';

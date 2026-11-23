@@ -10,7 +10,7 @@ import {extend} from '../../util/util.ts';
 import type {PatternAtlas} from '../../render/pattern_atlas.ts';
 import type {UniformValues, UniformLocations} from '../uniform_binding.ts';
 import type {Context} from '../../webgl/context.ts';
-import type {Color, ResolvedImage} from '@maplibre/maplibre-gl-style-spec';
+import type {Color, ResolvedImage} from '@emuanalytics/maplibre-gl-style-spec';
 import type {CrossFaded} from '../../style/properties.ts';
 import type {CrossfadeParameters} from '../../style/evaluation_parameters.ts';
 import type {OverscaledTileID} from '../../tile/tile_id.ts';

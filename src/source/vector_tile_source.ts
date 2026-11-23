@@ -13,7 +13,7 @@ import type {CanonicalTileID, OverscaledTileID} from '../tile/tile_id.ts';
 import type {Map} from '../ui/map.ts';
 import type {Dispatcher} from '../util/dispatcher.ts';
 import type {Tile} from '../tile/tile.ts';
-import type {VectorSourceSpecification, PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {VectorSourceSpecification, PromoteIdSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {RequestParameters} from '../util/ajax';
 import type {WorkerTileParameters, OverzoomParameters, WorkerTileResult, TileEncoding} from './worker_source.ts';
 

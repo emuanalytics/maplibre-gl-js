@@ -24,7 +24,7 @@ import type {Tile} from '../tile/tile.ts';
 import type {
     ImageSourceSpecification,
     VideoSourceSpecification
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@emuanalytics/maplibre-gl-style-spec';
 import type Point from '@mapbox/point-geometry';
 import type {Context} from '../webgl/context.ts';
 import type {Mesh} from '../render/mesh.ts';

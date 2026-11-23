@@ -86,7 +86,7 @@ import type {WorkerGlobalScopeInterface} from './util/web_worker.ts';
 import type {TerrainHeightMapTarget} from './render/terrain.ts';
 const version = packageJSON.version;
 
-export type * from '@maplibre/maplibre-gl-style-spec';
+export type * from '@emuanalytics/maplibre-gl-style-spec';
 
 /**
  * Sets the map's [RTL text plugin](https://www.mapbox.com/mapbox-gl-js/plugins/#mapbox-gl-rtl-text).

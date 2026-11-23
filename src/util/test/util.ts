@@ -31,7 +31,7 @@ import type {CameraContext} from '../../camera/camera_context.ts';
 import type {CameraProjectionKind} from '../../camera/camera_context.ts';
 import type {ProjectedCamera} from '../../camera/projected_camera.ts';
 import type {PaddingOptions} from '../../geo/edge_insets.ts';
-import type {SourceSpecification, StyleSpecification, TerrainSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {SourceSpecification, StyleSpecification, TerrainSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {SourceEventType} from '../../ui/events.ts';
 import type {IActor} from '../actor.ts';
 import type {FrameRenderData} from '../../render/frame_render_context.ts';

@@ -12,7 +12,7 @@ import {createFrameRenderData, createTestCamera} from '../util/test/util.ts';
 import type {Style} from '../style/style.ts';
 import type {Map} from '../ui/map.ts';
 import type {TileManager} from '../tile/tile_manager.ts';
-import type {TerrainSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {TerrainSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {FillStyleLayer} from '../style/style_layer/fill_style_layer.ts';
 import type {RasterStyleLayer} from '../style/style_layer/raster_style_layer.ts';
 import type {HillshadeStyleLayer} from '../style/style_layer/hillshade_style_layer.ts';

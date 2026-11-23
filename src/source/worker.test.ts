@@ -4,7 +4,7 @@ import Worker from './worker.ts';
 import {rtlWorkerPlugin} from './rtl_text_plugin_worker.ts';
 import {MessageType} from '../util/actor_messages.ts';
 
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {WorkerGlobalScopeInterface} from '../util/web_worker.ts';
 import type {CanonicalTileID, OverscaledTileID} from '../tile/tile_id.ts';
 import type {WorkerSource, WorkerTileParameters, WorkerTileResult} from './worker_source.ts';

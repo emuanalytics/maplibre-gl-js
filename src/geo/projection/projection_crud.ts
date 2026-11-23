@@ -1,6 +1,6 @@
 import {identityCrs, type CRS} from './crs.ts';
 
-import type {ProjectionSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {ProjectionSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 const registeredProjections = new Map<string, CRS>([[identityCrs.name, identityCrs]]);
 

@@ -1,4 +1,4 @@
-import {VariableAnchorOffsetCollection, type VariableAnchorOffsetCollectionSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {VariableAnchorOffsetCollection, type VariableAnchorOffsetCollectionSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import ONE_EM from '../../symbol/one_em.ts';
 
 import type {SymbolFeature} from '../../data/bucket/symbol_bucket.ts';

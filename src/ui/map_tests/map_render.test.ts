@@ -3,11 +3,11 @@ import {createMap, beforeMapTest, createStyle, sleep} from '../../util/test/util
 import {fakeServer, type FakeServer} from 'nise';
 import {PauseablePlacement} from '../../style/pauseable_placement.ts';
 import {FrameRenderContext} from '../../render/frame_render_context.ts';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@emuanalytics/maplibre-gl-style-spec';
 import {now, setNow, restoreNow} from '../../util/time_control.ts';
 
 import type {Map} from '../map.ts';
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {StyleSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 let server: FakeServer;
 

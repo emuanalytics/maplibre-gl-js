@@ -17,7 +17,7 @@ import type {
     StructArray,
     StructArrayMember
 } from '../util/struct_array.ts';
-import type {Color} from '@maplibre/maplibre-gl-style-spec';
+import type {Color} from '@emuanalytics/maplibre-gl-style-spec';
 
 type ClearArgs = {
     color?: Color;

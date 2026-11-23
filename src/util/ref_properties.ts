@@ -1,4 +1,4 @@
-import type {FillLayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {FillLayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 // keyof LayerSpecification is the intersection of all variants' keys — that
 // excludes `source`/`source-layer`/`filter` because BackgroundLayerSpecification

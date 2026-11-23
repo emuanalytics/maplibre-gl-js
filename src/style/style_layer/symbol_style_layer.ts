@@ -19,13 +19,13 @@ import {
     typeOf,
     Formatted,
     FormatExpression,
-    Literal} from '@maplibre/maplibre-gl-style-spec';
+    Literal} from '@emuanalytics/maplibre-gl-style-spec';
 import {FormatSectionOverride} from '../format_section_override.ts';
 
 import type {BucketParameters} from '../../data/bucket.ts';
 import type {SymbolLayoutProps, SymbolPaintProps} from './symbol_style_layer_properties.g.ts';
 import type {EvaluationParameters} from '../evaluation_parameters.ts';
-import type {Expression, Feature, SourceExpression, LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {Expression, Feature, SourceExpression, LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {CanonicalTileID} from '../../tile/tile_id.ts';
 
 export const isSymbolStyleLayer = (layer: StyleLayer): layer is SymbolStyleLayer => layer.type === 'symbol';

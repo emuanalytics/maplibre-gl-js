@@ -27,7 +27,7 @@ import type {Map} from '../ui/map.ts';
 import type {Style} from '../style/style.ts';
 import type {Dispatcher} from '../util/dispatcher.ts';
 import type {TileState} from './tile.ts';
-import type {FeatureState, ICanonicalTileID, SourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {FeatureState, ICanonicalTileID, SourceSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {Terrain} from '../render/terrain.ts';
 import type {CanvasSourceSpecification} from '../source/canvas_source.ts';
 import type {LoadTileResult} from '../source/vector_tile_source.ts';

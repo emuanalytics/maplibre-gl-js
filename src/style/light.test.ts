@@ -1,6 +1,6 @@
 import {describe, test, expect, vi, afterEach} from 'vitest';
 import {Light} from './light.ts';
-import {Color, latest as styleSpec, type LightSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {Color, latest as styleSpec, type LightSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 import type {EvaluationParameters} from './evaluation_parameters.ts';
 import type {TransitionParameters} from './properties.ts';

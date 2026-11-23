@@ -12,7 +12,7 @@ import {identityCrs} from '../geo/projection/crs.ts';
 import type {GeoJSONVT} from '@maplibre/geojson-vt';
 import type {Actor, IActor} from '../util/actor.ts';
 import type {TileParameters, WorkerTileParameters, WorkerTileResult, WorkerTileWithData} from './worker_source.ts';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {WorkerTile} from './worker_tile.ts';
 
 const actor = {send: () => {}} as any as Actor;

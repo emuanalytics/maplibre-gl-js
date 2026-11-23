@@ -3,7 +3,7 @@ import {FillExtrusionBucket} from './fill_extrusion_bucket.ts';
 import {FillExtrusionStyleLayer} from '../../style/style_layer/fill_extrusion_style_layer.ts';
 import {type CreateBucketParameters, createPopulateOptions, getFeaturesFromLayer, loadVectorTile} from '../../../test/unit/lib/tile.ts';
 
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {EvaluationParameters} from '../../style/evaluation_parameters.ts';
 import type {ZoomHistory} from '../../style/zoom_history.ts';
 import type {BucketParameters} from '../bucket.ts';

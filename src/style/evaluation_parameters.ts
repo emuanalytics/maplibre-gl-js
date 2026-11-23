@@ -1,6 +1,6 @@
 import {ZoomHistory} from './zoom_history.ts';
 
-import type {GlobalProperties, TransitionSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {GlobalProperties, TransitionSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 export type CrossfadeParameters = {
     fromScale: number;

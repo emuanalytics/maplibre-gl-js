@@ -18,7 +18,7 @@ import type {ProjectedCamera} from '../../camera/projected_camera.ts';
 import type {ZoomHistory} from '../../style/zoom_history.ts';
 import type {Map} from '../../ui/map.ts';
 import type {EvaluationParameters} from '../../style/evaluation_parameters.ts';
-import type {SymbolLayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {SymbolLayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 vi.mock(import('../../render/painter'));
 vi.mock(import('../program'));

@@ -3,7 +3,7 @@ import Point from '@mapbox/point-geometry';
 import {clamp, createMat4f64, createIdentityMat4f32, degreesToRadians, zoomScale, type Mat4f32, type Mat4f64} from '../util/util.ts';
 import {mat4, vec3, vec4} from 'gl-matrix';
 import {UnwrappedTileID, OverscaledTileID, type CanonicalTileID, calculateTileKey} from '../tile/tile_id.ts';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@emuanalytics/maplibre-gl-style-spec';
 import {LngLatBounds} from '../geo/lng_lat_bounds.ts';
 import {getMercatorHorizon, getMercatorTileCoordinates, calculateTileMatrix, cameraMercatorCoordinateFromCenterAndRotation, projectToWorldCoordinates, maxMercatorHorizonAngle} from '../geo/projection/mercator_utils.ts';
 import {fastInvertProjMat4, xyTransformMat4} from '../util/fast_maths.ts';

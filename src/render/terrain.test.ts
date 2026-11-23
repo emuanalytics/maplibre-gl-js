@@ -17,7 +17,7 @@ import {createDEM, createDEMTerrain, createPainter, createRasterDEMTileManager, 
 import {CRSWorldCoordinateHelper, identityCrs} from '../geo/projection/crs.ts';
 
 import type {TileManager} from '../tile/tile_manager.ts';
-import type {TerrainSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {TerrainSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {DEMData} from '../data/dem_data.ts';
 import type {Painter} from './painter.ts';
 

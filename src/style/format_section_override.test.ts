@@ -1,5 +1,5 @@
 import {describe, test, expect} from 'vitest';
-import {EvaluationContext, type FormattedSection, createExpression, type StyleExpression, ZoomConstantExpression} from '@maplibre/maplibre-gl-style-spec';
+import {EvaluationContext, type FormattedSection, createExpression, type StyleExpression, ZoomConstantExpression} from '@emuanalytics/maplibre-gl-style-spec';
 import properties from './style_layer/symbol_style_layer_properties.g.ts';
 import {PossiblyEvaluatedPropertyValue} from './properties.ts';
 import {FormatSectionOverride} from './format_section_override.ts';

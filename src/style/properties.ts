@@ -5,7 +5,7 @@ import {interpolates, type Color, type StylePropertySpecification, normalizeProp
     type StylePropertyExpression,
     type SourceExpression,
     type CompositeExpression, type TransitionSpecification,
-    type PropertyValueSpecification} from '@maplibre/maplibre-gl-style-spec';
+    type PropertyValueSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import {register} from '../util/web_worker_transfer.ts';
 import {EvaluationParameters} from './evaluation_parameters.ts';
 

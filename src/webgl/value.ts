@@ -1,4 +1,4 @@
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@emuanalytics/maplibre-gl-style-spec';
 
 import type {Context} from './context.ts';
 import type {

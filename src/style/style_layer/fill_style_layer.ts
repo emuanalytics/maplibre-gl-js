@@ -5,7 +5,7 @@ import {translateDistance, translate} from '../query_utils.ts';
 import properties, {type FillLayoutPropsPossiblyEvaluated, type FillPaintPropsPossiblyEvaluated} from './fill_style_layer_properties.g.ts';
 
 import type {Transitionable, Transitioning, Layout, PossiblyEvaluated} from '../properties.ts';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {BucketParameters} from '../../data/bucket.ts';
 import type {FillLayoutProps, FillPaintProps} from './fill_style_layer_properties.g.ts';
 import type {EvaluationParameters} from '../evaluation_parameters.ts';

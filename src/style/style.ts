@@ -21,7 +21,7 @@ import {Dispatcher} from '../util/dispatcher.ts';
 import {validateStyle, validateStyleAndEmit, validateAndEmit, emitValidationErrors, SPEC_SOURCE_TYPES} from './validate_style.ts';
 import {type QueryRenderedFeaturesOptions, type QueryRenderedFeaturesOptionsStrict, type QueryRenderedFeaturesResults, type QueryRenderedFeaturesResultsItem, type QuerySourceFeatureOptions, queryRenderedFeatures, queryRenderedSymbols, querySourceFeatures} from '../source/query_features.ts';
 import {TileManager} from '../tile/tile_manager.ts';
-import {derefLayers, emptyStyle, diff as diffStyles, type DiffCommand} from '@maplibre/maplibre-gl-style-spec';
+import {derefLayers, emptyStyle, diff as diffStyles, type DiffCommand} from '@emuanalytics/maplibre-gl-style-spec';
 import {getGlobalWorkerPool} from '../util/global_worker_pool.ts';
 import {rtlMainThreadPluginFactory} from '../source/rtl_text_plugin_main_thread.ts';
 import {RTLPluginLoadedEventName} from '../source/rtl_text_plugin_status.ts';
@@ -64,7 +64,7 @@ import type {
     AllLayoutProperties,
     FeatureState,
     TransitionSpecification,
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@emuanalytics/maplibre-gl-style-spec';
 import type {CanvasSourceSpecification} from '../source/canvas_source.ts';
 import type {CustomLayerInterface} from './style_layer/custom_style_layer.ts';
 import type {Validator} from './validate_style.ts';

@@ -3,7 +3,7 @@ import {FeatureIndex} from './feature_index.ts';
 import {mercatorWorldCoordinateHelper} from '../geo/mercator_coordinate.ts';
 import {OverscaledTileID} from '../tile/tile_id.ts';
 
-import type {FeatureFilter} from '@maplibre/maplibre-gl-style-spec';
+import type {FeatureFilter} from '@emuanalytics/maplibre-gl-style-spec';
 import type {VectorTileFeatureLike, VectorTileLayerLike} from '@maplibre/vt-pbf';
 
 const layerCount = 100;

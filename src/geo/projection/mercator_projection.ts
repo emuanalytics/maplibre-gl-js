@@ -7,7 +7,7 @@ import posAttributes from '../../data/pos_attributes.ts';
 import {SubdivisionGranularitySetting} from '../../render/subdivision_granularity_settings.ts';
 import {mercatorWorldCoordinateHelper} from '../mercator_coordinate.ts';
 
-import type {ProjectionSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {ProjectionSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {Context} from '../../webgl/context.ts';
 import type {CanonicalTileID} from '../../tile/tile_id.ts';
 import type {Projection, TileMeshUsage} from './projection.ts';

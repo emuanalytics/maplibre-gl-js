@@ -3,7 +3,7 @@ import {toGraphemes} from '../util/graphemes.ts';
 import {type PositionedIcon, type Box, type Shaping, applyTextFit, shapeIcon, fitIconToText, shapeText, WritingMode} from './shaping.ts';
 import {ImagePosition} from '../render/image_atlas.ts';
 import {type StyleImage, TextFit} from '../style/style_image.ts';
-import {Formatted, FormattedSection} from '@maplibre/maplibre-gl-style-spec';
+import {Formatted, FormattedSection} from '@emuanalytics/maplibre-gl-style-spec';
 import {verticalizedCharacterMap} from '../util/verticalize_punctuation.ts';
 import {rtlWorkerPlugin} from '../source/rtl_text_plugin_worker.ts';
 

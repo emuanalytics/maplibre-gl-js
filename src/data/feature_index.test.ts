@@ -9,7 +9,7 @@ import Point from '@mapbox/point-geometry';
 import {CRSWorldCoordinateHelper, identityCrs} from '../geo/projection/crs.ts';
 import {createIdentityCrsCamera, createTestCamera} from '../util/test/util.ts';
 
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {EvaluationParameters} from '../style/evaluation_parameters.ts';
 
 describe('FeatureIndex', () => {

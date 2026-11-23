@@ -1,7 +1,7 @@
 import {LngLat, earthRadius} from '../geo/lng_lat.ts';
 import {mercatorTileMatrixSet} from './projection/tile_matrix_set.ts';
 
-import type {IMercatorCoordinate} from '@maplibre/maplibre-gl-style-spec';
+import type {IMercatorCoordinate} from '@emuanalytics/maplibre-gl-style-spec';
 import type {LngLatLike} from '../geo/lng_lat.ts';
 import type {WorldCoordinateHelper} from './world_types.ts';
 

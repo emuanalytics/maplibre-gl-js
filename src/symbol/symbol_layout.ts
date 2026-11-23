@@ -15,7 +15,7 @@ import {EvaluationParameters} from '../style/evaluation_parameters.ts';
 import {SIZE_PACK_FACTOR, MAX_PACKED_SIZE, MAX_GLYPH_ICON_SIZE} from './symbol_size.ts';
 import {getIconPadding, type SymbolPadding} from '../style/style_layer/symbol_style_layer.ts';
 import {getTextVariableAnchorOffset, evaluateVariableOffset, INVALID_TEXT_OFFSET, type TextAnchor, TextAnchorEnum} from '../style/style_layer/variable_text_anchor.ts';
-import {type VariableAnchorOffsetCollection, classifyRings} from '@maplibre/maplibre-gl-style-spec';
+import {type VariableAnchorOffsetCollection, classifyRings} from '@emuanalytics/maplibre-gl-style-spec';
 import {subdivideVertexLine} from '../render/subdivision.ts';
 
 import type Point from '@mapbox/point-geometry';

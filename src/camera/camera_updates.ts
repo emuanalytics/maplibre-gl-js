@@ -7,7 +7,7 @@ import {applyConstrain} from './camera_constrain.ts';
 import {getCameraMetrics} from './project_camera.ts';
 import {getRollPitchBearing, rollPitchBearingToQuat} from '../util/util.ts';
 import {quat} from 'gl-matrix';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@emuanalytics/maplibre-gl-style-spec';
 
 import type {CameraContext} from './camera_context.ts';
 import type {CameraViewState} from './camera_view_state.ts';

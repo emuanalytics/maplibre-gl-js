@@ -15,7 +15,7 @@ import type {DEMEncoding} from '../data/dem_data.ts';
 import type {Source} from './source.ts';
 import type {Dispatcher} from '../util/dispatcher.ts';
 import type {Tile} from '../tile/tile.ts';
-import type {RasterDEMSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {RasterDEMSourceSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {Evented} from '../util/evented.ts';
 
 /**

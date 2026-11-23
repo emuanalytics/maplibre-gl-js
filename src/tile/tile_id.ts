@@ -6,7 +6,7 @@ import {type Mat4f32, MAX_TILE_ZOOM, MIN_TILE_ZOOM} from '../util/util.ts';
 import {isInBoundsForTileZoomXY} from '../util/world_bounds.ts';
 import {mercatorTileMatrixSet, type TileMatrixSet} from '../geo/projection/tile_matrix_set.ts';
 
-import type {ICanonicalTileID, IMercatorCoordinate} from '@maplibre/maplibre-gl-style-spec';
+import type {ICanonicalTileID, IMercatorCoordinate} from '@emuanalytics/maplibre-gl-style-spec';
 
 /**
  * A canonical way to define a tile ID

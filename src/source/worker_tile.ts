@@ -17,7 +17,7 @@ import type {
     WorkerTileParameters,
     WorkerTileResult,
 } from './worker_source.ts';
-import type {PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {PromoteIdSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {VectorTileLike} from '@maplibre/vt-pbf';
 import type {SubdivisionGranularitySetting} from '../render/subdivision_granularity_settings.ts';
 export class WorkerTile {

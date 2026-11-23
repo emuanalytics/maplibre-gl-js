@@ -2,11 +2,11 @@ import {test} from 'vitest';
 import {readFileSync} from 'fs';
 import {VectorTile} from '@mapbox/vector-tile';
 import {PbfReader} from 'pbf';
-import {featureFilter} from '@maplibre/maplibre-gl-style-spec';
+import {featureFilter} from '@emuanalytics/maplibre-gl-style-spec';
 import filters from '../../test/bench/data/filters.json' with {type: 'json'};
 
 import type {VectorTileFeature} from '@mapbox/vector-tile';
-import type {FeatureFilter, FilterSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {FeatureFilter, FilterSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 type FilteredLayer = {
     features: VectorTileFeature[];

@@ -7,7 +7,7 @@ import {FillStyleLayer} from '../../style/style_layer/fill_style_layer.ts';
 import {SubdivisionGranularitySetting} from '../../render/subdivision_granularity_settings.ts';
 import {CanonicalTileID} from '../../tile/tile_id.ts';
 
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {EvaluationParameters} from '../../style/evaluation_parameters.ts';
 import type {ZoomHistory} from '../../style/zoom_history.ts';
 import type {BucketDependencyParameters, BucketFeature, BucketParameters} from '../bucket.ts';

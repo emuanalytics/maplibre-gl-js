@@ -3,7 +3,7 @@ import {StencilMode} from '../stencil_mode.ts';
 import {CullFaceMode} from '../cull_face_mode.ts';
 import {ColorMode} from '../color_mode.ts';
 import {layerCompositeUniformValues} from '../program/layer_composite_program.ts';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@emuanalytics/maplibre-gl-style-spec';
 import {EXTENT} from '../../data/extent.ts';
 import {isLineStyleLayer, type LineStyleLayer} from '../../style/style_layer/line_style_layer.ts';
 import {isFillStyleLayer, type FillStyleLayer} from '../../style/style_layer/fill_style_layer.ts';

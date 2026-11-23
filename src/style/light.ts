@@ -4,7 +4,7 @@ import {getProperties, type LightProps, type LightPropsPossiblyEvaluated} from '
 import {Transitionable, type Transitioning, type PossiblyEvaluated} from './properties.ts';
 import {EvaluationParameters} from './evaluation_parameters.ts';
 
-import type {LightSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LightSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 import type {StyleSetterOptions} from '../style/style.ts';
 import type {TransitionParameters} from './properties.ts';
 

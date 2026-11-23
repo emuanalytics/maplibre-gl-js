@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {StyleSpecification} from '@emuanalytics/maplibre-gl-style-spec';
 
 export function localizeURLs(style: any, port: number, baseTestsDir: string): void {
     localizeStyleURLs(style, port);

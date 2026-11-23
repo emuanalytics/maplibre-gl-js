@@ -1,5 +1,5 @@
 import {packUint8ToFloat} from '../shaders/encode_attribute.ts';
-import {type Color, supportsPropertyExpression} from '@maplibre/maplibre-gl-style-spec';
+import {type Color, supportsPropertyExpression} from '@emuanalytics/maplibre-gl-style-spec';
 import {register} from '../util/web_worker_transfer.ts';
 import {PossiblyEvaluatedPropertyValue} from '../style/properties.ts';
 import {StructArrayLayout1f4, StructArrayLayout2f8, StructArrayLayout4f16, PatternLayoutArray, DashLayoutArray} from './array_types.g.ts';
@@ -25,7 +25,7 @@ import type {
     SourceExpression,
     CompositeExpression,
     FormattedSection
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@emuanalytics/maplibre-gl-style-spec';
 import type {FeatureStates} from '../source/source_state.ts';
 import type {DashEntry} from '../render/line_atlas.ts';
 import type {VectorTileLayerLike} from '@maplibre/vt-pbf';
